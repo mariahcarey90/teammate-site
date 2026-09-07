@@ -1,0 +1,437 @@
+/* TEAM MATE marketing site — teammateapp.au
+   Design: brand system §09 (docs/brand/assets/ref-09-website.pdf) +
+   docs/brand/BRAND.md. Tokens from docs/brand/assets/tokens.json.
+   White pages, Ink type, one Dot Blue moment per viewport; the dot is
+   the only decoration — no gradients, no illustration. */
+
+:root {
+  --dot-blue: #2B4DFF;
+  --dot-blue-deep: #1E3AE0;
+  --ink: #0A0F1A;
+  --mist: #F3F5F7;
+  --white: #FFFFFF;
+  --blue-50: #EDF1FF;
+  --blue-100: #D6DEFF;
+  --blue-300: #8FA3FF;
+  --text-secondary: #4B5563;
+  --text-tertiary: #6B7280;
+  --hairline: #E5E7EB;
+  --dark-surface: #121826;
+  --radius-pill: 999px;
+  --radius-card: 14px;
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color-scheme: light;
+}
+
+@supports (color: color(display-p3 0 0 0)) {
+  :root {
+    --dot-blue: color(display-p3 0.22 0.30 0.98);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font-stack);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--dot-blue);
+  outline-offset: 2px;
+}
+
+img { max-width: 100%; height: auto; }
+
+/* ---- type roles (BRAND.md) ---- */
+
+h1, h2 {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.12;
+  margin: 0;
+}
+
+h1 { font-size: clamp(38px, 6vw, 56px); }
+h2 { font-size: clamp(30px, 4.5vw, 40px); }
+h3 { font-size: 20px; font-weight: 600; margin: 0; }
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.muted { color: var(--text-secondary); }
+.blue { color: var(--dot-blue); }
+
+/* ---- buttons: pill radius, primary = Dot Blue fill,
+        secondary = 1.5px hairline, hover -> Dot Blue Deep ---- */
+
+.btn {
+  display: inline-block;
+  border-radius: var(--radius-pill);
+  padding: 13px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 200ms ease-out, border-color 200ms ease-out,
+    color 200ms ease-out, transform 120ms ease-out;
+}
+
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+  background: var(--dot-blue);
+  color: var(--white);
+}
+.btn-primary:hover { background: var(--dot-blue-deep); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--hairline);
+}
+.btn-secondary:hover {
+  border-color: var(--dot-blue-deep);
+  color: var(--dot-blue-deep);
+}
+
+/* on Ink bands: blue fills stay #2B4DFF (BRAND.md dark rules) */
+.on-dark.btn-secondary {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+.on-dark.btn-secondary:hover {
+  border-color: var(--blue-300);
+  color: var(--blue-300);
+}
+
+/* ---- nav ---- */
+
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--hairline);
+  z-index: 10;
+}
+
+.nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+  gap: 24px;
+}
+
+.nav-logo img { height: 17px; display: block; }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a:not(.btn) {
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--ink);
+  transition: color 200ms ease-out;
+}
+.nav-links a:not(.btn):hover { color: var(--dot-blue-deep); }
+.nav-links a[aria-current="page"] { color: var(--dot-blue); }
+
+.nav .btn { padding: 10px 22px; }
+
+/* ---- sections: alternate White / Mist ---- */
+
+section { padding: 96px 0; }
+section.mist { background: var(--mist); }
+
+.section-head { max-width: 640px; }
+.section-head .label { display: block; margin-bottom: 12px; }
+.section-head p { color: var(--text-secondary); margin: 16px 0 0; }
+
+/* ---- hero ---- */
+
+.hero { text-align: center; padding: 110px 0 90px; }
+
+.hero p {
+  max-width: 460px;
+  margin: 24px auto 36px;
+  color: var(--text-secondary);
+}
+
+.hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ---- pillar cards (Mist, dot-led) ---- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.card {
+  background: var(--mist);
+  border-radius: var(--radius-card);
+  padding: 28px;
+  text-align: left;
+}
+.mist .card { background: var(--white); }
+
+.card .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--dot-blue);
+  margin-bottom: 14px;
+}
+
+.card h3 { margin-bottom: 8px; }
+.card p { margin: 0; color: var(--text-secondary); font-size: 15px; }
+
+/* ---- product screenshots ---- */
+
+.phones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin-top: 56px;
+}
+
+.phone figure { margin: 0; }
+
+.phone img {
+  display: block;
+  width: 100%;
+  border-radius: 22px;
+  border: 1px solid var(--hairline);
+  background: var(--white);
+}
+
+.phone figcaption {
+  margin-top: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ---- feature bullets ---- */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px 40px;
+  margin-top: 40px;
+  padding: 0;
+  list-style: none;
+}
+
+.features li {
+  padding-left: 22px;
+  position: relative;
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.features li strong { color: var(--ink); font-weight: 600; }
+
+/* ---- Ink proof band ---- */
+
+.band {
+  background: var(--ink);
+  color: var(--white);
+  text-align: center;
+}
+
+.band h2 { color: var(--white); }
+
+.band p {
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 520px;
+  margin: 20px auto 32px;
+}
+
+/* ---- pricing ---- */
+
+.price-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 56px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.price-card {
+  background: var(--mist);
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.price-card.featured {
+  background: var(--white);
+  border: 2px solid var(--dot-blue);
+}
+
+.price-card .price {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 10px 0 2px;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.price-card .per { color: var(--text-tertiary); font-size: 15px; margin: 0 0 20px; }
+
+.price-card ul {
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+  flex: 1;
+}
+
+.price-card li {
+  padding: 7px 0 7px 22px;
+  position: relative;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.price-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.05em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--dot-blue);
+}
+
+.price-note {
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  margin-top: 24px;
+}
+
+/* comparison table */
+
+.table-scroll { overflow-x: auto; margin-top: 40px; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 560px;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+th, td {
+  text-align: left;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+th { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-tertiary); }
+
+td.us { font-weight: 800; color: var(--dot-blue); }
+
+/* FAQ */
+
+.faq { max-width: 720px; margin-top: 24px; }
+
+.faq h3 { margin-top: 36px; }
+.faq p { color: var(--text-secondary); margin: 8px 0 0; }
+
+/* ---- footer (Ink) ---- */
+
+footer {
+  background: var(--ink);
+  color: var(--white);
+  padding: 56px 0 48px;
+}
+
+.foot-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.foot-row img { height: 15px; display: block; }
+
+.tagline { color: rgba(255, 255, 255, 0.8); }
+.tagline .blue { color: var(--blue-300); } /* blue text lifts to 300 on dark */
+
+.foot-links {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px 32px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.foot-links nav { display: flex; gap: 24px; flex-wrap: wrap; }
+
+.foot-links a { color: rgba(255, 255, 255, 0.8); text-decoration: none; }
+.foot-links a:hover { color: var(--blue-300); }
+
+/* ---- small screens ---- */
+
+@media (max-width: 720px) {
+  .wrap { padding: 0 20px; }
+  section { padding: 64px 0; }
+  .hero { padding: 72px 0 56px; }
+  .nav-links { gap: 18px; }
+  .nav-links a.hide-sm { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn, .nav-links a { transition: none; }
+  .btn:active { transform: none; }
+}
