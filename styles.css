@@ -65,6 +65,7 @@ h1, h2 {
   letter-spacing: -0.01em;
   line-height: 1.12;
   margin: 0;
+  text-wrap: balance;
 }
 
 h1 { font-size: clamp(38px, 6vw, 56px); }
@@ -183,6 +184,7 @@ section.mist { background: var(--mist); }
 }
 
 .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.hero-cta-left { justify-content: flex-start; margin-top: 32px; }
 
 /* ---- pillar cards (Mist, dot-led) ---- */
 
@@ -321,6 +323,8 @@ section.mist { background: var(--mist); }
 
 .price-card .per { color: var(--text-tertiary); font-size: 15px; margin: 0 0 20px; }
 
+.price-card .btn { text-align: center; }
+
 .price-card ul {
   margin: 0 0 28px;
   padding: 0;
@@ -424,10 +428,61 @@ footer {
 
 @media (max-width: 720px) {
   .wrap { padding: 0 20px; }
-  section { padding: 64px 0; }
-  .hero { padding: 72px 0 56px; }
-  .nav-links { gap: 18px; }
+  section { padding: 56px 0; }
+  .hero { padding: 56px 0 48px; }
+
+  .nav .wrap { height: 64px; gap: 12px; }
+  .nav-logo img { height: 15px; }
+  .nav-links { gap: 16px; }
   .nav-links a.hide-sm { display: none; }
+  .nav-links a:not(.btn) { font-size: 15px; }
+  .nav .btn { padding: 9px 18px; font-size: 15px; }
+
+  /* headings wrap naturally on narrow screens; desktop line breaks off */
+  h1 br, .band h2 br { display: none; }
+
+  .hero p { margin: 18px auto 28px; }
+
+  /* CTAs stack full-width instead of sitting unevenly side by side */
+  .hero-cta { flex-direction: column; align-items: stretch; gap: 10px; }
+  .hero .hero-cta { max-width: 320px; margin-left: auto; margin-right: auto; }
+  .hero-cta-left { max-width: 320px; }
+  .hero-cta .btn { text-align: center; }
+
+  .cards { gap: 12px; margin-top: 40px; }
+  .card { padding: 22px 20px; }
+  .card .dot { margin-bottom: 10px; }
+
+  /* phone screenshots: swipeable row, not three stacked full-width
+     images (each would be ~4 screens tall at 375px) */
+  .phones {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: min(64vw, 230px);
+    gap: 16px;
+    margin: 40px -20px 0;
+    padding: 0 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 20px;
+    scrollbar-width: none;
+  }
+  .phones::-webkit-scrollbar { display: none; }
+  .phone { scroll-snap-align: start; }
+  .phone figcaption { font-size: 14px; margin-top: 10px; }
+
+  .features { margin-top: 28px; gap: 12px; }
+  .features li { font-size: 15px; }
+
+  .price-cards { gap: 16px; margin-top: 40px; }
+  .price-card { padding: 28px 24px; }
+  .price-card .price { font-size: 38px; }
+
+  table { font-size: 15px; }
+  th, td { padding: 12px 10px; }
+
+  .foot-links { flex-direction: column; gap: 20px; }
+  .foot-links nav { gap: 12px 18px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
