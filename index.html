@@ -15,6 +15,23 @@
 <link rel="icon" href="assets/tm-dot.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/tm-touch-180.png">
 <link rel="stylesheet" href="styles.css">
+<!-- Mobile-only entrance motion (owner request 2026-09-11, Handover+
+     homage — their Squarespace fade/ease reveal). This gate must run
+     before first paint: it flags <html> as tm-anim ONLY on small
+     screens with JS, IntersectionObserver and motion allowed, and the
+     CSS hides [data-reveal] targets only under that flag — so desktop,
+     no-JS and reduced-motion visitors never see hidden content. The
+     reveal logic itself is the script at the end of <body>. -->
+<script>
+(function () {
+  try {
+    if (window.matchMedia("(max-width: 720px)").matches &&
+        !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("tm-anim");
+    }
+  } catch (e) { /* no motion is always safe */ }
+})();
+</script>
 </head>
 <body>
 
@@ -35,25 +52,25 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <h1>Your team. Your shifts.<br> <span class="blue">Sorted.</span></h1>
-      <p>Roster, clock-in and pay in one app. Built for crews, loved by managers.</p>
-      <div class="hero-cta">
+      <h1 data-reveal>Your team. Your shifts.<br> <span class="blue">Sorted.</span></h1>
+      <p data-reveal>Roster, clock-in and pay in one app. Built for crews, loved by managers.</p>
+      <div class="hero-cta" data-reveal>
         <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
         <a class="btn btn-secondary" href="#product">See how it works</a>
       </div>
 
       <div class="cards">
-        <div class="card">
+        <div class="card" data-reveal>
           <div class="dot" aria-hidden="true"></div>
           <h3>Roster</h3>
           <p>Every shift, one calendar. Swaps in two taps.</p>
         </div>
-        <div class="card">
+        <div class="card" data-reveal>
           <div class="dot" aria-hidden="true"></div>
           <h3>Clock in</h3>
           <p>On-site check-in with fair, transparent hours.</p>
         </div>
-        <div class="card">
+        <div class="card" data-reveal>
           <div class="dot" aria-hidden="true"></div>
           <h3>Pay</h3>
           <p>Hours and estimated pay, adding up as you work — no surprises.</p>
@@ -74,8 +91,8 @@
        2026-09-10 — do not "fix" back). -->
   <section class="logos" aria-label="Teams using TEAM MATE">
     <div class="wrap">
-      <span class="label">The first crews on board</span>
-      <ul class="logo-row">
+      <span class="label" data-reveal>The first crews on board</span>
+      <ul class="logo-row" data-reveal>
         <li><img src="assets/logos/rice-rice-baby.png" alt="Rice Rice Baby To Go" class="xl light-art" width="384" height="192" loading="lazy"></li>
         <li><img src="assets/logos/rock-sugar-grey.svg" alt="Rock Sugar" class="lg light-art" width="68" height="48" loading="lazy"></li>
         <li><img src="assets/logos/lucky-cat-melbourne.png" alt="Lucky Cat Melbourne" class="xl" width="191" height="192" loading="lazy"></li>
@@ -85,7 +102,7 @@
 
   <section class="mist" id="product">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <span class="label">Product</span>
         <h2>The staff app your crew will actually use.</h2>
         <p>New shifts appear the moment they're published — in the app and in
@@ -93,19 +110,19 @@
       </div>
 
       <div class="phones">
-        <div class="phone">
+        <div class="phone" data-reveal>
           <figure>
             <img src="assets/app-01-schedule.png" alt="TEAM MATE schedule screen showing a week of shifts" loading="lazy">
             <figcaption>Know your week at a glance</figcaption>
           </figure>
         </div>
-        <div class="phone">
+        <div class="phone" data-reveal>
           <figure>
             <img src="assets/app-03-clock.png" alt="TEAM MATE clock screen with a shift timer running" loading="lazy">
             <figcaption>Clock in from your pocket</figcaption>
           </figure>
         </div>
-        <div class="phone">
+        <div class="phone" data-reveal>
           <figure>
             <img src="assets/app-04-leave.png" alt="TEAM MATE leave screen with balances and requests" loading="lazy">
             <figcaption>Leave, without the paperwork</figcaption>
@@ -113,7 +130,7 @@
         </div>
       </div>
 
-      <ul class="features">
+      <ul class="features" data-reveal>
         <li><strong>Open shifts</strong> — see extra shifts you're eligible for and claim them in a tap.</li>
         <li><strong>Swaps</strong> — offer a shift to a teammate; managers approve in the app.</li>
         <li><strong>Shift reminders</strong> — a nudge before each shift starts, and a "still clocked in?" one if you forget to clock off.</li>
@@ -126,14 +143,14 @@
 
   <section id="managers">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <span class="label">For managers</span>
         <h2>Run the whole roster from the web.</h2>
         <p>Set up in minutes with the welcome wizard — no implementation call,
         no sales demo.</p>
       </div>
 
-      <ul class="features">
+      <ul class="features" data-reveal>
         <li><strong>Build and publish rosters</strong> — your crew sees changes instantly.</li>
         <li><strong>Approve timesheets and leave</strong> — from one queue, in seconds.</li>
         <li><strong>Export payroll files</strong> your payroll software can read — Xero-ready included.</li>
@@ -156,13 +173,13 @@
        for a swap back — composite-table-photo.mjs). -->
   <section class="scene mist" aria-label="TEAM MATE in the wild">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <span class="label">In good company</span>
         <h2>At home on any shift.</h2>
         <p>From café counters to late-night service — TEAM MATE fits right
         in wherever your crew works.</p>
       </div>
-      <img class="scene-img" src="assets/photo-fancy-brand.jpg"
+      <img class="scene-img" data-reveal src="assets/photo-fancy-brand.jpg"
         alt="A phone on a dark marble restaurant table beside a cocktail and a candle, showing the TEAM MATE sign-in screen"
         width="1536" height="1024" loading="lazy">
     </div>
@@ -170,16 +187,16 @@
 
   <section class="band">
     <div class="wrap">
-      <h2>Free for your first 10 staff.<br> Actually free.</h2>
-      <p>Not a trial. No card details, no locked features. One honest price
+      <h2 data-reveal>Free for your first 10 staff.<br> Actually free.</h2>
+      <p data-reveal>Not a trial. No card details, no locked features. One honest price
       when you grow past 10.</p>
-      <a class="btn btn-primary" href="pricing.html">See pricing</a>
+      <a class="btn btn-primary" data-reveal href="pricing.html">See pricing</a>
     </div>
   </section>
 
   <section class="mist" id="get-the-app">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <span class="label">Get the app</span>
         <h2>Your crew signs in from their pocket.</h2>
         <p>Employers set up TEAM MATE on the web and invite the team — everyone
@@ -188,7 +205,7 @@
         <!-- Store badges: swap this line for official App Store / Google Play
              badges + links once the listings are live (docs/store/LISTINGS.md). -->
       </div>
-      <div class="hero-cta hero-cta-left">
+      <div class="hero-cta hero-cta-left" data-reveal>
         <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free on the web</a>
         <a class="btn btn-secondary" href="https://app.teammateapp.au/login">Sign in</a>
       </div>
@@ -214,6 +231,48 @@
     </div>
   </div>
 </footer>
+
+<!-- Mobile entrance motion, part 2 (gate script is in <head>): stagger
+     within each section, then reveal targets as they enter the
+     viewport. Deliberately NOT IntersectionObserver: a plain
+     rAF-throttled scroll sweep degrades to "everything visible" if
+     anything goes wrong, and IO callbacks proved unverifiable in the
+     embedded dev browser — 22 rect checks per scroll frame is cheap. -->
+<script>
+(function () {
+  if (!document.documentElement.classList.contains("tm-anim")) return;
+  var els = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
+  els.forEach(function (el) {
+    var section = el.closest("section") || document.body;
+    var n = section.tmRevealCount || 0;
+    section.tmRevealCount = n + 1;
+    el.style.setProperty("--reveal-delay", Math.min(n * 90, 450) + "ms");
+  });
+  var ticking = false;
+  function sweep() {
+    ticking = false;
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    els = els.filter(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < vh * 0.92 && r.bottom > 0) {
+        el.classList.add("is-in");
+        return false;
+      }
+      return true;
+    });
+    if (!els.length) {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    }
+  }
+  function onScroll() {
+    if (!ticking) { ticking = true; requestAnimationFrame(sweep); }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  sweep();
+})();
+</script>
 
 </body>
 </html>

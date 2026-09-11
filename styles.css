@@ -546,8 +546,32 @@ footer {
   .foot-links nav { gap: 12px 18px; }
 }
 
+/* ---- mobile-only entrance motion (owner request 2026-09-11,
+        Handover+ homage — their Squarespace fade-up/ease reveal).
+        MOBILE ONLY by owner direction: desktop stays perfectly still,
+        so everything lives behind the 720px query AND html.tm-anim,
+        which the index.html head script sets only on small screens
+        with JS + IntersectionObserver + motion allowed. Without the
+        flag these rules never apply and nothing is ever hidden. ---- */
+
+@media (max-width: 720px) {
+  html.tm-anim [data-reveal] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 640ms ease-out var(--reveal-delay, 0ms),
+      transform 640ms ease-out var(--reveal-delay, 0ms);
+  }
+  html.tm-anim [data-reveal].is-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .btn, .nav-links a { transition: none; }
   .btn:active { transform: none; }
+  /* belt-and-braces: the head script already skips reduced-motion */
+  html.tm-anim [data-reveal] { opacity: 1; transform: none; transition: none; }
 }
