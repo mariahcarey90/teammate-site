@@ -283,6 +283,17 @@ section.mist { background: var(--mist); }
   text-align: center;
 }
 
+/* ---- environment photo (H67 §3 — owner-driven photography moment;
+        the White/Ink/Dot framing stays, the photo is the one guest) ---- */
+
+.scene-img {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 48px auto 0;
+  border-radius: var(--radius-card);
+}
+
 /* ---- feature bullets ---- */
 
 .features {
