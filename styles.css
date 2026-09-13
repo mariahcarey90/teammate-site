@@ -478,6 +478,16 @@ footer {
 .foot-links a { color: rgba(255, 255, 255, 0.8); text-decoration: none; }
 .foot-links a:hover { color: var(--blue-300); }
 
+/* ---- contact page: one short section, so let <main> grow and keep
+        the footer at the bottom of tall viewports ---- */
+
+body.contact {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body.contact main { flex: 1 0 auto; }
+
 /* ---- small screens ---- */
 
 @media (max-width: 720px) {
