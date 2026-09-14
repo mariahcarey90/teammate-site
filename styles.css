@@ -294,6 +294,27 @@ section.mist { background: var(--mist); }
   border-radius: var(--radius-card);
 }
 
+.scene-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 960px;
+  margin: 48px auto 0;
+}
+
+.scene-pair .scene-img {
+  margin: 0;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 720px) {
+  .scene-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---- feature bullets ---- */
 
 .features {
