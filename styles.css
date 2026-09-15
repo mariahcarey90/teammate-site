@@ -186,6 +186,29 @@ section.mist { background: var(--mist); }
 .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .hero-cta-left { justify-content: flex-start; margin-top: 32px; }
 
+/* ---- split hero (index only — owner direction 2026-09-15: the
+        hand-held courtyard shot is hero #1, copy beside it;
+        pricing/contact keep the centered .hero base rules) ---- */
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: 64px;
+  text-align: left;
+}
+
+.hero-grid .hero-copy p { margin: 24px 0 36px; }
+.hero-grid .hero-cta { justify-content: flex-start; }
+
+.hero-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
 /* ---- early-customer logo strip (under the hero) ----
    Source files are the customer's ORIGINAL artwork, never redrawn
    (owner call, 2026-09-10: the brand is the brand). The grey comes
@@ -283,36 +306,20 @@ section.mist { background: var(--mist); }
   text-align: center;
 }
 
-/* ---- environment photo (H67 §3 — owner-driven photography moment;
-        the White/Ink/Dot framing stays, the photo is the one guest) ---- */
+/* ---- full-bleed scene band (owner direction 2026-09-15: the day
+        flat-lay is hero shot #2 — edge-to-edge under the logo strip;
+        the White/Ink/Dot framing stays, the photo is the one guest.
+        Replaces the boxed day/night .scene-pair — git history has it
+        for a swap back.) ---- */
 
-.scene-img {
+.scene-band { padding-bottom: 0; }
+
+.band-img {
   display: block;
   width: 100%;
-  max-width: 960px;
-  margin: 48px auto 0;
-  border-radius: var(--radius-card);
-}
-
-.scene-pair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  max-width: 960px;
-  margin: 48px auto 0;
-}
-
-.scene-pair .scene-img {
-  margin: 0;
-  max-width: none;
-  height: 100%;
+  max-height: 72vh;
   object-fit: cover;
-}
-
-@media (max-width: 720px) {
-  .scene-pair {
-    grid-template-columns: 1fr;
-  }
+  margin-top: 64px;
 }
 
 /* ---- feature bullets ---- */
@@ -527,6 +534,14 @@ body.contact main { flex: 1 0 auto; }
   h1 br, .band h2 br { display: none; }
 
   .hero p { margin: 18px auto 28px; }
+
+  /* split hero stacks: copy first (centered, as before), photo under */
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+  .hero-grid .hero-copy p { margin: 18px auto 28px; }
+  .hero-grid .hero-cta { justify-content: center; }
+  .hero-photo img { border-radius: 18px; }
+
+  .band-img { margin-top: 40px; max-height: 60vh; }
 
   /* CTAs stack full-width instead of sitting unevenly side by side */
   .hero-cta { flex-direction: column; align-items: stretch; gap: 10px; }
