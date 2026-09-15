@@ -201,11 +201,14 @@ section.mist { background: var(--mist); }
 .hero-grid .hero-copy p { margin: 24px 0 36px; }
 .hero-grid .hero-cta { justify-content: flex-start; }
 
+/* full photo, no crop (owner 2026-09-15: the whole phone screen must
+   read) — natural 2:3, width-capped so the hero stays balanced */
 .hero-photo img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  max-width: 480px;
+  height: auto;
+  margin: 0 auto;
   border-radius: 24px;
 }
 
@@ -317,8 +320,7 @@ section.mist { background: var(--mist); }
 .band-img {
   display: block;
   width: 100%;
-  max-height: 72vh;
-  object-fit: cover;
+  height: auto; /* natural ratio — never crop the phone screen */
   margin-top: 64px;
 }
 
@@ -541,7 +543,7 @@ body.contact main { flex: 1 0 auto; }
   .hero-grid .hero-cta { justify-content: center; }
   .hero-photo img { border-radius: 18px; }
 
-  .band-img { margin-top: 40px; max-height: 60vh; }
+  .band-img { margin-top: 40px; }
 
   /* CTAs stack full-width instead of sitting unevenly side by side */
   .hero-cta { flex-direction: column; align-items: stretch; gap: 10px; }
