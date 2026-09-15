@@ -115,12 +115,14 @@
     </div>
   </section>
 
-  <!-- Hero shot #2 (owner direction 2026-09-15): the daytime café
-       flat-lay (white brand screen rebuilt from the real assets —
-       composite-flatlay-day.mjs) promoted from the day/night pair to a
-       full-bleed band. The night shot came off the homepage; its asset
-       (photo-fancy-brand.jpg) + composite-fancy-photo.mjs remain for a
-       swap back. -->
+  <!-- Hero shot #2 (owner picks 2026-09-15): the daytime café flat-lay,
+       SIGN-IN screen variant (owner confirmed in-chat over the earlier
+       "Start free" splash; screen rebuilt from the real assets —
+       composite-flatlay-day.mjs signin). Full-bleed band; phones get an
+       art-directed portrait crop centred on the handset so the screen
+       reads (recipe in the marketing README). The splash asset
+       (photo-flatlay-brand.jpg) and the night shot + its script remain
+       for a swap back. -->
   <section class="scene-band mist" aria-label="TEAM MATE in the wild">
     <div class="wrap">
       <div class="section-head" data-reveal>
@@ -130,9 +132,14 @@
         wherever your crew works.</p>
       </div>
     </div>
-    <img class="band-img" data-reveal src="assets/photo-flatlay-brand.jpg"
-      alt="A phone on a sunlit marble café counter between a flat white and a barista's apron, showing the TEAM MATE start screen"
-      width="1536" height="1024" loading="lazy">
+    <picture>
+      <source media="(max-width: 720px)"
+        srcset="assets/photo-flatlay-signin-mobile.jpg"
+        width="720" height="1024">
+      <img class="band-img" data-reveal src="assets/photo-flatlay-signin.jpg"
+        alt="A phone on a sunlit marble café counter beside a flat white, showing the TEAM MATE sign-in screen"
+        width="1536" height="1024" loading="lazy">
+    </picture>
   </section>
 
   <section class="mist" id="product">
