@@ -45,7 +45,11 @@
       <a href="pricing.html">Pricing</a>
       <a href="#managers" class="hide-sm">For managers</a>
       <a href="contact.html">Contact</a>
-      <a class="btn btn-primary" href="#get-the-app">Get the app</a>
+      <!-- One Dot Blue moment per viewport (BRAND.md / change request
+           2026-09-20 item 5): above the fold the hero "Start free" wins,
+           so this pill starts hairline-secondary; the script at the foot
+           of <body> promotes it to primary once the hero scrolls out. -->
+      <a id="nav-cta" class="btn btn-secondary" href="#get-the-app">Get the app</a>
     </nav>
   </div>
 </header>
@@ -83,7 +87,7 @@
         <div class="card" data-reveal>
           <div class="dot" aria-hidden="true"></div>
           <h3>Clock in</h3>
-          <p>On-site check-in with fair, transparent hours.</p>
+          <p>Transparent hours, down to the minute.</p>
         </div>
         <div class="card" data-reveal>
           <div class="dot" aria-hidden="true"></div>
@@ -290,6 +294,41 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", onScroll);
   sweep();
+})();
+</script>
+
+<!-- One-blue-moment nav pill (change request 2026-09-20 item 5): the pill
+     is hairline secondary whenever ANY in-page blue CTA is in the
+     viewport (hero "Start free", "See pricing", "Start free on the web")
+     and becomes the viewport's blue moment only when none is — so no
+     viewport ever shows two. Same rAF-throttled pattern as the reveal
+     sweep above; degrades to a permanent secondary pill if anything goes
+     wrong, which still obeys the rule. Runs regardless of tm-anim —
+     this is state, not motion. -->
+<script>
+(function () {
+  var cta = document.getElementById("nav-cta");
+  if (!cta) return;
+  var rivals = Array.prototype.slice.call(document.querySelectorAll("main .btn-primary"));
+  if (!rivals.length) return;
+  var nav = document.querySelector(".nav");
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var navH = nav ? nav.offsetHeight : 76;
+    var rivalVisible = rivals.some(function (el) {
+      var r = el.getBoundingClientRect();
+      return r.bottom > navH && r.top < window.innerHeight;
+    });
+    cta.classList.toggle("btn-primary", !rivalVisible);
+    cta.classList.toggle("btn-secondary", rivalVisible);
+  }
+  function onScroll() {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  update();
 })();
 </script>
 
