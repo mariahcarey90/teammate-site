@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TEAM MATE for shops and retail — rosters, clock-in and pay</title>
-<meta name="description" content="Rosters, clock-in and pay for Australian shops and retail stores. Staff to your sales, cover late-night trade, free for teams of 10 or fewer.">
-<link rel="canonical" href="https://teammateapp.au/retail.html">
-<meta property="og:title" content="TEAM MATE for shops and retail">
-<meta property="og:description" content="Staff to your sales, cover every trading hour, see wages add up. Free for teams of 10 or fewer.">
+<title>TEAM MATE for cleaning businesses — rosters, clock-in and pay</title>
+<meta name="description" content="Rosters, clock-in and pay for Australian cleaning crews across client sites. Police Checks on file, clock in at each site, free for teams of 10 or fewer.">
+<link rel="canonical" href="https://teammateapp.au/cleaning.html">
+<meta property="og:title" content="TEAM MATE for cleaning businesses">
+<meta property="og:description" content="Crews across every client site, Police Checks on file, evening rates added up. Free for teams of 10 or fewer.">
 <meta property="og:image" content="https://teammateapp.au/assets/tm-og-1200x630.png">
-<meta property="og:url" content="https://teammateapp.au/retail.html">
+<meta property="og:url" content="https://teammateapp.au/cleaning.html">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="assets/tm-dot.svg" type="image/svg+xml">
@@ -18,14 +18,15 @@
 </head>
 <body>
 
-<!-- Vertical landing page #2 (owner 2026-09-25: "then do retail").
-     Same copy guardrails as hospitality.html / the README: no award /
-     compliance / legal claims; suggested rules are "common starting
-     points" the owner checks. Retail words: store, shop floor, checkout,
-     stockroom, trading hours, late-night trade. Photo: an owner-picked
-     Unsplash deli-counter shot (staff only, 2026-09-25). The logo strip is
-     left out too: all three real customers are hospo venues, and
-     showing them here would imply retail customers we don't have. -->
+<!-- Vertical landing page #4 (owner 2026-09-25: keep the C4 rope-access
+     photo). Same copy guardrails as hospitality.html / the README: no
+     award / compliance / legal / WHS claims; suggested rules are a
+     "common starting point" the owner checks. Every feature line maps to
+     the CLEANING preset (packages/core/src/onboarding/presets.ts), the
+     CLEANING suggested-rules pack (packages/core/src/compliance/packs.ts)
+     or an app-wide feature in docs/KNOWLEDGE-BASE.md. Cleaning words:
+     client site, crew, after hours. No logo strip: all real customers
+     are hospo venues. -->
 
 <header class="nav">
   <div class="wrap">
@@ -47,58 +48,59 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <span class="label">Shops · stores · retail</span>
-      <h1>Every trading hour,<br> covered. <span class="blue">Sorted.</span></h1>
-      <p>Roster the shop floor to your sales, fill the late-night trade and
-      see wages add up as the day goes.</p>
+      <span class="label">Cleaning · client sites · after hours</span>
+      <h1>Every site covered,<br> every night. <span class="blue">Sorted.</span></h1>
+      <p>Send the right crew to the right client site, see who's clocked
+      in where, and let evening rates add themselves up.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
-        <a class="btn btn-secondary" href="#store">See how it works</a>
+        <a class="btn btn-secondary" href="#site">See how it works</a>
       </div>
 
       <div class="cards">
         <div class="card">
           <div class="dot" aria-hidden="true"></div>
-          <h3>Staff to your sales</h3>
-          <p>Upload daily sales and get a suggested headcount for mornings, peak and evenings.</p>
+          <h3>Every client site</h3>
+          <p>Each client site is its own location, so your crew knows exactly where tonight's job is.</p>
         </div>
         <div class="card">
           <div class="dot" aria-hidden="true"></div>
-          <h3>Casuals, sorted</h3>
-          <p>Staff set their availability; extra shifts go out as open shifts they claim in a tap.</p>
+          <h3>Police Checks on file</h3>
+          <p>See who holds what and when it runs out, with a warning before you roster someone without it.</p>
         </div>
         <div class="card">
           <div class="dot" aria-hidden="true"></div>
-          <h3>Weekend rates, done</h3>
-          <p>Set your Saturday, Sunday, evening and public-holiday rates once. Pay adds them up.</p>
+          <h3>Evening rates, done</h3>
+          <p>Set your evening, weekend and public-holiday rates once. Pay adds them up.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="mist" id="store">
+  <!-- Stock photo (README "Assets": Unsplash licence, owner-picked
+       2026-09-25, "the Australian feel"; owner kept it over an everyday
+       office-cleaner shot). Workers at work, not a customer. -->
+  <section class="scene-band mist" id="site" aria-label="A rope-access crew at work on a city building">
     <div class="wrap">
       <div class="section-head">
-        <span class="label">For your store</span>
-        <h2>Built around a retail week.</h2>
-        <p>Pick "shop or retail store" in the welcome wizard and your store
-        is set up in minutes: no implementation call, no sales demo.</p>
+        <span class="label">For your business</span>
+        <h2>Built around an after-hours week.</h2>
+        <p>Pick "cleaning" in the welcome wizard and your crew is set up in
+        minutes: no implementation call, no sales demo.</p>
       </div>
 
       <ul class="features">
-        <li><strong>Shop floor, checkout and stockroom, ready to go</strong> — sales assistants, cashiers, stock hands and supervisors, plus a typical week to start your roster from.</li>
-        <li><strong>Labour as a % of sales</strong> — set a target and see which days ran over.</li>
-        <li><strong>Suggested rules for retail</strong> — common starting points for meal breaks, rest between shifts and days in a row. You check them, switch them on, and change any number.</li>
-        <li><strong>A daily wages budget</strong> — the roster's cost bar and the live wages figure tell you when a day is running heavy.</li>
-        <li><strong>Opening and closing checklists</strong> — recurring tasks your crew ticks off in the app, every shift.</li>
-        <li><strong>More than one store?</strong> — share staff between your stores when a shift needs cover.</li>
-        <li><strong>Announcements people confirm</strong> — new promo, new process: see who's read it.</li>
+        <li><strong>Your crew, ready to go</strong> — cleaners and team leaders, plus a typical week to start from: weeknights 6 till 10 and Saturday mornings.</li>
+        <li><strong>Police Checks and Working with Children Checks</strong> — track who holds what and when it expires, and get a warning before you roster someone who doesn't have one.</li>
+        <li><strong>Suggested rules for cleaning crews</strong> — a meal break once a shift runs past 4½ hours, 8 hours off between a late job and an early start, and no more than 5 days in a row. Common starting points: you check them, switch them on, and change any number.</li>
+        <li><strong>Clock in at the client's site</strong> — each site gets its own location check, plus an optional photo on each clock-in, so hours match who was actually there.</li>
+        <li><strong>Someone calls in sick?</strong> — post it as an open shift, free cleaners ask for it from their phone, and you pick who takes it.</li>
+        <li><strong>A checklist for every site</strong> — the jobs each client expects, ticked off on the night.</li>
+        <li><strong>A daily wages budget</strong> — the roster's cost bar and the live wages figure tell you when a night is running heavy.</li>
       </ul>
     </div>
-    <!-- Stock photo (README "Assets": Unsplash licence, owner-picked
-         2026-09-25). Staff at work only — no customer is implied. -->
-    <img class="band-img" src="assets/photo-retail-deli.jpg"
-      alt="Staff working the counter of a busy deli, under Pay Here and Soft Cheese signs"
+    <img class="band-img" src="assets/photo-cleaning-rope-access.jpg"
+      alt="Three rope-access workers in hi-vis abseiling down the wall of a city building"
       width="1600" height="1066" loading="lazy">
   </section>
 
@@ -106,9 +108,10 @@
     <div class="wrap">
       <div class="section-head">
         <span class="label">For your crew</span>
-        <h2>The app your team will actually open.</h2>
+        <h2>The app your crew will actually open.</h2>
         <p>Shifts land in their pocket the moment you publish, and in their
-        phone calendar too. No more roster printouts by the stockroom door.</p>
+        phone calendar too. No more texting the whole crew the site list
+        every afternoon.</p>
       </div>
 
       <div class="phones">
@@ -149,7 +152,8 @@
         <span class="label">Born in hospo</span>
         <h2>Built for every crew.</h2>
         <p>TEAM MATE started in Melbourne cafés and restaurants. The same app
-        runs shops, <a href="cleaning.html">cleaning crews</a>, <a href="construction.html">building sites</a>, clinics and security
+        runs <a href="retail.html">shops</a>, cleaning crews,
+        <a href="construction.html">building sites</a>, clinics and security
         teams, each with its own setup in the welcome wizard.</p>
       </div>
       <div class="hero-cta hero-cta-left">
