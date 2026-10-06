@@ -3,18 +3,81 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pricing — TEAM MATE</title>
-<meta name="description" content="One plan. One number. Free for teams of 10 or fewer; $60 a month covers up to 30 staff.">
+<!-- gen:head (scripts/marketing-pages.mjs — edit there, not here) -->
+<title>Pricing: Free for up to 10 Staff | TEAM MATE</title>
+<meta name="description" content="One plan, one number. Free for teams of 10 or fewer, $60 a month for up to 30 staff, then $3 a month per person. No card, no locked features.">
 <link rel="canonical" href="https://teammateapp.au/pricing.html">
-<meta property="og:title" content="Pricing — TEAM MATE">
-<meta property="og:description" content="One plan. One number. Free for teams of 10 or fewer; $60 a month covers up to 30 staff.">
-<meta property="og:image" content="https://teammateapp.au/assets/tm-og-1200x630.png">
-<meta property="og:url" content="https://teammateapp.au/pricing.html">
+<meta property="og:site_name" content="TEAM MATE">
+<meta property="og:locale" content="en_AU">
 <meta property="og:type" content="website">
+<meta property="og:title" content="TEAM MATE pricing — one plan, one number">
+<meta property="og:description" content="Free for teams of 10 or fewer. $60 a month covers up to 30 staff.">
+<meta property="og:url" content="https://teammateapp.au/pricing.html">
+<meta property="og:image" content="https://teammateapp.au/assets/tm-og-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TEAM MATE">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="assets/tm-dot.svg" type="image/svg+xml">
+<link rel="icon" href="assets/tm-favicon-48.png" type="image/png" sizes="48x48">
 <link rel="apple-touch-icon" href="assets/tm-touch-180.png">
 <link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://teammateapp.au/#app",
+   "name": "TEAM MATE",
+   "url": "https://teammateapp.au/",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Staff rostering, time clock and timesheets",
+   "operatingSystem": "Web browser",
+   "description": "Rosters, clock-in, timesheets and leave in one app for Australian shift teams.",
+   "publisher": {
+    "@id": "https://teammateapp.au/#org"
+   },
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "Free",
+     "price": "0",
+     "priceCurrency": "AUD",
+     "description": "The whole app for teams of 10 or fewer. No card, no time limit."
+    },
+    {
+     "@type": "Offer",
+     "name": "Paid",
+     "price": "60",
+     "priceCurrency": "AUD",
+     "description": "Per month, covers up to 30 staff; $3 a month for each person after that."
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://teammateapp.au/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Pricing",
+     "item": "https://teammateapp.au/pricing.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<!-- /gen:head -->
 </head>
 <body>
 
@@ -24,14 +87,53 @@
       <img src="assets/tm-wordmark-light.svg" alt="TEAM MATE" width="181" height="18">
     </a>
     <nav class="nav-links" aria-label="Main">
+      <!-- Plain <details> menus: they open without JS; site.js only adds
+           close-on-outside-click and Escape. -->
+      <details class="nav-drop hide-sm">
+        <summary>Industries</summary>
+        <div class="drop-panel">
+          <ul class="drop-grid">
+            <li><a class="ind-link" href="hospitality.html"><img src="assets/industry-hospitality-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Hospitality</strong><span>Cafés, restaurants, pubs and bars</span></span></a></li>
+            <li><a class="ind-link" href="retail.html"><img src="assets/industry-retail-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Retail</strong><span>Shops and stores</span></span></a></li>
+            <li><a class="ind-link" href="cleaning.html"><img src="assets/industry-cleaning-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Cleaning</strong><span>Crews across client sites</span></span></a></li>
+            <li><a class="ind-link" href="security.html"><img src="assets/industry-security-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Security</strong><span>Guards, crowd control and patrols</span></span></a></li>
+            <li><a class="ind-link" href="clinics.html"><img src="assets/industry-clinics-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Healthcare</strong><span>Clinics, practices and allied health</span></span></a></li>
+            <li><a class="ind-link" href="construction.html"><img src="assets/industry-construction-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Building sites</strong><span>Builders, trades and site crews</span></span></a></li>
+          </ul>
+        </div>
+      </details>
       <a href="/#product" class="hide-sm">Product</a>
-      <a href="pricing.html" aria-current="page">Pricing</a>
-      <a href="/#managers" class="hide-sm">For managers</a>
-      <a href="contact.html">Contact</a>
-      <!-- One Dot Blue moment per viewport: the pricing card's "Start
-           free" is this page's blue moment, so the nav pill stays
-           hairline secondary (change request 2026-09-20 item 5). -->
+      <a href="pricing.html" class="hide-sm" aria-current="page">Pricing</a>
+      <a href="contact.html" class="hide-sm">Contact</a>
+      <!-- One Dot Blue moment per viewport: this page's own blue CTA
+           wins, so the pill stays hairline secondary. -->
       <a class="btn btn-secondary" href="/#get-the-app">Get the app</a>
+      <details class="nav-menu">
+        <summary aria-label="Menu">
+          <svg class="i-open" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5.5h14M2 12.5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="i-close" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="menu-panel">
+          <span class="label">Industries</span>
+          <ul class="menu-ind">
+            <li><a class="ind-link" href="hospitality.html"><img src="assets/industry-hospitality-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Hospitality</strong><span>Cafés, restaurants, pubs and bars</span></span></a></li>
+            <li><a class="ind-link" href="retail.html"><img src="assets/industry-retail-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Retail</strong><span>Shops and stores</span></span></a></li>
+            <li><a class="ind-link" href="cleaning.html"><img src="assets/industry-cleaning-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Cleaning</strong><span>Crews across client sites</span></span></a></li>
+            <li><a class="ind-link" href="security.html"><img src="assets/industry-security-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Security</strong><span>Guards, crowd control and patrols</span></span></a></li>
+            <li><a class="ind-link" href="clinics.html"><img src="assets/industry-clinics-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Healthcare</strong><span>Clinics, practices and allied health</span></span></a></li>
+            <li><a class="ind-link" href="construction.html"><img src="assets/industry-construction-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Building sites</strong><span>Builders, trades and site crews</span></span></a></li>
+          </ul>
+          <ul class="menu-links">
+            <li><a href="/#product">Product</a></li>
+            <li><a href="/#managers">For managers</a></li>
+            <li><a href="pricing.html" aria-current="page">Pricing</a></li>
+            <li><a href="/#faq">Questions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://app.teammateapp.au/login">Sign in</a></li>
+          </ul>
+          <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+        </div>
+      </details>
     </nav>
   </div>
 </header>
@@ -174,23 +276,34 @@
       <img src="assets/tm-wordmark-reversed.svg" alt="TEAM MATE" width="151" height="15">
       <span class="tagline">Your work crew, <span class="blue">sorted.</span></span>
     </div>
-    <div class="foot-links">
-      <nav aria-label="Footer">
+    <div class="foot-cols">
+      <nav aria-label="Industries">
+        <p class="foot-h">Industries</p>
         <a href="hospitality.html">Hospitality</a>
         <a href="retail.html">Retail</a>
-        <a href="construction.html">Building sites</a>
         <a href="cleaning.html">Cleaning</a>
-        <a href="clinics.html">Clinics</a>
         <a href="security.html">Security</a>
+        <a href="clinics.html">Healthcare</a>
+        <a href="construction.html">Building sites</a>
+      </nav>
+      <nav aria-label="Product">
+        <p class="foot-h">Product</p>
+        <a href="/#product">Staff app</a>
+        <a href="/#managers">For managers</a>
+        <a href="/#how-it-works">How it works</a>
         <a href="pricing.html">Pricing</a>
+        <a href="/#faq">Questions</a>
+      </nav>
+      <nav aria-label="Company">
+        <p class="foot-h">Company</p>
         <a href="contact.html">Contact</a>
         <a href="https://app.teammateapp.au/login">Sign in</a>
         <a href="https://app.teammateapp.au/privacy">Privacy</a>
         <a href="https://app.teammateapp.au/terms">Terms</a>
         <a href="mailto:support@teammateapp.au">support@teammateapp.au</a>
       </nav>
-      <span>Made in Melbourne, hosted in Australia. © 2026 TEAM MATE</span>
     </div>
+    <div class="foot-base">Made in Melbourne, hosted in Australia. © 2026 TEAM MATE</div>
   </div>
 </footer>
 

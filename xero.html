@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TEAM MATE and Xero Payroll — help</title>
+<meta name="description" content="How TEAM MATE sends approved timesheets to Xero Payroll: connecting, setting up pay items, sending, and disconnecting.">
+<!-- ⏳ OWNER: NOT PUBLISHED YET. MARKETING.md guardrail: nothing public may
+     imply a live payroll connection until the Xero keys are on the live
+     server (OWNER-CHECKLIST §13 step 4). At that point: remove this noindex
+     line, add the page to the footer nav of every page, and give its URL
+     (https://teammateapp.au/xero.html) to Xero with the App Store listing.
+     Xero's minimum for this page (developer.xero.com → partner resources →
+     "App partner – support documentation guidelines", read 2026-09-30):
+     table of contents, data flow diagram, getting started, FAQ, inline
+     help (the in-app Settings → Integrations text). Keep it in step with
+     docs/KNOWLEDGE-BASE.md's Xero entries. Copy guardrails as everywhere:
+     no award / compliance claims; penalty rates are "rates you set". -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://teammateapp.au/xero.html">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="assets/tm-dot.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/tm-touch-180.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .help { max-width: 720px; }
+  .help h2 { margin-top: 56px; }
+  .help h3 { margin-top: 32px; }
+  .help p, .help li { color: var(--text-secondary); }
+  .help ol, .help ul { padding-left: 22px; }
+  .help li { margin: 8px 0; }
+  .help strong { color: var(--ink); font-weight: 600; }
+  .help .toc { list-style: none; padding: 0; margin-top: 24px; }
+  .help .toc li { margin: 6px 0; }
+  .flow { width: 100%; max-width: 480px; height: auto; margin-top: 24px; display: block; }
+  .flow text { font-family: inherit; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-logo" href="/" aria-label="TEAM MATE home">
+      <img src="assets/tm-wordmark-light.svg" alt="TEAM MATE" width="181" height="18">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#product" class="hide-sm">Product</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-secondary" href="https://app.teammateapp.au/login">Sign in</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap help">
+      <span class="label">Help</span>
+      <h1>TEAM MATE and Xero Payroll</h1>
+      <p>TEAM MATE sends each person's approved hours to Xero Payroll as a
+      draft timesheet, so nobody types hours in twice. You still check and
+      approve every timesheet in Xero, and run your pay run there as usual.</p>
+
+      <h2 id="contents">Contents</h2>
+      <ul class="toc">
+        <li><a href="#what-goes-where">What goes where</a></li>
+        <li><a href="#getting-started">Getting started</a></li>
+        <li><a href="#pay-items">Setting up pay items</a></li>
+        <li><a href="#staff">Matching and adding staff</a></li>
+        <li><a href="#sending">Sending timesheets</a></li>
+        <li><a href="#faq">Questions</a></li>
+      </ul>
+
+      <h2 id="what-goes-where">What goes where</h2>
+      <p>Most information flows one way, from TEAM MATE into Xero. TEAM MATE
+      reads a few things from Xero so it can put your hours in the right
+      place.</p>
+      <svg class="flow" viewBox="0 0 360 400" role="img" aria-labelledby="flow-title flow-desc">
+        <title id="flow-title">How data moves between TEAM MATE and Xero Payroll</title>
+        <desc id="flow-desc">From TEAM MATE to Xero: draft timesheets, new staff when you press the button, and missing pay items when you press the button. From Xero to TEAM MATE: employees, pay items and pay calendars.</desc>
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4A5068"/></marker>
+        </defs>
+        <rect x="1" y="1" width="358" height="64" rx="12" fill="#F4F6FF" stroke="#2B4DFF" stroke-width="2"/>
+        <text x="20" y="30" font-size="18" font-weight="700" fill="#0B1020">TEAM MATE</text>
+        <text x="20" y="50" font-size="13" fill="#4A5068">rosters, clock-in, approved timesheets</text>
+        <line x1="36" y1="82" x2="36" y2="122" stroke="#4A5068" stroke-width="2" marker-end="url(#arr)"/>
+        <text x="60" y="108" font-size="15" fill="#0B1020">Draft timesheets (hours, penalties, tips)</text>
+        <line x1="36" y1="142" x2="36" y2="182" stroke="#4A5068" stroke-width="2" marker-end="url(#arr)"/>
+        <text x="60" y="168" font-size="15" fill="#0B1020">New staff, when you ask</text>
+        <line x1="36" y1="202" x2="36" y2="242" stroke="#4A5068" stroke-width="2" marker-end="url(#arr)"/>
+        <text x="60" y="228" font-size="15" fill="#0B1020">Missing pay items, when you ask</text>
+        <line x1="36" y1="302" x2="36" y2="262" stroke="#4A5068" stroke-width="2" marker-end="url(#arr)"/>
+        <text x="60" y="288" font-size="15" fill="#0B1020">Employees, pay items, pay calendars</text>
+        <rect x="1" y="335" width="358" height="64" rx="12" fill="#F2FAFD" stroke="#13B5EA" stroke-width="2"/>
+        <text x="20" y="364" font-size="18" font-weight="700" fill="#0B1020">Xero Payroll</text>
+        <text x="20" y="384" font-size="13" fill="#4A5068">pay runs, payslips, tax and super</text>
+      </svg>
+      <p>TEAM MATE never changes or deletes an existing Xero employee, never
+      runs a pay run, and never moves money.</p>
+
+      <h2 id="getting-started">Getting started</h2>
+      <p>You need a TEAM MATE admin login and a Xero login that can manage
+      payroll for your organisation. Payroll must be switched on in Xero,
+      with at least one pay calendar.</p>
+      <ol>
+        <li>In TEAM MATE on the web, go to <strong>Settings → Integrations</strong>.</li>
+        <li>Under Xero Payroll, press <strong>Connect to Xero</strong>.</li>
+        <li>Xero opens in the same window. Sign in, pick your organisation,
+        and press <strong>Allow access</strong>. Xero lists exactly what
+        TEAM MATE may do: read and add employees, read and add pay items,
+        read pay calendars, and create draft timesheets.</li>
+        <li>You're sent back to TEAM MATE, which shows your organisation's
+        name and "Connected".</li>
+        <li>Pick the Xero pay items for <strong>ordinary hours</strong> and
+        <strong>overtime</strong>. TEAM MATE never guesses these. Nothing is
+        sent until ordinary hours has a pay item, and anyone with overtime
+        waits until overtime has one too.</li>
+      </ol>
+      <p>New to TEAM MATE and already use Xero? On our sign-up page, choose
+      "Fill this in from your Xero login" and we'll fill in your name and
+      email from Xero. You connect your organisation afterwards, as above.</p>
+
+      <h2 id="pay-items">Setting up pay items</h2>
+      <p>Xero works out pay from its own pay items. Each penalty rate you've
+      switched on in TEAM MATE (for example Saturday, Sunday, public holiday
+      or evening) needs a matching Xero pay item, and the rate on that pay
+      item must match the rate you set in TEAM MATE.</p>
+      <ul>
+        <li><strong>Pick one you already have:</strong> Settings →
+        Integrations shows a picker for each penalty rate in use.</li>
+        <li><strong>Or let TEAM MATE add them:</strong> press "Create missing
+        pay items". You see exactly what will be added (for example
+        "Saturday 1.25x (TEAM MATE)") before anything happens, and nothing
+        is added until you press "Create in Xero".</li>
+      </ul>
+      <p>Until a penalty rate has a pay item, anyone with those hours shows
+      "Needs penalty pay item" and isn't sent, so nobody is underpaid by
+      having penalty hours paid as ordinary hours.</p>
+      <p><strong>Tips:</strong> if a location shares tips through TEAM MATE,
+      you can also send each person's share as a Tips line. Set up a pay item
+      in Xero at $1.00 per unit, and TEAM MATE sends one unit per dollar.</p>
+
+      <h2 id="staff">Matching and adding staff</h2>
+      <p>TEAM MATE matches your staff to Xero employees by email address, or
+      by exact name. Anyone it can't match shows "Not in Xero". You can link
+      them by hand under <strong>Match staff</strong>, or add them with
+      <strong>Add new staff to Xero</strong>, which sends the details they
+      entered when they joined (name, date of birth, home address, tax file
+      number, bank account, super fund). Xero needs a date of birth and a
+      home address written "street, suburb STATE postcode". Anyone
+      without these is held back until they're fixed. You finish the rest
+      of the tax declaration in Xero.</p>
+
+      <h2 id="sending">Sending timesheets</h2>
+      <ol>
+        <li>Approve the week's timesheets in TEAM MATE as usual.</li>
+        <li>On the Timesheets page, press <strong>Send to Xero</strong>.
+        TEAM MATE uses each person's Xero pay calendar to work out the pay
+        period.</li>
+        <li>A preview lists each person, their hours split the way Xero
+        will get them, and whether they're ready, already sent, changed
+        since sent, or can't be sent (with the reason).</li>
+        <li>Press send. Each person gets one <strong>draft</strong> timesheet
+        per pay period in Xero.</li>
+        <li>In Xero, check and approve the timesheets, then run your pay run.</li>
+      </ol>
+
+      <h2 id="faq">Questions</h2>
+      <div class="faq">
+        <h3>When does TEAM MATE send to Xero?</h3>
+        <p>Only when a manager presses Send to Xero. There's no automatic
+        or overnight sync.</p>
+
+        <h3>Can the same hours be sent twice?</h3>
+        <p>No. TEAM MATE remembers what it sent for each person and pay
+        period. If approved hours change after sending, the preview says
+        "Changed since sent", and sending again updates the same Xero
+        timesheet. If you had already approved it in Xero, it goes back to
+        draft for you to approve again. A timesheet Xero has already paid
+        can't be changed.</p>
+
+        <h3>What doesn't TEAM MATE do?</h3>
+        <p>It doesn't run pay runs, work out tax or super, or pay anyone. It
+        doesn't read your accounts, invoices or bank feeds. It doesn't change
+        or delete existing Xero employees; once someone is in Xero, update
+        their bank details there.</p>
+
+        <h3>Xero says payroll isn't set up</h3>
+        <p>Switch on Payroll in your Xero organisation and add a pay calendar,
+        then try again.</p>
+
+        <h3>A send failed. What now?</h3>
+        <p>The preview shows the reason Xero gave next to each person, for
+        example a missing pay item or a person not in Xero. Fix that and send
+        again; people already sent are skipped.</p>
+
+        <h3>How do I disconnect from Xero?</h3>
+        <p>Settings → Integrations → <strong>Disconnect from Xero</strong>.
+        Timesheets already sent stay in Xero. You can also remove TEAM MATE
+        in Xero under Settings → Connected apps; TEAM MATE then shows "Needs
+        reconnecting". If you close your TEAM MATE account, TEAM MATE
+        disconnects from Xero for you.</p>
+
+        <h3>Can I connect more than one Xero organisation?</h3>
+        <p>One TEAM MATE business connects to one Xero organisation.</p>
+
+        <h3>Still stuck?</h3>
+        <p>Email <a href="mailto:support@teammateapp.au">support@teammateapp.au</a>
+        and tell us what you were doing and what the screen said.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <img src="assets/tm-wordmark-reversed.svg" alt="TEAM MATE" width="151" height="15">
+      <span class="tagline">Your work crew, <span class="blue">sorted.</span></span>
+    </div>
+    <div class="foot-links">
+      <nav aria-label="Footer">
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://app.teammateapp.au/login">Sign in</a>
+        <a href="https://app.teammateapp.au/privacy">Privacy</a>
+        <a href="https://app.teammateapp.au/terms">Terms</a>
+        <a href="mailto:support@teammateapp.au">support@teammateapp.au</a>
+      </nav>
+      <span>Made in Melbourne, hosted in Australia. © 2026 TEAM MATE</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

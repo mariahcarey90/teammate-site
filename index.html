@@ -3,18 +3,151 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TEAM MATE — Your work crew, sorted.</title>
-<meta name="description" content="Roster, clock-in and pay in one app. Built for Australian crews — free for teams of 10 or fewer.">
+<!-- gen:head (scripts/marketing-pages.mjs — edit there, not here) -->
+<title>Free Rostering App for Australian Teams | TEAM MATE</title>
+<meta name="description" content="Rosters, clock-in, timesheets and leave for Australian hospitality, retail, cleaning, security, healthcare and building crews. Free for teams of 10 or fewer.">
 <link rel="canonical" href="https://teammateapp.au/">
+<meta property="og:site_name" content="TEAM MATE">
+<meta property="og:locale" content="en_AU">
+<meta property="og:type" content="website">
 <meta property="og:title" content="TEAM MATE — Your work crew, sorted.">
 <meta property="og:description" content="Roster, clock-in and pay in one app. Free for teams of 10 or fewer.">
-<meta property="og:image" content="https://teammateapp.au/assets/tm-og-1200x630.png">
 <meta property="og:url" content="https://teammateapp.au/">
-<meta property="og:type" content="website">
+<meta property="og:image" content="https://teammateapp.au/assets/tm-og-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TEAM MATE">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="assets/tm-dot.svg" type="image/svg+xml">
+<link rel="icon" href="assets/tm-favicon-48.png" type="image/png" sizes="48x48">
 <link rel="apple-touch-icon" href="assets/tm-touch-180.png">
 <link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://teammateapp.au/#org",
+   "name": "TEAM MATE",
+   "url": "https://teammateapp.au/",
+   "logo": "https://teammateapp.au/assets/tm-touch-180.png",
+   "email": "support@teammateapp.au",
+   "areaServed": {
+    "@type": "Country",
+    "name": "Australia"
+   },
+   "foundingLocation": {
+    "@type": "Place",
+    "name": "Melbourne, Victoria, Australia"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://teammateapp.au/#site",
+   "name": "TEAM MATE",
+   "url": "https://teammateapp.au/",
+   "inLanguage": "en-AU",
+   "publisher": {
+    "@id": "https://teammateapp.au/#org"
+   }
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://teammateapp.au/#app",
+   "name": "TEAM MATE",
+   "url": "https://teammateapp.au/",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Staff rostering, time clock and timesheets",
+   "operatingSystem": "Web browser",
+   "description": "Rosters, clock-in, timesheets and leave in one app for Australian shift teams.",
+   "publisher": {
+    "@id": "https://teammateapp.au/#org"
+   },
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "Free",
+     "price": "0",
+     "priceCurrency": "AUD",
+     "description": "The whole app for teams of 10 or fewer. No card, no time limit."
+    },
+    {
+     "@type": "Offer",
+     "name": "Paid",
+     "price": "60",
+     "priceCurrency": "AUD",
+     "description": "Per month, covers up to 30 staff; $3 a month for each person after that."
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is TEAM MATE really free?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, for teams of 10 or fewer, with the whole app: rosters, time clock, timesheets, leave and messaging. It's not a trial, so there's no card and no time limit. Past 10 staff it's $60 a month for up to 30 staff, then $3 a month for each person after that."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who is TEAM MATE for?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Australian businesses that roster shift workers. There's a ready-made setup for cafés, restaurants and bars, shops, cleaning businesses, security teams, clinics and building crews: pick yours in the welcome wizard and it adds the jobs, a typical week and suggested rules to start from."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I pay for managers?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. A seat is a person on the roster, not a login, so owners and managers who don't work shifts cost nothing."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I run more than one location?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Each venue, store or site is its own location, and you can share staff between them when one is short."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I set my own weekend and public-holiday rates?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Set your weekend, evening and public-holiday rates once and pay adds them up on every shift. You choose the rates."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it work with my payroll software?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "TEAM MATE exports approved timesheets as files your payroll software can read, including Xero-ready files."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where is my data kept?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In Australia. TEAM MATE is made in Melbourne and hosted in Australia."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<!-- /gen:head -->
 <!-- Mobile-only entrance motion (owner request 2026-09-11, Handover+
      homage — their Squarespace fade/ease reveal). This gate must run
      before first paint: it flags <html> as tm-anim ONLY on small
@@ -41,15 +174,55 @@
       <img src="assets/tm-wordmark-light.svg" alt="TEAM MATE" width="181" height="18">
     </a>
     <nav class="nav-links" aria-label="Main">
-      <a href="#product" class="hide-sm">Product</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="#managers" class="hide-sm">For managers</a>
-      <a href="contact.html">Contact</a>
+      <!-- Plain <details> menus: they open without JS; site.js only adds
+           close-on-outside-click and Escape. -->
+      <details class="nav-drop hide-sm">
+        <summary>Industries</summary>
+        <div class="drop-panel">
+          <ul class="drop-grid">
+            <li><a class="ind-link" href="hospitality.html"><img src="assets/industry-hospitality-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Hospitality</strong><span>Cafés, restaurants, pubs and bars</span></span></a></li>
+            <li><a class="ind-link" href="retail.html"><img src="assets/industry-retail-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Retail</strong><span>Shops and stores</span></span></a></li>
+            <li><a class="ind-link" href="cleaning.html"><img src="assets/industry-cleaning-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Cleaning</strong><span>Crews across client sites</span></span></a></li>
+            <li><a class="ind-link" href="security.html"><img src="assets/industry-security-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Security</strong><span>Guards, crowd control and patrols</span></span></a></li>
+            <li><a class="ind-link" href="clinics.html"><img src="assets/industry-clinics-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Healthcare</strong><span>Clinics, practices and allied health</span></span></a></li>
+            <li><a class="ind-link" href="construction.html"><img src="assets/industry-construction-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Building sites</strong><span>Builders, trades and site crews</span></span></a></li>
+          </ul>
+        </div>
+      </details>
+      <a href="/#product" class="hide-sm">Product</a>
+      <a href="pricing.html" class="hide-sm">Pricing</a>
+      <a href="contact.html" class="hide-sm">Contact</a>
       <!-- One Dot Blue moment per viewport (BRAND.md / change request
            2026-09-20 item 5): above the fold the hero "Start free" wins,
            so this pill starts hairline-secondary; the script at the foot
            of <body> promotes it to primary once the hero scrolls out. -->
       <a id="nav-cta" class="btn btn-secondary" href="#get-the-app">Get the app</a>
+      <details class="nav-menu">
+        <summary aria-label="Menu">
+          <svg class="i-open" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5.5h14M2 12.5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="i-close" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="menu-panel">
+          <span class="label">Industries</span>
+          <ul class="menu-ind">
+            <li><a class="ind-link" href="hospitality.html"><img src="assets/industry-hospitality-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Hospitality</strong><span>Cafés, restaurants, pubs and bars</span></span></a></li>
+            <li><a class="ind-link" href="retail.html"><img src="assets/industry-retail-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Retail</strong><span>Shops and stores</span></span></a></li>
+            <li><a class="ind-link" href="cleaning.html"><img src="assets/industry-cleaning-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Cleaning</strong><span>Crews across client sites</span></span></a></li>
+            <li><a class="ind-link" href="security.html"><img src="assets/industry-security-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Security</strong><span>Guards, crowd control and patrols</span></span></a></li>
+            <li><a class="ind-link" href="clinics.html"><img src="assets/industry-clinics-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Healthcare</strong><span>Clinics, practices and allied health</span></span></a></li>
+            <li><a class="ind-link" href="construction.html"><img src="assets/industry-construction-thumb.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Building sites</strong><span>Builders, trades and site crews</span></span></a></li>
+          </ul>
+          <ul class="menu-links">
+            <li><a href="/#product">Product</a></li>
+            <li><a href="/#managers">For managers</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="/#faq">Questions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://app.teammateapp.au/login">Sign in</a></li>
+          </ul>
+          <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+        </div>
+      </details>
     </nav>
   </div>
 </header>
@@ -68,7 +241,21 @@
           <p data-reveal>Roster, clock-in and pay in one app. Built for crews, loved by managers.</p>
           <div class="hero-cta" data-reveal>
             <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
-            <a class="btn btn-secondary" href="#product">See how it works</a>
+            <a class="btn btn-secondary" href="#how-it-works">See how it works</a>
+          </div>
+          <!-- Industry photo tiles (owner 2026-10-06: make the non-hospo
+               industries easy to see; owner picked "A · photo tiles" over
+               circles and mini cards). Never blue: the hero's "Start free"
+               is this viewport's one blue moment. Tiles come from
+               scripts/prep-industry-photos.mjs (industry-<key>-tile.jpg). -->
+          <div class="hero-for" data-reveal>
+            <span class="label">Built for</span>
+            <a class="for-tile" href="hospitality.html"><img src="assets/industry-hospitality-tile.jpg" alt="" width="360" height="360">Hospitality</a>
+            <a class="for-tile" href="retail.html"><img src="assets/industry-retail-tile.jpg" alt="" width="360" height="360">Retail</a>
+            <a class="for-tile" href="cleaning.html"><img src="assets/industry-cleaning-tile.jpg" alt="" width="360" height="360">Cleaning</a>
+            <a class="for-tile" href="security.html"><img src="assets/industry-security-tile.jpg" alt="" width="360" height="360">Security</a>
+            <a class="for-tile" href="clinics.html"><img src="assets/industry-clinics-tile.jpg" alt="" width="360" height="360">Healthcare</a>
+            <a class="for-tile" href="construction.html"><img src="assets/industry-construction-tile.jpg" alt="" width="360" height="360">Building sites</a>
           </div>
         </div>
         <div class="hero-photo" data-reveal>
@@ -128,20 +315,128 @@
        marketing README (composite-flatlay-day.mjs signin). The splash
        asset (photo-flatlay-brand.jpg) and the night shot + its script
        remain for a swap back. -->
-  <section class="scene-band mist" aria-label="TEAM MATE in the wild">
+  <!-- Who it's for (owner 2026-10-06): one photo tile per industry page,
+       generated from the INDUSTRIES list in scripts/marketing-pages.mjs.
+       Photos: owner-supplied, scripts/prep-industry-photos.mjs. -->
+  <section class="scene-band mist" id="industries" aria-labelledby="industries-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <span class="label">In good company</span>
-        <h2>At home on any shift.</h2>
+        <span class="label">Who it's for</span>
+        <h2 id="industries-h">At home on any shift.</h2>
         <p>Born in hospo, from the café counter to closing time, and just
-        as at home on the shop floor, the building site, the after-hours
-        clean, the clinic or the night patrol. See TEAM MATE for
-        <a href="hospitality.html">cafés, restaurants and bars</a>,
-        <a href="retail.html">shops and retail</a>,
-        <a href="construction.html">building sites and trades</a>,
-        <a href="cleaning.html">cleaning businesses</a>,
-        <a href="clinics.html">clinics and practices</a> or
-        <a href="security.html">security teams</a>.</p>
+        as at home on the shop floor, the after-hours clean, the night
+        patrol, the clinic and the building site. Pick your industry and
+        TEAM MATE sets itself up for the way you work.</p>
+      </div>
+      <div data-reveal>
+<!-- gen:industries -->
+<div class="showcase" data-showcase>
+  <div class="sc-tabs" role="tablist" aria-label="Industries" hidden>
+    <button type="button" class="sc-tab" role="tab" id="sc-tab-hospitality" aria-controls="sc-hospitality" aria-selected="true"><img src="assets/industry-hospitality-thumb.jpg" alt="" width="52" height="52">Hospitality</button>
+    <button type="button" class="sc-tab" role="tab" id="sc-tab-retail" aria-controls="sc-retail" aria-selected="false" tabindex="-1"><img src="assets/industry-retail-thumb.jpg" alt="" width="52" height="52">Retail</button>
+    <button type="button" class="sc-tab" role="tab" id="sc-tab-cleaning" aria-controls="sc-cleaning" aria-selected="false" tabindex="-1"><img src="assets/industry-cleaning-thumb.jpg" alt="" width="52" height="52">Cleaning</button>
+    <button type="button" class="sc-tab" role="tab" id="sc-tab-security" aria-controls="sc-security" aria-selected="false" tabindex="-1"><img src="assets/industry-security-thumb.jpg" alt="" width="52" height="52">Security</button>
+    <button type="button" class="sc-tab" role="tab" id="sc-tab-clinics" aria-controls="sc-clinics" aria-selected="false" tabindex="-1"><img src="assets/industry-clinics-thumb.jpg" alt="" width="52" height="52">Healthcare</button>
+    <button type="button" class="sc-tab" role="tab" id="sc-tab-construction" aria-controls="sc-construction" aria-selected="false" tabindex="-1"><img src="assets/industry-construction-thumb.jpg" alt="" width="52" height="52">Building sites</button>
+  </div>
+  <div class="sc-panel" id="sc-hospitality" role="tabpanel" aria-labelledby="sc-tab-hospitality">
+    <div class="sc-media">
+      <img class="sc-photo" src="assets/industry-hospitality-800.jpg" srcset="assets/industry-hospitality-800.jpg 800w, assets/industry-hospitality.jpg 1600w" sizes="(max-width: 720px) 100vw, 620px" alt="" width="800" height="533">
+      <img class="sc-phone" src="assets/app-hospitality-home.png" alt="TEAM MATE Home screen for a barista on the clock" width="1080" height="2341" loading="lazy">
+    </div>
+    <div class="sc-copy">
+      <span class="label">Cafés, restaurants, pubs and bars</span>
+      <h3 class="sc-title">From the first coffee to last drinks.</h3>
+      <ul class="sc-points">
+        <li><strong>Roster the rush</strong> See your busy days coming and staff the rush, not the lull.</li>
+        <li><strong>Cover the gap</strong> Someone calls in sick? Offer the shift, approve a swap, or borrow a hand from your other venue.</li>
+        <li><strong>Weekend rates, done</strong> Set your Saturday, Sunday, evening and public-holiday rates once. Pay adds them up.</li>
+      </ul>
+      <a class="btn btn-secondary sc-more" href="hospitality.html">See TEAM MATE for hospo</a>
+    </div>
+  </div>
+  <div class="sc-panel" id="sc-retail" role="tabpanel" aria-labelledby="sc-tab-retail">
+    <div class="sc-media">
+      <img class="sc-photo" src="assets/industry-retail-800.jpg" srcset="assets/industry-retail-800.jpg 800w, assets/industry-retail.jpg 1600w" sizes="(max-width: 720px) 100vw, 620px" alt="" width="800" height="533" loading="lazy">
+      <img class="sc-phone" src="assets/app-retail-home.png" alt="TEAM MATE Home screen for a sales assistant on the clock" width="1080" height="2341" loading="lazy">
+    </div>
+    <div class="sc-copy">
+      <span class="label">Shops and stores</span>
+      <h3 class="sc-title">Every trading hour, covered.</h3>
+      <ul class="sc-points">
+        <li><strong>Staff to your sales</strong> Upload daily sales and get a suggested headcount for mornings, peak and evenings.</li>
+        <li><strong>Casuals, sorted</strong> Staff set their availability; extra shifts go out as open shifts they claim in a tap.</li>
+        <li><strong>Weekend rates, done</strong> Set your Saturday, Sunday, evening and public-holiday rates once. Pay adds them up.</li>
+      </ul>
+      <a class="btn btn-secondary sc-more" href="retail.html">See TEAM MATE for retail</a>
+    </div>
+  </div>
+  <div class="sc-panel" id="sc-cleaning" role="tabpanel" aria-labelledby="sc-tab-cleaning">
+    <div class="sc-media">
+      <img class="sc-photo" src="assets/industry-cleaning-800.jpg" srcset="assets/industry-cleaning-800.jpg 800w, assets/industry-cleaning.jpg 1600w" sizes="(max-width: 720px) 100vw, 620px" alt="" width="800" height="533" loading="lazy">
+      <img class="sc-phone" src="assets/app-cleaning-home.png" alt="TEAM MATE Home screen for a cleaner on the clock" width="1080" height="2341" loading="lazy">
+    </div>
+    <div class="sc-copy">
+      <span class="label">Crews across client sites</span>
+      <h3 class="sc-title">Every site covered, every night.</h3>
+      <ul class="sc-points">
+        <li><strong>Every client site</strong> Each client site is its own location, so your crew knows exactly where tonight's job is.</li>
+        <li><strong>Police Checks on file</strong> See who holds what and when it runs out, with a warning before you roster someone without it.</li>
+        <li><strong>Evening rates, done</strong> Set your evening, weekend and public-holiday rates once. Pay adds them up.</li>
+      </ul>
+      <a class="btn btn-secondary sc-more" href="cleaning.html">See TEAM MATE for cleaning</a>
+    </div>
+  </div>
+  <div class="sc-panel" id="sc-security" role="tabpanel" aria-labelledby="sc-tab-security">
+    <div class="sc-media">
+      <img class="sc-photo" src="assets/industry-security-800.jpg" srcset="assets/industry-security-800.jpg 800w, assets/industry-security.jpg 1600w" sizes="(max-width: 720px) 100vw, 620px" alt="" width="800" height="533" loading="lazy">
+      <img class="sc-phone" src="assets/app-security-home.png" alt="TEAM MATE Home screen for a security officer on the clock" width="1080" height="2341" loading="lazy">
+    </div>
+    <div class="sc-copy">
+      <span class="label">Guards, crowd control and patrols</span>
+      <h3 class="sc-title">Every post covered, round the clock.</h3>
+      <ul class="sc-points">
+        <li><strong>Every post covered</strong> Each site is its own location, so officers know exactly where tonight's shift is.</li>
+        <li><strong>Licences on file</strong> See who holds what and when it runs out, with a warning before you roster someone without it.</li>
+        <li><strong>Night rates, done</strong> Set your evening, weekend and public-holiday rates once. Pay adds them up.</li>
+      </ul>
+      <a class="btn btn-secondary sc-more" href="security.html">See TEAM MATE for security</a>
+    </div>
+  </div>
+  <div class="sc-panel" id="sc-clinics" role="tabpanel" aria-labelledby="sc-tab-clinics">
+    <div class="sc-media">
+      <img class="sc-photo" src="assets/industry-clinics-800.jpg" srcset="assets/industry-clinics-800.jpg 800w, assets/industry-clinics.jpg 1600w" sizes="(max-width: 720px) 100vw, 620px" alt="" width="800" height="533" loading="lazy">
+      <img class="sc-phone" src="assets/app-clinics-home.png" alt="TEAM MATE Home screen for a nurse on the clock" width="1080" height="2341" loading="lazy">
+    </div>
+    <div class="sc-copy">
+      <span class="label">Clinics, practices and allied health</span>
+      <h3 class="sc-title">Front desk to treatment room.</h3>
+      <ul class="sc-points">
+        <li><strong>Reception and clinic</strong> Front desk and clinical staff rostered side by side, so you see the whole day at once.</li>
+        <li><strong>Registrations on file</strong> Track AHPRA registrations and CPR, and see when each one is due to run out.</li>
+        <li><strong>Leave, sorted</strong> Staff ask from their phone, you approve, and the roster knows they're away.</li>
+      </ul>
+      <a class="btn btn-secondary sc-more" href="clinics.html">See TEAM MATE for healthcare</a>
+    </div>
+  </div>
+  <div class="sc-panel" id="sc-construction" role="tabpanel" aria-labelledby="sc-tab-construction">
+    <div class="sc-media">
+      <img class="sc-photo" src="assets/industry-construction-800.jpg" srcset="assets/industry-construction-800.jpg 800w, assets/industry-construction.jpg 1600w" sizes="(max-width: 720px) 100vw, 620px" alt="" width="800" height="533" loading="lazy">
+      <img class="sc-phone" src="assets/app-construction-home.png" alt="TEAM MATE Home screen for a carpenter on the clock" width="1080" height="2341" loading="lazy">
+    </div>
+    <div class="sc-copy">
+      <span class="label">Builders, trades and site crews</span>
+      <h3 class="sc-title">From first pour to knock-off.</h3>
+      <ul class="sc-points">
+        <li><strong>Right crew, right site</strong> Each site is its own location, so everyone knows where to turn up tomorrow.</li>
+        <li><strong>White Cards on file</strong> See who holds what, and get a warning before you roster someone without it.</li>
+        <li><strong>Saturday rates, done</strong> Set your Saturday, Sunday and public-holiday rates once. Pay adds them up.</li>
+      </ul>
+      <a class="btn btn-secondary sc-more" href="construction.html">See TEAM MATE for building sites</a>
+    </div>
+  </div>
+</div>
+<!-- /gen:industries -->
       </div>
     </div>
     <!-- Mobile portrait crop RETIRED for now (owner 2026-09-15: the
@@ -153,6 +448,35 @@
       width="2400" height="1600" loading="lazy">
   </section>
 
+  <section id="how-it-works">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="label">How it works</span>
+        <h2>Up and running before your next shift.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step" data-reveal>
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Pick your industry</h3>
+          <p>The welcome wizard adds your jobs, a typical week and suggested
+          rules for your kind of business. No implementation call, no sales demo.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>Publish your roster</h3>
+          <p>Your crew sees their shifts in the app, and in their phone
+          calendar, the moment you publish.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Clock in, approve, export</h3>
+          <p>Hours and pay add up as they work. Approve timesheets in one
+          queue and export files your payroll software can read.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
   <section class="mist" id="product">
     <div class="wrap">
       <div class="section-head" data-reveal>
@@ -162,35 +486,37 @@
         your phone calendar. No printouts, no group-chat chaos.</p>
       </div>
 
+<!-- gen:phones -->
       <div class="phones">
         <div class="phone" data-reveal>
           <figure>
-            <img src="assets/app-01-schedule.png" alt="TEAM MATE schedule screen showing a week of shifts" loading="lazy">
+            <img src="assets/app-hospitality-home.png" alt="TEAM MATE Home screen: a barista on the clock at a café, with today's shift, jobs and who's working" width="1080" height="2341" loading="lazy">
+            <figcaption>Clock in from Home</figcaption>
+          </figure>
+        </div>
+        <div class="phone" data-reveal>
+          <figure>
+            <img src="assets/app-hospitality-schedule.png" alt="TEAM MATE Schedule screen: a barista's week, with confirmed shifts" width="1080" height="2341" loading="lazy">
             <figcaption>Know your week at a glance</figcaption>
           </figure>
         </div>
         <div class="phone" data-reveal>
           <figure>
-            <img src="assets/app-03-clock.png" alt="TEAM MATE clock screen with a shift timer running" loading="lazy">
-            <figcaption>Clock in from your pocket</figcaption>
-          </figure>
-        </div>
-        <div class="phone" data-reveal>
-          <figure>
-            <img src="assets/app-04-leave.png" alt="TEAM MATE leave screen with balances and requests" loading="lazy">
-            <figcaption>Leave, without the paperwork</figcaption>
+            <img src="assets/app-hospitality-timesheets.png" alt="TEAM MATE Timesheets screen: a barista's paid hours, approved by the manager" width="1080" height="2341" loading="lazy">
+            <figcaption>Hours, checked and approved</figcaption>
           </figure>
         </div>
       </div>
+<!-- /gen:phones -->
 
-      <ul class="features" data-reveal>
-        <li><strong>Open shifts</strong> — see extra shifts you're eligible for and claim them in a tap.</li>
-        <li><strong>Swaps</strong> — offer a shift to a teammate; managers approve in the app.</li>
-        <li><strong>Shift reminders</strong> — a nudge before each shift starts, and a "still clocked in?" one if you forget to clock off.</li>
-        <li><strong>Leave</strong> — check balances, request time off, track approvals.</li>
-        <li><strong>Announcements and tasks</strong> — read updates, confirm the important ones, tick off today's list.</li>
-        <li><strong>Handover notes</strong> — what the last shift wants the next one to know.</li>
-      </ul>
+      <ul class="features feature-cards cols-3" data-reveal>
+        <li><strong>Open shifts</strong> See extra shifts you're eligible for and claim them in a tap.</li>
+        <li><strong>Swaps</strong> Offer a shift to a teammate; managers approve in the app.</li>
+        <li><strong>Shift reminders</strong> A nudge before each shift starts, and a "still clocked in?" one if you forget to clock off.</li>
+        <li><strong>Leave</strong> Check balances, request time off, track approvals.</li>
+        <li><strong>Announcements and tasks</strong> Read updates, confirm the important ones, tick off today's list.</li>
+        <li><strong>Handover notes</strong> What the last shift wants the next one to know.</li>
+      
     </div>
   </section>
 
@@ -203,15 +529,15 @@
         no sales demo.</p>
       </div>
 
-      <ul class="features" data-reveal>
-        <li><strong>Build and publish rosters</strong> — your crew sees changes instantly.</li>
-        <li><strong>Approve timesheets and leave</strong> — from one queue, in seconds.</li>
-        <li><strong>Weekend, evening and public-holiday rates</strong> — set your rates once and pay adds them up for you.</li>
-        <li><strong>Export payroll files</strong> your payroll software can read — Xero-ready included.</li>
-        <li><strong>Forecast busy days</strong> — staff the rush, not the lull.</li>
-        <li><strong>Your compliance rules in one place</strong> — set them once, see them applied.</li>
-        <li><strong>You don't pay for managers</strong> — a seat is a person on the roster, not a login.</li>
-      </ul>
+      <ul class="features feature-cards" data-reveal>
+        <li><strong>Build and publish rosters</strong> Your crew sees changes instantly.</li>
+        <li><strong>Approve timesheets and leave</strong> From one queue, in seconds.</li>
+        <li><strong>Weekend, evening and public-holiday rates</strong> Set your rates once and pay adds them up for you.</li>
+        <li><strong>Export payroll files</strong> Files your payroll software can read, Xero-ready included.</li>
+        <li><strong>Forecast busy days</strong> Staff the rush, not the lull.</li>
+        <li><strong>Your compliance rules in one place</strong> Set them once, see them applied.</li>
+        <li><strong>You don't pay for managers</strong> A seat is a person on the roster, not a login.</li>
+      
     </div>
   </section>
 
@@ -221,6 +547,51 @@
       <p data-reveal>Not a trial. No card details, no locked features. One honest price
       when you grow past 10.</p>
       <a class="btn btn-primary" data-reveal href="pricing.html">See pricing</a>
+    </div>
+  </section>
+
+  <!-- FAQ text lives in scripts/marketing-pages.mjs (it also feeds the
+       page's FAQPage search data, so the two can't drift). -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="label">Questions</span>
+        <h2>Good questions, straight answers.</h2>
+      </div>
+      <div data-reveal>
+<!-- gen:faq -->
+<div class="faq-list">
+  <details>
+    <summary>Is TEAM MATE really free?</summary>
+    <p>Yes, for teams of 10 or fewer, with the whole app: rosters, time clock, timesheets, leave and messaging. It's not a trial, so there's no card and no time limit. Past 10 staff it's $60 a month for up to 30 staff, then $3 a month for each person after that.</p>
+  </details>
+  <details>
+    <summary>Who is TEAM MATE for?</summary>
+    <p>Australian businesses that roster shift workers. There's a ready-made setup for cafés, restaurants and bars, shops, cleaning businesses, security teams, clinics and building crews: pick yours in the welcome wizard and it adds the jobs, a typical week and suggested rules to start from.</p>
+  </details>
+  <details>
+    <summary>Do I pay for managers?</summary>
+    <p>No. A seat is a person on the roster, not a login, so owners and managers who don't work shifts cost nothing.</p>
+  </details>
+  <details>
+    <summary>Can I run more than one location?</summary>
+    <p>Yes. Each venue, store or site is its own location, and you can share staff between them when one is short.</p>
+  </details>
+  <details>
+    <summary>Can I set my own weekend and public-holiday rates?</summary>
+    <p>Yes. Set your weekend, evening and public-holiday rates once and pay adds them up on every shift. You choose the rates.</p>
+  </details>
+  <details>
+    <summary>Does it work with my payroll software?</summary>
+    <p>TEAM MATE exports approved timesheets as files your payroll software can read, including Xero-ready files.</p>
+  </details>
+  <details>
+    <summary>Where is my data kept?</summary>
+    <p>In Australia. TEAM MATE is made in Melbourne and hosted in Australia.</p>
+  </details>
+</div>
+<!-- /gen:faq -->
+      </div>
     </div>
   </section>
 
@@ -249,23 +620,34 @@
       <img src="assets/tm-wordmark-reversed.svg" alt="TEAM MATE" width="151" height="15">
       <span class="tagline">Your work crew, <span class="blue">sorted.</span></span>
     </div>
-    <div class="foot-links">
-      <nav aria-label="Footer">
+    <div class="foot-cols">
+      <nav aria-label="Industries">
+        <p class="foot-h">Industries</p>
         <a href="hospitality.html">Hospitality</a>
         <a href="retail.html">Retail</a>
-        <a href="construction.html">Building sites</a>
         <a href="cleaning.html">Cleaning</a>
-        <a href="clinics.html">Clinics</a>
         <a href="security.html">Security</a>
+        <a href="clinics.html">Healthcare</a>
+        <a href="construction.html">Building sites</a>
+      </nav>
+      <nav aria-label="Product">
+        <p class="foot-h">Product</p>
+        <a href="/#product">Staff app</a>
+        <a href="/#managers">For managers</a>
+        <a href="/#how-it-works">How it works</a>
         <a href="pricing.html">Pricing</a>
+        <a href="/#faq">Questions</a>
+      </nav>
+      <nav aria-label="Company">
+        <p class="foot-h">Company</p>
         <a href="contact.html">Contact</a>
         <a href="https://app.teammateapp.au/login">Sign in</a>
         <a href="https://app.teammateapp.au/privacy">Privacy</a>
         <a href="https://app.teammateapp.au/terms">Terms</a>
         <a href="mailto:support@teammateapp.au">support@teammateapp.au</a>
       </nav>
-      <span>Made in Melbourne, hosted in Australia. © 2026 TEAM MATE</span>
     </div>
+    <div class="foot-base">Made in Melbourne, hosted in Australia. © 2026 TEAM MATE</div>
   </div>
 </footer>
 
