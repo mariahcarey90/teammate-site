@@ -45,7 +45,9 @@
 // Without this script every panel shows stacked and the tab row stays
 // hidden; with it, one industry at a time. Arrow keys, Home and End move
 // between tabs (WAI-ARIA tabs pattern). No auto-rotate: the desktop page
-// stays still unless the visitor acts (owner direction 2026-09-11).
+// stays still unless the visitor acts (owner direction 2026-09-11). All
+// six tabs are always in view (two rows on phones), so the row never
+// scrolls sideways (owner 2026-10-06).
 (function () {
   var root = document.querySelector("[data-showcase]");
   if (!root) return;
@@ -61,11 +63,6 @@
       document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
     });
     if (focus) tab.focus();
-    // keep the chosen tab in view when the row scrolls sideways (phones)
-    var l = tab.offsetLeft, r = l + tab.offsetWidth;
-    if (l < list.scrollLeft || r > list.scrollLeft + list.clientWidth) {
-      list.scrollTo({ left: l - 20, behavior: "smooth" });
-    }
   }
 
   tabs.forEach(function (t, i) {

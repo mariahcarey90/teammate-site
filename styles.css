@@ -694,50 +694,46 @@ footer {
 .ind-card:hover .ind-name { color: var(--dot-blue-deep); }
 
 /* ---- homepage industry switcher (owner 2026-10-06: show off the
-        options). Tabs = photo pills; the open one is an Ink pill (blue
-        stays with the one CTA per viewport). Panel = white card: big
-        photo with that industry's own app screen in an Ink phone frame,
-        then the three headline points. ---- */
+        options). Tabs = one white segmented track as wide as the panel,
+        six equal text segments (owner 2026-10-06: no photo thumbnails
+        in the tabs); the open one is an Ink pill (blue stays with the
+        one CTA per viewport). Phones: two rows of three, no sideways
+        scroll. Panel = white card: big photo with that industry's own
+        app screen in an Ink phone frame, then the three headline
+        points. ---- */
 
 .showcase { margin-top: 44px; }
 
 .sc-tabs {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 4px;
   margin-bottom: 20px;
-}
-
-.sc-tab {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 5px 18px 5px 5px;
-  border: 1.5px solid var(--hairline);
+  padding: 6px;
   border-radius: var(--radius-pill);
   background: var(--white);
+}
+.sc-tabs[hidden] { display: none; } /* no-JS: row stays hidden */
+
+.sc-tab {
+  padding: 12px 10px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
   color: var(--ink);
   font: inherit;
   font-size: 15px;
   font-weight: 600;
-  line-height: 1.2;
-  white-space: nowrap;
+  line-height: 1.25;
+  text-align: center;
   cursor: pointer;
-  transition: border-color 200ms ease-out, color 200ms ease-out,
-    background-color 200ms ease-out, transform 120ms ease-out;
+  transition: color 200ms ease-out, background-color 200ms ease-out,
+    transform 120ms ease-out;
 }
-.sc-tab img {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.sc-tab:hover { border-color: var(--dot-blue-deep); color: var(--dot-blue-deep); }
+.sc-tab:hover { color: var(--dot-blue-deep); }
 .sc-tab:active { transform: scale(0.97); }
 .sc-tab[aria-selected="true"] {
   background: var(--ink);
-  border-color: var(--ink);
   color: var(--white);
 }
 
@@ -920,7 +916,8 @@ section:not(.mist) .feature-cards li { background: var(--mist); }
 @media (max-width: 960px) {
   .ind-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .hero-split .hero-grid { gap: 40px; }
-  .sc-panel { grid-template-columns: 1fr; gap: 28px; }
+  .sc-panel { grid-template-columns: minmax(0, 1fr); gap: 28px; } /* minmax: a plain 1fr kept its content's width and pushed phones sideways */
+  .sc-tab { padding: 12px 4px; font-size: 14px; } /* "Building sites" stays on one line */
   .feature-cards,
   .feature-cards.cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -1038,7 +1035,7 @@ body.contact main { flex: 1 0 auto; }
   .btn, .nav-links a { transition: none; }
   .for-tile img, .ind-card img { transition: none; transform: none !important; }
   .is-tabs .sc-panel { animation: none; }
-  .btn:active { transform: none; }
+  .btn:active, .sc-tab:active { transform: none; }
   /* belt-and-braces: the head script already skips reduced-motion */
   html.tm-anim [data-reveal] { opacity: 1; transform: none; transition: none; }
 }
@@ -1117,23 +1114,24 @@ body.contact main { flex: 1 0 auto; }
   .ind-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 32px; }
   .ind-name { left: 8px; bottom: 8px; padding: 4px 11px; font-size: 14px; }
 
-  /* switcher: tabs scroll sideways in one row; panel goes edge to edge */
+  /* switcher: the track goes two rows of three (all six in view, no
+     sideways scroll); the panel's inner padding shrinks */
   .showcase { margin-top: 28px; }
   .sc-tabs {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    margin: 0 -20px 14px;
-    padding: 0 20px 4px;
-    scrollbar-width: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 14px;
+    padding: 4px;
+    border-radius: 20px;
   }
-  .sc-tabs::-webkit-scrollbar { display: none; }
-  .sc-tab { flex: none; font-size: 14px; padding-right: 14px; }
-  .sc-tab img { width: 28px; height: 28px; }
+  /* one line down to 360px; narrower, a label wraps to two centred lines */
+  .sc-tab { padding: 11px 4px; border-radius: 16px; font-size: 14px; text-wrap: balance; }
   .sc-panel { padding: 14px 14px 22px; gap: 22px; border-radius: 16px; }
   .sc-copy { padding: 0 6px; }
   .sc-media { padding-bottom: 28px; }
   .sc-phone { border-width: 4px; border-radius: 18px; }
-  .sc-more { display: block; text-align: center; }
+  /* full-width button: slimmer side padding keeps "…for building sites"
+     on one line from 390px; narrower, it wraps instead of widening the page */
+  .sc-more { display: block; padding-left: 16px; padding-right: 16px; text-align: center; white-space: normal; text-wrap: balance; }
 
   .feature-cards,
   .feature-cards.cols-3 { grid-template-columns: 1fr; gap: 10px; }
