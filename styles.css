@@ -543,7 +543,6 @@ footer {
 .nav details summary { list-style: none; cursor: pointer; }
 .nav details summary::-webkit-details-marker { display: none; }
 
-.nav-drop { position: relative; }
 .nav-drop summary {
   display: flex;
   align-items: center;
@@ -563,49 +562,123 @@ footer {
 .nav-drop summary:hover,
 .nav-drop.is-current summary { color: var(--dot-blue-deep); }
 
+/* Industries drop-down (owner 2026-10-07: each tile suits its
+   industry): six photo cards, 3 x 2 — the owner's tile portrait, the
+   name and that industry's own line. .nav-drop is not positioned, so
+   the panel anchors to the sticky .nav and lines up with the header's
+   right content edge (the "Get the app" pill): it can't run off-screen
+   at any desktop width.
+   The photos always show the WHOLE square portrait — the coffee, the
+   bread, the spray bottle at the bottom are what tell Hospitality,
+   Retail and Cleaning apart. So on shorter windows (a 1440 x 900
+   laptop's browser is ~790 tall, a 1366 x 768 one ~650) the panel gets
+   narrower instead of cropping: its width follows the window height
+   (150vh - 408px keeps two rows of square cards with two-line captions
+   inside the window, 8px clear at the bottom). Under ~610px tall it
+   stops shrinking at 520px and scrolls inside itself. */
 .drop-panel {
   position: absolute;
-  top: calc(100% + 22px);
-  left: -24px;
-  width: 560px;
+  top: calc(100% + 8px);
+  right: max(32px, calc((100% - 1200px) / 2 + 32px));
+  width: min(760px, calc(100% - 64px));
+  width: min(760px, calc(100% - 64px), max(520px, calc(150vh - 408px)));
+  width: min(760px, calc(100% - 64px), max(520px, calc(150dvh - 408px)));
   padding: 10px;
   background: var(--white);
   border: 1px solid var(--hairline);
-  border-radius: var(--radius-card);
-  box-shadow: 0 18px 48px rgba(10, 15, 26, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 24px 56px -16px rgba(10, 15, 26, 0.2);
+  /* safety net for very short windows: scroll inside, never cut off */
+  max-height: calc(100vh - 92px);
+  max-height: calc(100dvh - 92px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
+.nav-drop[open] .drop-panel { animation: drop-in 200ms ease-out; }
+@keyframes drop-in { from { opacity: 0; transform: translateY(-4px); } }
 
-.drop-grid,
-.menu-ind {
+.drop-cards {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2px;
 }
 
-.nav .ind-link {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 10px;
-  border-radius: 10px;
-  text-decoration: none;
+.nav-links a.drop-card {
+  display: block;
+  height: 100%;
+  padding: 8px 8px 16px;
+  border-radius: var(--radius-card);
   color: var(--ink);
-  line-height: 1.3;
+  transition: background-color 200ms ease-out;
 }
-.nav .ind-link:hover,
-.nav .ind-link[aria-current="page"] { background: var(--mist); }
-.ind-link img {
-  flex: none;
-  width: 52px;
-  height: 52px;
+.drop-photo {
+  position: relative;
+  display: block;
+  overflow: hidden;
   border-radius: 10px;
-  object-fit: cover;
+  background: var(--mist);
 }
-.ind-link strong { display: block; font-size: 15px; font-weight: 600; }
-.ind-link strong + span { display: block; font-size: 13px; color: var(--text-tertiary); margin-top: 2px; }
+/* the whole square portrait at every size (its prop says the industry) */
+.drop-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: transform 400ms ease-out;
+}
+.drop-card strong {
+  display: block;
+  margin: 14px 2px 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  transition: color 200ms ease-out;
+}
+.drop-card .ind-line {
+  display: block;
+  margin: 3px 2px 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--text-secondary);
+  text-wrap: balance;
+}
+.nav-links a.drop-card:hover,
+.nav-links a.drop-card:focus-visible,
+.nav-links a.drop-card[aria-current="page"] { background: var(--mist); }
+.nav-links a.drop-card:hover strong,
+.nav-links a.drop-card:focus-visible strong { color: var(--dot-blue-deep); }
+.drop-card:hover .drop-photo img,
+.drop-card:focus-visible .drop-photo img { transform: scale(1.03); }
+
+/* the page you're on: Mist card + a quiet white pill on its photo
+   (the small dot is a wordmark-adjacent accent, not a blue fill) */
+.ind-here {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.ind-here::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--dot-blue);
+}
+.drop-photo .ind-here {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  padding: 4px 10px 4px 9px;
+  border-radius: var(--radius-pill);
+  background: var(--white);
+}
 
 /* phone menu: hidden on desktop */
 .nav-menu { display: none; }
@@ -1033,7 +1106,8 @@ body.contact main { flex: 1 0 auto; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .btn, .nav-links a { transition: none; }
-  .for-tile img, .ind-card img { transition: none; transform: none !important; }
+  .for-tile img, .ind-card img, .drop-photo img { transition: none; transform: none !important; }
+  .nav-drop[open] .drop-panel { animation: none; }
   .is-tabs .sc-panel { animation: none; }
   .btn:active, .sc-tab:active { transform: none; }
   /* belt-and-braces: the head script already skips reduced-motion */
@@ -1075,7 +1149,52 @@ body.contact main { flex: 1 0 auto; }
     border-top: 1px solid var(--hairline);
   }
   .menu-panel .label { display: block; margin-bottom: 8px; }
-  .menu-ind { margin: 0 -10px 20px; }
+
+  /* industries: rows of the owner's square tile portrait + name + that
+     industry's line; two columns on tablets, one on phones */
+  .menu-rows {
+    list-style: none;
+    margin: 0 -10px 20px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px 12px;
+  }
+  .nav-links a.menu-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 7px 10px;
+    border-radius: var(--radius-card);
+    color: var(--ink);
+    line-height: 1.3;
+    transition: background-color 200ms ease-out;
+  }
+  .menu-row img {
+    flex: none;
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: var(--mist);
+  }
+  .menu-row strong {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .menu-row .ind-line {
+    display: block;
+    margin-top: 3px;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+  .menu-row .ind-here { font-size: 12px; color: var(--text-secondary); }
+  .nav-links a.menu-row:hover,
+  .nav-links a.menu-row[aria-current="page"] { background: var(--mist); }
   .nav-links .menu-links { list-style: none; margin: 0 0 28px; padding: 0; border-top: 1px solid var(--hairline); }
   .nav-links .menu-links a {
     display: block;
@@ -1096,9 +1215,7 @@ body.contact main { flex: 1 0 auto; }
     height: calc(100dvh - 64px);
     padding: 20px 20px 40px;
   }
-  .menu-ind .ind-link { gap: 10px; padding: 8px 10px; }
-  .menu-ind .ind-link img { width: 44px; height: 44px; }
-  .menu-ind .ind-link strong + span { display: none; }
+  .menu-rows { grid-template-columns: minmax(0, 1fr); gap: 2px; }
 
   .hero-for {
     grid-template-columns: repeat(3, minmax(0, 1fr));
