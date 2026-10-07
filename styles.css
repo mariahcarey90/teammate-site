@@ -145,7 +145,10 @@ h3 { font-size: 20px; font-weight: 600; margin: 0; }
   gap: 24px;
 }
 
-.nav-logo img { height: 17px; display: block; }
+/* width follows the SVG's ratio (not the 181px attribute); on a tight
+   phone header the box can shrink a few px, so scale the artwork evenly
+   rather than squash it */
+.nav-logo img { height: 17px; width: auto; display: block; object-fit: contain; object-position: left center; }
 
 .nav-links {
   display: flex;
