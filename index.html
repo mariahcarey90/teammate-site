@@ -228,58 +228,57 @@
 </header>
 
 <main>
-  <!-- Split hero (owner direction 2026-09-15): the hand-held courtyard
-       shot is hero #1, copy beside it. The photo is owner-generated AI
-       imagery; the SHIPPED asset must come from
-       scripts/composite-hero-hand.mjs (real wordmark painted over the
-       AI-drawn screen art) — AI-drawn UI or marks must never ship. -->
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <h1 data-reveal>Your team. Your shifts.<br> <span class="blue">Sorted.</span></h1>
-          <p data-reveal>Roster, clock-in and pay in one app. Built for crews, loved by managers.</p>
-          <div class="hero-cta" data-reveal>
-            <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
-            <a class="btn btn-secondary" href="#how-it-works">See how it works</a>
-          </div>
-          <!-- Industry photo tiles (owner 2026-10-06: make the non-hospo
-               industries easy to see; owner picked "A · photo tiles" over
-               circles and mini cards). Never blue: the hero's "Start free"
-               is this viewport's one blue moment. Tiles come from
-               scripts/prep-industry-photos.mjs (industry-<key>-tile.jpg). -->
-          <div class="hero-for" data-reveal>
-            <span class="label">Built for</span>
-            <a class="for-tile" href="hospitality.html"><img src="assets/industry-hospitality-tile.jpg" alt="" width="360" height="360">Hospitality</a>
-            <a class="for-tile" href="retail.html"><img src="assets/industry-retail-tile.jpg" alt="" width="360" height="360">Retail</a>
-            <a class="for-tile" href="cleaning.html"><img src="assets/industry-cleaning-tile.jpg" alt="" width="360" height="360">Cleaning</a>
-            <a class="for-tile" href="security.html"><img src="assets/industry-security-tile.jpg" alt="" width="360" height="360">Security</a>
-            <a class="for-tile" href="clinics.html"><img src="assets/industry-clinics-tile.jpg" alt="" width="360" height="360">Healthcare</a>
-            <a class="for-tile" href="construction.html"><img src="assets/industry-construction-tile.jpg" alt="" width="360" height="360">Building sites</a>
-          </div>
-        </div>
-        <div class="hero-photo" data-reveal>
-          <img src="assets/photo-hero-hand.jpg"
-            alt="A hand holding up a phone with the TEAM MATE start screen, in a sunny courtyard"
-            width="1284" height="1920" fetchpriority="high">
-        </div>
+  <!-- Hero A2, "The Signature, in hand" (owner pick 2026-10-07): type-led
+       and still on the desktop until the visitor acts. The brand tagline
+       is the statement; the word "work" is a slot that becomes each crew
+       ("hospo", "retail" …) while that industry's card is hovered or
+       focused. Below it, the crew ribbon: six portraits (the owner's
+       square tile portraits, cut 4:5) in a soft arc around the owner's
+       hand-held shot. At rest the hand holds exactly the owner's photo
+       (photo-hero-hand.jpg, a recorded owner call — README "Assets");
+       pointing at a crew lights the phone with that crew's REAL Home
+       screen, warped onto the photographed glass under the fingers
+       (site.js). The card is cut above the screen's own blue buttons.
+       The h1 is plain text: "Your work crew, sorted." site.js fades the
+       real word "work" and lays aria-hidden crew words over it, so
+       assistive tech and crawlers always get the one stable sentence.
+       Without JS: the plain tagline, six links, the owner's photo.
+       Touch screens (phones, tablets, iPad landscape) step through the
+       crews every 2.5s with a Pause button; never under reduced motion.
+       Blue: "Start free" is this viewport's one blue moment; "sorted."
+       and the card dots are the exempt wordmark-adjacent accents. -->
+  <section class="hero sig" aria-labelledby="sig-h">
+    <div class="wrap sig-head">
+      <h1 id="sig-h" class="sig-title" data-reveal><span class="sig-vis"><span class="sig-a">Your <span class="slot" data-slot>work</span></span> <span class="sig-b">crew,</span> <span class="sig-c">sorted.</span></span></h1>
+      <p class="sig-sub" data-reveal><span>Roster. Clock in. Get paid.</span> <span>All in one place.</span></p>
+      <div class="hero-cta sig-cta" data-reveal>
+        <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+        <a class="btn btn-secondary" href="#how-it-works">See how it works</a>
       </div>
+      <p class="sig-note" data-reveal><span>Free for teams of 10 or fewer.</span> <span>No card, no time limit.</span></p>
+    </div>
 
-      <div class="cards">
-        <div class="card" data-reveal>
-          <div class="dot" aria-hidden="true"></div>
-          <h3>Roster</h3>
-          <p>Every shift, one calendar. Swaps in two taps.</p>
-        </div>
-        <div class="card" data-reveal>
-          <div class="dot" aria-hidden="true"></div>
-          <h3>Clock in</h3>
-          <p>Transparent hours, down to the minute.</p>
-        </div>
-        <div class="card" data-reveal>
-          <div class="dot" aria-hidden="true"></div>
-          <h3>Pay</h3>
-          <p>Hours and estimated pay, adding up as you work — no surprises.</p>
+    <div class="ribbon" data-ribbon data-reveal>
+      <!-- gen:hero-crews -->
+      <ul class="crews" aria-label="Industries">
+        <li class="p3 l"><a class="crew" href="hospitality.html" data-key="hospitality" data-word="hospo" data-screen="assets/app-hospitality-home-600.png" data-screen-alt="TEAM MATE Home screen: a barista on the clock at a café, with today's shift, jobs and who's working" data-time="9:41" aria-label="Hospitality: cafés, restaurants, pubs and bars"><img src="assets/industry-hospitality-crew-400.jpg" srcset="assets/industry-hospitality-crew-400.jpg 400w, assets/industry-hospitality-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Hospitality</span></a></li>
+        <li class="p2 l"><a class="crew" href="retail.html" data-key="retail" data-word="retail" data-screen="assets/app-retail-home-600.png" data-screen-alt="TEAM MATE Home screen: a sales assistant on the clock at a deli, with today's shift, jobs and who's working" data-time="11:25" aria-label="Retail: shops and stores"><img src="assets/industry-retail-crew-400.jpg" srcset="assets/industry-retail-crew-400.jpg 400w, assets/industry-retail-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Retail</span></a></li>
+        <li class="p1 l"><a class="crew" href="cleaning.html" data-key="cleaning" data-word="cleaning" data-screen="assets/app-cleaning-home-600.png" data-screen-alt="TEAM MATE Home screen: a cleaner on the clock at an office site, with today's shift, jobs and who's working" data-time="7:26" aria-label="Cleaning: crews across client sites"><img src="assets/industry-cleaning-crew-400.jpg" srcset="assets/industry-cleaning-crew-400.jpg 400w, assets/industry-cleaning-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Cleaning</span></a></li>
+        <li class="p1 r"><a class="crew" href="security.html" data-key="security" data-word="security" data-screen="assets/app-security-home-600.png" data-screen-alt="TEAM MATE Home screen: a security officer on the clock at an arena, with today's shift, jobs and who's working" data-time="11:24" aria-label="Security: guards, crowd control and patrols"><img src="assets/industry-security-crew-400.jpg" srcset="assets/industry-security-crew-400.jpg 400w, assets/industry-security-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Security</span></a></li>
+        <li class="p2 r"><a class="crew" href="clinics.html" data-key="clinics" data-word="clinic" data-screen="assets/app-clinics-home-600.png" data-screen-alt="TEAM MATE Home screen: a nurse on the clock at a physio clinic, with today's shift, jobs and who's working" data-time="9:53" aria-label="Healthcare: clinics, practices and allied health"><img src="assets/industry-clinics-crew-400.jpg" srcset="assets/industry-clinics-crew-400.jpg 400w, assets/industry-clinics-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Healthcare</span></a></li>
+        <li class="p3 r"><a class="crew" href="construction.html" data-key="construction" data-word="site" data-screen="assets/app-construction-home-600.png" data-screen-alt="TEAM MATE Home screen: a carpenter on the clock at a building site, with today's shift, jobs and who's working" data-time="9:21" aria-label="Building sites: builders, trades and site crews"><img src="assets/industry-construction-crew-400.jpg" srcset="assets/industry-construction-crew-400.jpg 400w, assets/industry-construction-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Building sites</span></a></li>
+      </ul>
+      <!-- /gen:hero-crews -->
+      <!-- Touch screens only, shown by site.js while the crews step
+           through on their own: stops and restarts that (WCAG 2.2.2). -->
+      <button class="sig-pause" type="button" data-pause hidden><span class="sig-pause-i" aria-hidden="true"></span><span data-pause-label>Pause</span></button>
+      <div class="sig-hand">
+        <div class="hp" data-hp>
+          <div class="hp-stage">
+            <img class="hp-photo" src="assets/photo-hero-hand-900.jpg" srcset="assets/photo-hero-hand-900.jpg 900w, assets/photo-hero-hand-1400.jpg 1400w" sizes="(max-width: 999px) 80vw, 24vw" alt="A hand holding up a phone with the TEAM MATE start screen, in a sunny courtyard" width="1712" height="2560" fetchpriority="high" decoding="async">
+            <div class="hp-glass"></div>
+            <img class="hp-hand" src="assets/photo-hero-hand-glassless-900.webp" srcset="assets/photo-hero-hand-glassless-900.webp 900w, assets/photo-hero-hand-glassless-1400.webp 1400w" sizes="(max-width: 999px) 80vw, 24vw" alt="" width="1712" height="2560" decoding="async">
+          </div>
         </div>
       </div>
     </div>
@@ -315,18 +314,19 @@
        marketing README (composite-flatlay-day.mjs signin). The splash
        asset (photo-flatlay-brand.jpg) and the night shot + its script
        remain for a swap back. -->
-  <!-- Who it's for (owner 2026-10-06): one photo tile per industry page,
-       generated from the INDUSTRIES list in scripts/marketing-pages.mjs.
-       Photos: owner-supplied, scripts/prep-industry-photos.mjs. -->
+  <!-- Who it's for (owner 2026-10-06): the industry switcher, generated
+       from the INDUSTRIES list in scripts/marketing-pages.mjs. Photos:
+       owner-supplied, scripts/prep-industry-photos.mjs. Slimmed with hero
+       A2 (owner 2026-10-07: don't repeat the hero): its phone shows each
+       industry's Schedule (the hero's phone shows Home), and the intro no
+       longer lists the six crews the hero has just shown. -->
   <section class="scene-band mist" id="industries" aria-labelledby="industries-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
         <span class="label">Who it's for</span>
         <h2 id="industries-h">At home on any shift.</h2>
-        <p>Born in hospo, from the café counter to closing time, and just
-        as at home on the shop floor, the after-hours clean, the night
-        patrol, the clinic and the building site. Pick your industry and
-        TEAM MATE sets itself up for the way you work.</p>
+        <p>Born in hospo. Pick your industry and TEAM MATE sets itself up
+        for the way you work.</p>
       </div>
       <div data-reveal>
 <!-- gen:industries -->
@@ -342,7 +342,7 @@
   <div class="sc-panel" id="sc-hospitality" role="tabpanel" aria-labelledby="sc-tab-hospitality">
     <div class="sc-media">
       <img class="sc-photo" src="assets/industry-hospitality-800.jpg" srcset="assets/industry-hospitality-800.jpg 800w, assets/industry-hospitality.jpg 1600w" sizes="(max-width: 720px) 100vw, 620px" alt="" width="800" height="450">
-      <img class="sc-phone" src="assets/app-hospitality-home.png" alt="TEAM MATE Home screen for a barista on the clock" width="1080" height="2341" loading="lazy">
+      <img class="sc-phone" src="assets/app-hospitality-schedule.png" alt="TEAM MATE Schedule screen: a barista's week, with confirmed shifts" width="1080" height="2341" loading="lazy">
     </div>
     <div class="sc-copy">
       <span class="label">Cafés, restaurants, pubs and bars</span>
@@ -358,7 +358,7 @@
   <div class="sc-panel" id="sc-retail" role="tabpanel" aria-labelledby="sc-tab-retail">
     <div class="sc-media">
       <img class="sc-photo" src="assets/industry-retail-800.jpg" srcset="assets/industry-retail-800.jpg 800w, assets/industry-retail.jpg 1600w" sizes="(max-width: 720px) 100vw, 620px" alt="" width="800" height="450" loading="lazy">
-      <img class="sc-phone" src="assets/app-retail-home.png" alt="TEAM MATE Home screen for a sales assistant on the clock" width="1080" height="2341" loading="lazy">
+      <img class="sc-phone" src="assets/app-retail-schedule.png" alt="TEAM MATE Schedule screen: a sales assistant's week, with confirmed shifts" width="1080" height="2341" loading="lazy">
     </div>
     <div class="sc-copy">
       <span class="label">Shops and stores</span>
@@ -374,7 +374,7 @@
   <div class="sc-panel" id="sc-cleaning" role="tabpanel" aria-labelledby="sc-tab-cleaning">
     <div class="sc-media">
       <img class="sc-photo" src="assets/industry-cleaning-800.jpg" srcset="assets/industry-cleaning-800.jpg 800w, assets/industry-cleaning.jpg 1600w" sizes="(max-width: 720px) 100vw, 620px" alt="" width="800" height="450" loading="lazy">
-      <img class="sc-phone" src="assets/app-cleaning-home.png" alt="TEAM MATE Home screen for a cleaner on the clock" width="1080" height="2341" loading="lazy">
+      <img class="sc-phone" src="assets/app-cleaning-schedule.png" alt="TEAM MATE Schedule screen: a cleaner's week, with confirmed shifts" width="1080" height="2341" loading="lazy">
     </div>
     <div class="sc-copy">
       <span class="label">Crews across client sites</span>
@@ -390,7 +390,7 @@
   <div class="sc-panel" id="sc-security" role="tabpanel" aria-labelledby="sc-tab-security">
     <div class="sc-media">
       <img class="sc-photo" src="assets/industry-security-800.jpg" srcset="assets/industry-security-800.jpg 800w, assets/industry-security.jpg 1600w" sizes="(max-width: 720px) 100vw, 620px" alt="" width="800" height="450" loading="lazy">
-      <img class="sc-phone" src="assets/app-security-home.png" alt="TEAM MATE Home screen for a security officer on the clock" width="1080" height="2341" loading="lazy">
+      <img class="sc-phone" src="assets/app-security-schedule.png" alt="TEAM MATE Schedule screen: a security officer's week, with confirmed shifts" width="1080" height="2341" loading="lazy">
     </div>
     <div class="sc-copy">
       <span class="label">Guards, crowd control and patrols</span>
@@ -406,7 +406,7 @@
   <div class="sc-panel" id="sc-clinics" role="tabpanel" aria-labelledby="sc-tab-clinics">
     <div class="sc-media">
       <img class="sc-photo" src="assets/industry-clinics-800.jpg" srcset="assets/industry-clinics-800.jpg 800w, assets/industry-clinics.jpg 1600w" sizes="(max-width: 720px) 100vw, 620px" alt="" width="800" height="450" loading="lazy">
-      <img class="sc-phone" src="assets/app-clinics-home.png" alt="TEAM MATE Home screen for a nurse on the clock" width="1080" height="2341" loading="lazy">
+      <img class="sc-phone" src="assets/app-clinics-schedule.png" alt="TEAM MATE Schedule screen: a nurse's week, with confirmed shifts" width="1080" height="2341" loading="lazy">
     </div>
     <div class="sc-copy">
       <span class="label">Clinics, practices and allied health</span>
@@ -422,7 +422,7 @@
   <div class="sc-panel" id="sc-construction" role="tabpanel" aria-labelledby="sc-tab-construction">
     <div class="sc-media">
       <img class="sc-photo" src="assets/industry-construction-800.jpg" srcset="assets/industry-construction-800.jpg 800w, assets/industry-construction.jpg 1600w" sizes="(max-width: 720px) 100vw, 620px" alt="" width="800" height="450" loading="lazy">
-      <img class="sc-phone" src="assets/app-construction-home.png" alt="TEAM MATE Home screen for a carpenter on the clock" width="1080" height="2341" loading="lazy">
+      <img class="sc-phone" src="assets/app-construction-schedule.png" alt="TEAM MATE Schedule screen: a carpenter's week, with confirmed shifts" width="1080" height="2341" loading="lazy">
     </div>
     <div class="sc-copy">
       <span class="label">Builders, trades and site crews</span>
