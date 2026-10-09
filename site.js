@@ -62,7 +62,8 @@
 // between tabs (WAI-ARIA tabs pattern). No auto-rotate: the desktop page
 // stays still unless the visitor acts (owner direction 2026-09-11). All
 // six tabs are always in view (two rows on phones), so the row never
-// scrolls sideways (owner 2026-10-06).
+// scrolls sideways (owner 2026-10-06). It opens on the tab the generated
+// HTML marks aria-selected (retail since 2026-10-09).
 (function () {
   var root = document.querySelector("[data-showcase]");
   if (!root) return;
@@ -92,7 +93,7 @@
 
   list.hidden = false;
   root.classList.add("is-tabs");
-  select(tabs[0], false);
+  select(tabs.filter(function (t) { return t.getAttribute("aria-selected") === "true"; })[0] || tabs[0], false);
 })();
 
 // Homepage hero A3, "The Signature, clean phone" (owner pick 2026-10-09).
