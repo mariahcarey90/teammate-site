@@ -228,52 +228,53 @@
 </header>
 
 <main>
-  <!-- Hero B, "Words left, crew photo + phone right" (owner pick
-       2026-10-09; it replaced A2's hand-held phone photo). The brand
-       tagline is the statement; the word "work" is a slot that becomes
-       each crew ("hospo", "retail" …) while that crew's face is hovered
-       or focused, and the photo, the phone's real Home screen and the
-       clock-in moment change to match (site.js). The h1 is plain text:
-       "Your work crew, sorted." site.js fades the real word "work" and
-       lays aria-hidden crew words over it, so assistive tech and crawlers
-       always get the one stable sentence. Without JS: the plain tagline,
-       six links, the café photo and its Home screen. Touch screens step
-       through the crews every 2.5s with a Pause button; never under
-       reduced motion. Blue: "Start free" is this viewport's one blue
-       moment; "sorted." and the selected face's dot are the exempt
-       wordmark-adjacent accents; the clock-in moment covers the phone's
-       own blue "Take a break" button. -->
-  <section class="hero lead" aria-labelledby="lead-h">
-    <div class="wrap">
-      <div class="lead-words">
-        <h1 id="lead-h" class="lead-title" data-reveal><span class="lead-a">Your <span class="slot" data-slot>work</span></span> <span class="lead-b">crew,</span> <span class="lead-c">sorted.</span></h1>
-        <p class="lead-sub" data-reveal><span>Roster. Clock in. Get paid.</span> <span>All in one place.</span></p>
-        <div class="hero-cta lead-cta" data-reveal>
-          <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
-          <a class="btn btn-secondary" href="#how-it-works">See how it works</a>
-        </div>
-        <p class="lead-note" data-reveal><span>Free for teams of 10 or fewer.</span> <span>No card, no time limit.</span></p>
-        <div class="lead-crews" data-reveal>
-        <!-- gen:hero-crews -->
-        <ul class="faces" aria-label="Industries">
-        <li><a class="face" href="hospitality.html" data-key="hospitality" data-word="hospo" data-photo="assets/industry-hospitality-800.jpg 800w, assets/industry-hospitality.jpg 1600w" data-focus="38% 50%" data-screen="assets/app-hospitality-home-600.png" data-screen-alt="TEAM MATE Home screen: a barista on the clock at a café, with today's shift, jobs and who's working" data-time="9:41" data-who="Ava" data-when="6:58 am" data-where="Yarra River Café" aria-label="Hospitality: cafés, restaurants, pubs and bars"><img src="assets/industry-hospitality-thumb.jpg" alt="" width="192" height="192" decoding="async"></a></li>
-        <li><a class="face" href="retail.html" data-key="retail" data-word="retail" data-photo="assets/industry-retail-800.jpg 800w, assets/industry-retail.jpg 1600w" data-focus="50% 50%" data-screen="assets/app-retail-home-600.png" data-screen-alt="TEAM MATE Home screen: a sales assistant on the clock at a deli, with today's shift, jobs and who's working" data-time="11:25" data-who="Tom" data-when="8:58 am" data-where="Yarra River Deli" aria-label="Retail: shops and stores"><img src="assets/industry-retail-thumb.jpg" alt="" width="192" height="192" decoding="async"></a></li>
-        <li><a class="face" href="cleaning.html" data-key="cleaning" data-word="cleaning" data-photo="assets/industry-cleaning-800.jpg 800w, assets/industry-cleaning.jpg 1600w" data-focus="50% 50%" data-screen="assets/app-cleaning-home-600.png" data-screen-alt="TEAM MATE Home screen: a cleaner on the clock at an office site, with today's shift, jobs and who's working" data-time="7:26" data-who="Rosa" data-when="5:28 pm" data-where="Yarra River Offices" aria-label="Cleaning: crews across client sites"><img src="assets/industry-cleaning-thumb.jpg" alt="" width="192" height="192" decoding="async"></a></li>
-        <li><a class="face" href="security.html" data-key="security" data-word="security" data-photo="assets/industry-security-800.jpg 800w, assets/industry-security.jpg 1600w" data-focus="42% 50%" data-screen="assets/app-security-home-600.png" data-screen-alt="TEAM MATE Home screen: a security officer on the clock at an arena, with today's shift, jobs and who's working" data-time="11:24" data-who="Jo" data-when="9:58 pm" data-where="Yarra River Arena" aria-label="Security: guards, crowd control and patrols"><img src="assets/industry-security-thumb.jpg" alt="" width="192" height="192" decoding="async"></a></li>
-        <li><a class="face" href="clinics.html" data-key="clinics" data-word="clinic" data-photo="assets/industry-clinics-800.jpg 800w, assets/industry-clinics.jpg 1600w" data-focus="50% 50%" data-screen="assets/app-clinics-home-600.png" data-screen-alt="TEAM MATE Home screen: a nurse on the clock at a physio clinic, with today's shift, jobs and who's working" data-time="9:53" data-who="Kim" data-when="7:58 am" data-where="Yarra River Physio" aria-label="Healthcare: clinics, practices and allied health"><img src="assets/industry-clinics-thumb.jpg" alt="" width="192" height="192" decoding="async"></a></li>
-        <li><a class="face" href="construction.html" data-key="construction" data-word="site" data-photo="assets/industry-construction-800.jpg 800w, assets/industry-construction.jpg 1600w" data-focus="50% 50%" data-screen="assets/app-construction-home-600.png" data-screen-alt="TEAM MATE Home screen: a carpenter on the clock at a building site, with today's shift, jobs and who's working" data-time="9:21" data-who="Al" data-when="5:58 am" data-where="Yarra River Towers" aria-label="Building sites: builders, trades and site crews"><img src="assets/industry-construction-thumb.jpg" alt="" width="192" height="192" decoding="async"></a></li>
-        </ul>
-        <!-- /gen:hero-crews -->
-          <p class="lead-made"><span>Made for cafés, shops, cleaners, security,</span> <span>clinics and building sites.</span></p>
-          <!-- Touch screens only, shown by site.js while the crews step
-               through on their own: stops and restarts that (WCAG 2.2.2). -->
-          <button class="lead-pause" type="button" data-pause hidden><span class="lead-pause-i" aria-hidden="true"></span><span data-pause-label>Pause</span></button>
-        </div>
+  <!-- Hero A3, "The Signature, clean phone" (owner pick 2026-10-09:
+       option 1 of four boards; A2's hand-held phone photo "didn't look
+       right", and hero B's photo-and-phone split was live for one day):
+       type-led and still on the desktop until the visitor acts. The brand tagline
+       is the statement; the word "work" is a slot that becomes each crew
+       ("hospo", "retail" …) while that industry's card is hovered or
+       focused. Below it, the crew ribbon: six portraits (the owner's
+       square tile portraits, cut 4:5) in a soft arc around a clean,
+       upright phone drawn in CSS around the real Home screen. At rest it
+       shows the café's Home; pointing at a crew shows that crew's REAL
+       Home screen and its clock (site.js). The phone is whole, its own
+       blue "Take a break" button included (owner call 2026-10-09).
+       The h1 is plain text: "Your work crew, sorted." site.js fades the
+       real word "work" and lays aria-hidden crew words over it, so
+       assistive tech and crawlers always get the one stable sentence.
+       Without JS: the plain tagline, six links, the café's Home screen.
+       Touch screens (phones, tablets, iPad landscape) step through the
+       crews every 2.5s with a Pause button; never under reduced motion.
+       Blue: "Start free" is this viewport's one blue moment; "sorted."
+       and the card dots are the exempt wordmark-adjacent accents, and
+       the phone's own blue button is the owner's recorded exception. -->
+  <section class="hero sig" aria-labelledby="sig-h">
+    <div class="wrap sig-head">
+      <h1 id="sig-h" class="sig-title" data-reveal><span class="sig-vis"><span class="sig-a">Your <span class="slot" data-slot>work</span></span> <span class="sig-b">crew,</span> <span class="sig-c">sorted.</span></span></h1>
+      <p class="sig-sub" data-reveal><span>Roster. Clock in. Get paid.</span> <span>All in one place.</span></p>
+      <div class="hero-cta sig-cta" data-reveal>
+        <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+        <a class="btn btn-secondary" href="#how-it-works">See how it works</a>
       </div>
-      <div class="lead-art" data-reveal>
-        <div class="lead-photo" data-photo-box>
-          <img class="is-on" src="assets/industry-hospitality-800.jpg" srcset="assets/industry-hospitality-800.jpg 800w, assets/industry-hospitality.jpg 1600w" sizes="(max-width: 999px) 90vw, 46vw" alt="" width="1600" height="900" style="object-position: 38% 50%" fetchpriority="high" decoding="async" data-key="hospitality">
-        </div>
+      <p class="sig-note" data-reveal><span>Free for teams of 10 or fewer.</span> <span>No card, no time limit.</span></p>
+    </div>
+
+    <div class="ribbon" data-ribbon data-reveal>
+      <!-- gen:hero-crews -->
+      <ul class="crews" aria-label="Industries">
+        <li class="p3 l"><a class="crew" href="hospitality.html" data-key="hospitality" data-word="hospo" data-screen="assets/app-hospitality-home-600.png" data-screen-alt="TEAM MATE Home screen: a barista on the clock at a café, with today's shift, jobs and who's working" data-time="9:41" aria-label="Hospitality: cafés, restaurants, pubs and bars"><img src="assets/industry-hospitality-crew-400.jpg" srcset="assets/industry-hospitality-crew-400.jpg 400w, assets/industry-hospitality-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Hospitality</span></a></li>
+        <li class="p2 l"><a class="crew" href="retail.html" data-key="retail" data-word="retail" data-screen="assets/app-retail-home-600.png" data-screen-alt="TEAM MATE Home screen: a sales assistant on the clock at a deli, with today's shift, jobs and who's working" data-time="11:25" aria-label="Retail: shops and stores"><img src="assets/industry-retail-crew-400.jpg" srcset="assets/industry-retail-crew-400.jpg 400w, assets/industry-retail-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Retail</span></a></li>
+        <li class="p1 l"><a class="crew" href="cleaning.html" data-key="cleaning" data-word="cleaning" data-screen="assets/app-cleaning-home-600.png" data-screen-alt="TEAM MATE Home screen: a cleaner on the clock at an office site, with today's shift, jobs and who's working" data-time="7:26" aria-label="Cleaning: crews across client sites"><img src="assets/industry-cleaning-crew-400.jpg" srcset="assets/industry-cleaning-crew-400.jpg 400w, assets/industry-cleaning-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Cleaning</span></a></li>
+        <li class="p1 r"><a class="crew" href="security.html" data-key="security" data-word="security" data-screen="assets/app-security-home-600.png" data-screen-alt="TEAM MATE Home screen: a security officer on the clock at an arena, with today's shift, jobs and who's working" data-time="11:24" aria-label="Security: guards, crowd control and patrols"><img src="assets/industry-security-crew-400.jpg" srcset="assets/industry-security-crew-400.jpg 400w, assets/industry-security-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Security</span></a></li>
+        <li class="p2 r"><a class="crew" href="clinics.html" data-key="clinics" data-word="clinic" data-screen="assets/app-clinics-home-600.png" data-screen-alt="TEAM MATE Home screen: a nurse on the clock at a physio clinic, with today's shift, jobs and who's working" data-time="9:53" aria-label="Healthcare: clinics, practices and allied health"><img src="assets/industry-clinics-crew-400.jpg" srcset="assets/industry-clinics-crew-400.jpg 400w, assets/industry-clinics-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Healthcare</span></a></li>
+        <li class="p3 r"><a class="crew" href="construction.html" data-key="construction" data-word="site" data-screen="assets/app-construction-home-600.png" data-screen-alt="TEAM MATE Home screen: a carpenter on the clock at a building site, with today's shift, jobs and who's working" data-time="9:21" aria-label="Building sites: builders, trades and site crews"><img src="assets/industry-construction-crew-400.jpg" srcset="assets/industry-construction-crew-400.jpg 400w, assets/industry-construction-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Building sites</span></a></li>
+      </ul>
+      <!-- /gen:hero-crews -->
+      <!-- Touch screens only, shown by site.js while the crews step
+           through on their own: stops and restarts that (WCAG 2.2.2). -->
+      <button class="sig-pause" type="button" data-pause hidden><span class="sig-pause-i" aria-hidden="true"></span><span data-pause-label>Pause</span></button>
+      <div class="sig-phone">
         <div class="dev">
           <div class="dev-screen">
             <div class="dev-bar" aria-hidden="true"><span data-dev-time>9:41</span><svg viewBox="0 0 78 14" aria-hidden="true"><rect x="0" y="9" width="3.4" height="5" rx="1" fill="currentColor"/><rect x="5" y="6.5" width="3.4" height="7.5" rx="1" fill="currentColor"/><rect x="10" y="4" width="3.4" height="10" rx="1" fill="currentColor"/><rect x="15" y="1.5" width="3.4" height="12.5" rx="1" fill="currentColor"/><path d="M31 3.6a10.6 10.6 0 0 1 7.4 3l1.4-1.4A12.6 12.6 0 0 0 31 1.6a12.6 12.6 0 0 0-8.8 3.6l1.4 1.4a10.6 10.6 0 0 1 7.4-3Zm0 4a6.6 6.6 0 0 1 4.6 1.9l1.4-1.4a8.6 8.6 0 0 0-12 0l1.4 1.4A6.6 6.6 0 0 1 31 7.6Zm0 4a2.6 2.6 0 0 1 1.8.7L31 14l-1.8-1.7a2.6 2.6 0 0 1 1.8-.7Z" fill="currentColor"/><rect x="47.5" y="1.5" width="25" height="11.5" rx="3.6" fill="none" stroke="currentColor" stroke-opacity=".4"/><rect x="50" y="4" width="17" height="6.5" rx="2" fill="currentColor"/></svg></div>
@@ -283,8 +284,6 @@
             </div>
           </div>
         </div>
-        <div class="lead-chip clock" aria-hidden="true"><span class="lead-chip-i"><span class="lead-live"></span></span><span><b><span data-chip-who>Ava</span> clocked in</b><small><span data-chip-when>6:58 am</span> · <span data-chip-where>Yarra River Café</span></small></span></div>
-        <div class="lead-chip roster" aria-hidden="true"><span class="lead-chip-i"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 6.5 12 13 4.5"/></svg></span><span><b>Next week's roster is out</b><small>12 shifts · everyone notified</small></span></div>
       </div>
     </div>
   </section>
