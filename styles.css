@@ -188,6 +188,9 @@ section.mist { background: var(--mist); }
 
 .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .hero-cta-left { justify-content: flex-start; margin-top: 32px; }
+/* Healthcare page: the line pointing at the two care pages */
+.care-more { margin: 48px 0 0; max-width: 640px; color: var(--text-secondary); }
+.care-more + .hero-cta-left { margin-top: 20px; }
 
 /* ---- split hero (industry pages: copy beside the photo — see
         .hero-split below; pricing/contact keep the centered .hero base
@@ -565,16 +568,17 @@ footer {
    Retail and Cleaning apart. So on shorter windows (a 1440 x 900
    laptop's browser is ~790 tall, a 1366 x 768 one ~650) the panel gets
    narrower instead of cropping: its width follows the window height
-   (150vh - 408px keeps two rows of square cards with two-line captions
-   inside the window, 8px clear at the bottom). Under ~610px tall it
+   (150vh - 456px keeps two rows of square cards with two-line captions
+   and the "Also in healthcare" line under them inside the window, 8px
+   clear at the bottom). Under ~650px tall it
    stops shrinking at 520px and scrolls inside itself. */
 .drop-panel {
   position: absolute;
   top: calc(100% + 8px);
   right: max(32px, calc((100% - 1200px) / 2 + 32px));
   width: min(760px, calc(100% - 64px));
-  width: min(760px, calc(100% - 64px), max(520px, calc(150vh - 408px)));
-  width: min(760px, calc(100% - 64px), max(520px, calc(150dvh - 408px)));
+  width: min(760px, calc(100% - 64px), max(520px, calc(150vh - 456px)));
+  width: min(760px, calc(100% - 64px), max(520px, calc(150dvh - 456px)));
   padding: 10px;
   background: var(--white);
   border: 1px solid var(--hairline);
@@ -672,6 +676,25 @@ footer {
   background: var(--white);
 }
 
+/* "Also in healthcare": the care pages (aged care, disability care) as
+   plain links under the photo cards — they're not in the six-card grid */
+.drop-more,
+.menu-more {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+.drop-more { margin: 2px 0 0; padding: 8px 10px 2px; border-top: 1px solid var(--hairline); }
+.nav-links .drop-more a,
+.nav-links .menu-more a {
+  font-size: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--hairline);
+  text-underline-offset: 3px;
+}
+
 /* phone menu: hidden on desktop */
 .nav-menu { display: none; }
 
@@ -687,6 +710,8 @@ footer {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 16px;
 }
+/* care pages (aged care, disability care) list all six crews */
+.ind-grid.six { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 
 .ind-card {
   position: relative;
@@ -1147,6 +1172,7 @@ body.contact main { flex: 1 0 auto; }
     color: var(--text-secondary);
   }
   .menu-row .ind-here { font-size: 12px; color: var(--text-secondary); }
+  .menu-more { margin: -12px 0 24px; font-size: 15px; }
   .nav-links a.menu-row:hover,
   .nav-links a.menu-row[aria-current="page"] { background: var(--mist); }
   .nav-links .menu-links { list-style: none; margin: 0 0 28px; padding: 0; border-top: 1px solid var(--hairline); }
