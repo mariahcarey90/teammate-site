@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- gen:head (scripts/marketing-pages.mjs — edit there, not here) -->
+<title>Swim &amp; Leisure Centre Rostering App for Lifeguards | TEAM MATE</title>
+<meta name="description" content="Rosters, clock-in and pay for Australian swim and leisure centres. Lifeguard tickets on file, two on the pool deck, swim lessons rostered. Free for teams of 10 or fewer.">
+<link rel="canonical" href="https://teammateapp.au/swim-leisure.html">
+<meta property="og:site_name" content="TEAM MATE">
+<meta property="og:locale" content="en_AU">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TEAM MATE for swim and leisure centres">
+<meta property="og:description" content="Rosters, clock-in and pay for Australian swim and leisure centres. Lifeguard tickets on file, two on the pool deck, swim lessons rostered. Free for teams of 10 or fewer.">
+<meta property="og:url" content="https://teammateapp.au/swim-leisure.html">
+<meta property="og:image" content="https://teammateapp.au/assets/og-swim-leisure.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TEAM MATE for swim and leisure centres: Every lane covered, first swim to last.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="assets/tm-dot.svg" type="image/svg+xml">
+<link rel="icon" href="assets/tm-favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="assets/tm-touch-180.png">
+<link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://teammateapp.au/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Swim centres",
+     "item": "https://teammateapp.au/swim-leisure.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Can it tell me when the pool deck is short?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Tick the suggested rules and the roster lists any time fewer than 2 people with a Pool Lifeguard ticket are on the pool deck while you're open. You choose the numbers; TEAM MATE doesn't check them against any law or pool safety guideline."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I keep track of lifeguard and swim teacher tickets?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Record each Pool Lifeguard ticket, swim teacher qualification, First Aid, CPR, Working with Children Check and Pool Operations Certificate, and when each one runs out, and TEAM MATE warns you before you roster someone who doesn't have what their job needs."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do short lesson shifts work?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. An after-school block of swim lessons or a Saturday morning is a shift like any other: on the roster, on their phone and on the timesheet."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do lifeguards see their shifts?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "On their phone. Shifts land the moment you publish, with the area and the times, and they clock in and out from the same app."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<!-- /gen:head -->
+</head>
+<body>
+
+<!-- Swim and leisure centres page (2026-10-12, foreman queue item 9). HELD in
+     scripts/marketing-pages.mjs until the owner's photos arrive: nothing
+     links here and the deploy leaves it out.
+     Same copy guardrails as clinics.html / the README: no award /
+     compliance / legal / safety claims; suggested rules are a "common
+     starting point" the owner checks; we TRACK tickets and checks, we
+     never verify them; skill mix is the business's OWN rule ("you choose
+     the numbers") — never say it meets staffing laws or pool safety
+     guidelines. Every feature line maps to the AQUATIC preset
+     (packages/core/src/onboarding/presets.ts), its suggested-rules pack
+     (packages/core/src/compliance/packs.ts) or an app-wide feature in
+     docs/KNOWLEDGE-BASE.md. Hero photo: owner-supplied
+     (scripts/prep-industry-photos.mjs swim-leisure <file>, then --tile). -->
+
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-logo" href="/" aria-label="TEAM MATE home">
+      <img src="assets/tm-wordmark-light.svg" alt="TEAM MATE" width="181" height="18">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <!-- Plain <details> menus: they open without JS; site.js only adds
+           close-on-outside-click and Escape. -->
+      <details class="nav-drop hide-sm is-current">
+        <summary>Industries</summary>
+        <div class="drop-panel" style="--cols: 6; --rows: 2">
+          <ul class="drop-cards">
+            <li><a class="drop-card" href="hospitality.html"><span class="drop-photo"><img src="assets/industry-hospitality-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Hospitality</strong><span class="ind-line">From the first coffee to last drinks.</span></a></li>
+            <li><a class="drop-card" href="hotels.html"><span class="drop-photo"><img src="assets/industry-hotels-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Hotels</strong><span class="ind-line">Every floor covered, check-in to checkout.</span></a></li>
+            <li><a class="drop-card" href="retail.html"><span class="drop-photo"><img src="assets/industry-retail-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Retail</strong><span class="ind-line">Every trading hour, covered.</span></a></li>
+            <li><a class="drop-card" href="cleaning.html"><span class="drop-photo"><img src="assets/industry-cleaning-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Cleaning</strong><span class="ind-line">Every site covered, day or night.</span></a></li>
+            <li><a class="drop-card" href="security.html"><span class="drop-photo"><img src="assets/industry-security-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Security</strong><span class="ind-line">Every post covered, round the clock.</span></a></li>
+            <li><a class="drop-card" href="clinics.html"><span class="drop-photo"><img src="assets/industry-clinics-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Healthcare</strong><span class="ind-line">Front desk to treatment room.</span></a></li>
+            <li><a class="drop-card" href="aged-care.html"><span class="drop-photo"><img src="assets/industry-aged-care-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Aged care</strong><span class="ind-line">Every wing covered, day and night.</span></a></li>
+            <li><a class="drop-card" href="childcare.html"><span class="drop-photo"><img src="assets/industry-childcare-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Childcare</strong><span class="ind-line">Every room covered, open to close.</span></a></li>
+            <li><a class="drop-card" href="gyms.html"><span class="drop-photo"><img src="assets/industry-gyms-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Gyms</strong><span class="ind-line">Every class covered, early till late.</span></a></li>
+            <li><a class="drop-card" href="swim-leisure.html" aria-current="page"><span class="drop-photo"><img src="assets/industry-swim-leisure-menu.jpg" alt="" width="560" height="560" loading="lazy"><span class="ind-here" aria-hidden="true">You're here</span></span><strong>Swim centres</strong><span class="ind-line">Every lane covered, first swim to last.</span></a></li>
+            <li><a class="drop-card" href="construction.html"><span class="drop-photo"><img src="assets/industry-construction-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Building sites</strong><span class="ind-line">From first pour to knock-off.</span></a></li>
+          </ul>
+        </div>
+      </details>
+      <a href="/#product" class="hide-sm">Product</a>
+      <a href="pricing.html" class="hide-sm">Pricing</a>
+      <a href="contact.html" class="hide-sm">Contact</a>
+      <!-- One Dot Blue moment per viewport: this page's own blue CTA
+           wins, so the pill stays hairline secondary. -->
+      <a class="btn btn-secondary" href="/#get-the-app">Get the app</a>
+      <details class="nav-menu">
+        <summary aria-label="Menu">
+          <svg class="i-open" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5.5h14M2 12.5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="i-close" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="menu-panel">
+          <span class="label">Industries</span>
+          <ul class="menu-rows">
+            <li><a class="menu-row" href="hospitality.html"><img src="assets/industry-hospitality-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Hospitality</strong><span class="ind-line">From the first coffee to last drinks.</span></span></a></li>
+            <li><a class="menu-row" href="hotels.html"><img src="assets/industry-hotels-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Hotels</strong><span class="ind-line">Every floor covered, check-in to checkout.</span></span></a></li>
+            <li><a class="menu-row" href="retail.html"><img src="assets/industry-retail-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Retail</strong><span class="ind-line">Every trading hour, covered.</span></span></a></li>
+            <li><a class="menu-row" href="cleaning.html"><img src="assets/industry-cleaning-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Cleaning</strong><span class="ind-line">Every site covered, day or night.</span></span></a></li>
+            <li><a class="menu-row" href="security.html"><img src="assets/industry-security-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Security</strong><span class="ind-line">Every post covered, round the clock.</span></span></a></li>
+            <li><a class="menu-row" href="clinics.html"><img src="assets/industry-clinics-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Healthcare</strong><span class="ind-line">Front desk to treatment room.</span></span></a></li>
+            <li><a class="menu-row" href="aged-care.html"><img src="assets/industry-aged-care-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Aged care</strong><span class="ind-line">Every wing covered, day and night.</span></span></a></li>
+            <li><a class="menu-row" href="childcare.html"><img src="assets/industry-childcare-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Childcare</strong><span class="ind-line">Every room covered, open to close.</span></span></a></li>
+            <li><a class="menu-row" href="gyms.html"><img src="assets/industry-gyms-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Gyms</strong><span class="ind-line">Every class covered, early till late.</span></span></a></li>
+            <li><a class="menu-row" href="swim-leisure.html" aria-current="page"><img src="assets/industry-swim-leisure-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Swim centres<span class="ind-here" aria-hidden="true">You're here</span></strong><span class="ind-line">Every lane covered, first swim to last.</span></span></a></li>
+            <li><a class="menu-row" href="construction.html"><img src="assets/industry-construction-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Building sites</strong><span class="ind-line">From first pour to knock-off.</span></span></a></li>
+          </ul>
+          <ul class="menu-links">
+            <li><a href="/#product">Product</a></li>
+            <li><a href="/#managers">For managers</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="/#faq">Questions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://app.teammateapp.au/login">Sign in</a></li>
+          </ul>
+          <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Split hero (owner 2026-10-06: the industry photo leads). Photo:
+       waiting for the owner's (this page is HELD in
+       scripts/marketing-pages.mjs until it arrives); file it with
+       scripts/prep-industry-photos.mjs and fix this alt to match it. -->
+  <section class="hero hero-split">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="label">Rostering app for swim and leisure centres</span>
+          <h1>Every lane covered,<br> first swim to last. <span class="blue">Sorted.</span></h1>
+          <p>Keep two lifeguards on the pool deck, roster swim lessons, the
+          desk and the café, and keep lifeguard tickets up to date.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+            <a class="btn btn-secondary" href="#site">See how it works</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="assets/industry-swim-leisure.jpg"
+            srcset="assets/industry-swim-leisure-800.jpg 800w, assets/industry-swim-leisure.jpg 1600w"
+            sizes="(max-width: 720px) 100vw, 55vw"
+            alt="A lifeguard in a yellow and red uniform stacking kickboards beside an indoor pool, with swimmers in the lanes behind her"
+            width="1600" height="900" fetchpriority="high">
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="dot" aria-hidden="true"></div>
+          <h3>Two on the pool deck</h3>
+          <p>Set your own “at least 2 lifeguards on the pool deck” rule and the roster lists any time that falls short.</p>
+        </div>
+        <div class="card">
+          <div class="dot" aria-hidden="true"></div>
+          <h3>Tickets on file</h3>
+          <p>Track pool lifeguard, First Aid, CPR and Working with Children Checks, and see when each one is due to run out.</p>
+        </div>
+        <div class="card">
+          <div class="dot" aria-hidden="true"></div>
+          <h3>Pool, lessons and more</h3>
+          <p>Lifeguards, swim teachers, reception, the gym floor and the café on one roster, so you see the whole centre at once.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mist" id="site">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">For your centre</span>
+        <h2>Built around a pool that’s open seven days.</h2>
+        <p>Pick "Swim or leisure centre" in the welcome wizard and your team is set
+        up in minutes: no implementation call, no sales demo.</p>
+      </div>
+
+      <ul class="features feature-cards">
+        <li><strong>Your team, ready to go</strong> Lifeguards, swim teachers, receptionists, a fitness instructor, café staff and duty managers, plus a typical week to start from: open 5:30am to 8:30pm on weekdays and 7am to 6pm at weekends, two lifeguards on the pool deck the whole time with overlapping handovers, and swim lessons after school and on Saturday morning.</li>
+        <li><strong>Two lifeguards on the pool deck</strong> Tick the suggested rules and TEAM MATE warns you when fewer than 2 people with a Pool Lifeguard ticket are rostered on the pool deck while you’re open. You choose the numbers; TEAM MATE doesn’t check them against any law or pool safety guideline.</li>
+        <li><strong>Lifeguard and swim teacher tickets</strong> Track who holds what and when it runs out: Pool Lifeguard, swim teacher qualifications, First Aid, CPR, Working with Children Checks, Certificate III in Fitness and Pool Operations Certificates. You get a warning before you roster someone without one.</li>
+        <li><strong>Suggested rules for swim centres</strong> A meal break on shifts longer than 5 hours, 10 hours off between shifts and no shift longer than 10½ hours. No shortest shift, so short lesson blocks don’t set off warnings. Common starting points: you check them, switch them on, and change any number.</li>
+        <li><strong>Swim lessons on the roster</strong> An after-school block of lessons or a Saturday morning is a shift like any other, in the Learn to Swim area of your roster.</li>
+        <li><strong>Handover notes</strong> What the morning lifeguards want the afternoon shift to know.</li>
+        <li><strong>Someone calls in sick?</strong> Post it as an open shift, free lifeguards ask for it from their phone, and you pick who takes it.</li>
+        <li><strong>Leave without the paperwork</strong> Staff request leave from their phone and see their balances, and approved leave shows on the roster before you schedule over it.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">For your team</span>
+        <h2>The app your lifeguards will actually open.</h2>
+        <p>Shifts land in their pocket the moment you publish, and in their
+        phone calendar too. No more ringing round at 5am to open the
+        pool.</p>
+      </div>
+
+<!-- gen:phones -->
+      <div class="phones">
+        <div class="phone">
+          <figure>
+            <img src="assets/app-swim-leisure-home.png" alt="TEAM MATE Home screen: a lifeguard on the clock at a swim centre, with today's shift, jobs and who's working" width="1080" height="2341" loading="lazy">
+            <figcaption>Clock in and out from Home</figcaption>
+          </figure>
+        </div>
+        <div class="phone">
+          <figure>
+            <img src="assets/app-swim-leisure-schedule.png" alt="TEAM MATE Schedule screen: a lifeguard's week, with confirmed shifts" width="1080" height="2341" loading="lazy">
+            <figcaption>Know your week at a glance</figcaption>
+          </figure>
+        </div>
+        <div class="phone">
+          <figure>
+            <img src="assets/app-swim-leisure-timesheets.png" alt="TEAM MATE Timesheets screen: a lifeguard's paid hours, approved by the manager" width="1080" height="2341" loading="lazy">
+            <figcaption>Hours, checked and approved</figcaption>
+          </figure>
+        </div>
+      </div>
+<!-- /gen:phones -->
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Free for your first 10 staff.<br> Actually free.</h2>
+      <p>Not a trial. No card details, no locked features. One honest price
+      when you grow past 10.</p>
+      <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Questions</span>
+        <h2>Questions swim centres ask.</h2>
+      </div>
+<!-- gen:faq -->
+<div class="faq-list">
+  <details>
+    <summary>Can it tell me when the pool deck is short?</summary>
+    <p>Yes. Tick the suggested rules and the roster lists any time fewer than 2 people with a Pool Lifeguard ticket are on the pool deck while you're open. You choose the numbers; TEAM MATE doesn't check them against any law or pool safety guideline.</p>
+  </details>
+  <details>
+    <summary>Can I keep track of lifeguard and swim teacher tickets?</summary>
+    <p>Yes. Record each Pool Lifeguard ticket, swim teacher qualification, First Aid, CPR, Working with Children Check and Pool Operations Certificate, and when each one runs out, and TEAM MATE warns you before you roster someone who doesn't have what their job needs.</p>
+  </details>
+  <details>
+    <summary>Do short lesson shifts work?</summary>
+    <p>Yes. An after-school block of swim lessons or a Saturday morning is a shift like any other: on the roster, on their phone and on the timesheet.</p>
+  </details>
+  <details>
+    <summary>How do lifeguards see their shifts?</summary>
+    <p>On their phone. Shifts land the moment you publish, with the area and the times, and they clock in and out from the same app.</p>
+  </details>
+</div>
+<!-- /gen:faq -->
+    </div>
+  </section>
+
+  <section class="mist">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Born in hospo</span>
+        <h2>Built for every crew.</h2>
+        <p>TEAM MATE started in Melbourne cafés and restaurants. The same
+        app runs all of these crews too, each with its own setup in the
+        welcome wizard.</p>
+      </div>
+<!-- gen:industries -->
+<ul class="ind-grid compact">
+  <li><a class="ind-card" href="hospitality.html"><img src="assets/industry-hospitality-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Hospitality</span></a></li>
+  <li><a class="ind-card" href="hotels.html"><img src="assets/industry-hotels-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Hotels</span></a></li>
+  <li><a class="ind-card" href="retail.html"><img src="assets/industry-retail-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Retail</span></a></li>
+  <li><a class="ind-card" href="cleaning.html"><img src="assets/industry-cleaning-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Cleaning</span></a></li>
+  <li><a class="ind-card" href="security.html"><img src="assets/industry-security-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Security</span></a></li>
+  <li><a class="ind-card" href="clinics.html"><img src="assets/industry-clinics-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Healthcare</span></a></li>
+  <li><a class="ind-card" href="aged-care.html"><img src="assets/industry-aged-care-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Aged care</span></a></li>
+  <li><a class="ind-card" href="childcare.html"><img src="assets/industry-childcare-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Childcare</span></a></li>
+  <li><a class="ind-card" href="gyms.html"><img src="assets/industry-gyms-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Gyms</span></a></li>
+  <li><a class="ind-card" href="construction.html"><img src="assets/industry-construction-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Building sites</span></a></li>
+</ul>
+<!-- /gen:industries -->
+      <div class="hero-cta hero-cta-left">
+        <a class="btn btn-secondary" href="/">See everything TEAM MATE does</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <img src="assets/tm-wordmark-reversed.svg" alt="TEAM MATE" width="151" height="15">
+      <span class="tagline">Your work crew, <span class="blue">sorted.</span></span>
+    </div>
+    <div class="foot-cols">
+      <nav aria-label="Industries">
+        <p class="foot-h">Industries</p>
+        <a href="hospitality.html">Hospitality</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="retail.html">Retail</a>
+        <a href="cleaning.html">Cleaning</a>
+        <a href="security.html">Security</a>
+        <a href="clinics.html">Healthcare</a>
+        <a href="aged-care.html">Aged care</a>
+        <a href="childcare.html">Childcare</a>
+        <a href="gyms.html">Gyms</a>
+        <a href="swim-leisure.html">Swim centres</a>
+        <a href="construction.html">Building sites</a>
+      </nav>
+      <nav aria-label="Product">
+        <p class="foot-h">Product</p>
+        <a href="/#product">Staff app</a>
+        <a href="/#managers">For managers</a>
+        <a href="/#how-it-works">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="/#faq">Questions</a>
+      </nav>
+      <nav aria-label="Company">
+        <p class="foot-h">Company</p>
+        <a href="contact.html">Contact</a>
+        <a href="https://app.teammateapp.au/login">Sign in</a>
+        <a href="https://app.teammateapp.au/privacy">Privacy</a>
+        <a href="https://app.teammateapp.au/terms">Terms</a>
+        <a href="mailto:support@teammateapp.au">support@teammateapp.au</a>
+      </nav>
+    </div>
+    <div class="foot-base">Made in Melbourne, hosted in Australia. © 2026 TEAM MATE</div>
+  </div>
+</footer>
+
+</body>
+</html>

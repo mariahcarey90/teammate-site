@@ -443,7 +443,7 @@ section.mist { background: var(--mist); }
 table {
   border-collapse: collapse;
   width: 100%;
-  min-width: 560px;
+  min-width: 320px;
   font-size: 16px;
   font-variant-numeric: tabular-nums lining-nums;
 }
