@@ -61,7 +61,7 @@
 // hidden; with it, one industry at a time. Arrow keys, Home and End move
 // between tabs (WAI-ARIA tabs pattern). No auto-rotate: the desktop page
 // stays still unless the visitor acts (owner direction 2026-09-11). All
-// tabs are always in view (rows of four on tablets and phones), so the row never
+// tabs are always in view (even rows on tablets and phones), so the row never
 // scrolls sideways (owner 2026-10-06). It opens on the tab the generated
 // HTML marks aria-selected (retail since 2026-10-09).
 (function () {

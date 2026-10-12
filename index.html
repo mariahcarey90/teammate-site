@@ -274,34 +274,6 @@
 
     <div class="ribbon" data-ribbon data-reveal>
       <!-- gen:hero-crews -->
-      <style>
-        .ribbon:has(.crews.many) { --n: 11; }
-        @media (min-width: 1000px) {
-          .crews.many .crew-name { max-width: calc(100% - 6px); padding: 4px 9px; font-size: clamp(11px, 0.9vw, 14px); line-height: 1.15;
-            white-space: normal; text-align: center; text-wrap: balance; }
-          .crews.many .crew-name::before { left: 8px; }
-          .crews.many .crew:hover .crew-name, .crews.many .crew:focus-visible .crew-name, .crews.many .crew.is-active .crew-name { padding-left: 21px; }
-        }
-        @media (min-width: 1180px) {
-          .ribbon:has(.crews.many) { --gap: clamp(8px, 0.8vw, 16px); --cw: clamp(72px, min(10vw, 14vh, (100vw - 96px - 10 * var(--gap)) / 13.12), 190px); }
-          .crews.many li.p6 { --y: calc(var(--cw) * 0.62); }
-          .crews.many li.p6.l { --r: -6deg; } .crews.many li.p6.r { --r: 6deg; }
-        }
-        @media (min-width: 1180px) and (max-height: 860px) {
-          .ribbon:has(.crews.many) { --cw: clamp(72px, min(10vw, 13vh, (100vw - 96px - 10 * var(--gap)) / 13.12), 190px); }
-          .crews.many li.p6 { --y: calc(var(--cw) * 0.52); }
-        }
-        @media (min-width: 1000px) and (max-width: 1179px) {
-          .ribbon:has(.crews.many) { --mcw: clamp(128px, 13vw, 150px); --pw: 280px; display: flex; flex-direction: column; }
-          .ribbon:has(.crews.many) .sig-phone { order: -1; margin: 0 auto 20px; }
-          .crews.many, .crews.many.odd { position: static; transform: none; gap: 14px; padding: 14px calc(50% - var(--mcw) / 2) 36px; margin-bottom: -14px;
-            overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; }
-          .crews.many::-webkit-scrollbar { display: none; }
-          .crews.many li[class] { width: var(--mcw); margin-right: 0; transform: none; scroll-snap-align: center; }
-          .crews.many .crew-name { font-size: 14px; padding: 5px 12px; }
-          .ribbon:has(.crews.many) .sig-pause:not([hidden]) { position: relative; left: auto; bottom: auto; margin: 2px auto 0; }
-        }
-      </style>
       <ul class="crews odd many" aria-label="Industries">
         <li class="p6 l"><a class="crew" href="hospitality.html" data-key="hospitality" data-word="hospo" data-screen="assets/app-hospitality-home-600.png" data-screen-alt="TEAM MATE Home screen: a barista on the clock at a café, with today's shift, jobs and who's working" data-time="9:41" aria-label="Hospitality: cafés, restaurants, pubs and bars"><img src="assets/industry-hospitality-crew-400.jpg" srcset="assets/industry-hospitality-crew-400.jpg 400w, assets/industry-hospitality-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Hospitality</span></a></li>
         <li class="p5 l"><a class="crew" href="hotels.html" data-key="hotels" data-word="hotel" data-screen="assets/app-hotels-home-600.png" data-screen-alt="TEAM MATE Home screen: a front desk agent on the clock at a hotel, with today's shift, jobs and who's working" data-time="10:04" aria-label="Hotels: hotels, motels and resorts"><img src="assets/industry-hotels-crew-400.jpg" srcset="assets/industry-hotels-crew-400.jpg 400w, assets/industry-hotels-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Hotels</span></a></li>
@@ -314,6 +286,7 @@
         <li class="p3 r"><a class="crew" href="gyms.html" data-key="gyms" data-word="gym" data-screen="assets/app-gyms-home-600.png" data-screen-alt="TEAM MATE Home screen: a fitness instructor on the clock at a gym, with today's shift, jobs and who's working" data-time="8:17" aria-label="Gyms: gyms and fitness centres"><img src="assets/industry-gyms-crew-400.jpg" srcset="assets/industry-gyms-crew-400.jpg 400w, assets/industry-gyms-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Gyms</span></a></li>
         <li class="p4 r"><a class="crew" href="swim-leisure.html" data-key="swim-leisure" data-word="pool" data-screen="assets/app-swim-leisure-home-600.png" data-screen-alt="TEAM MATE Home screen: a lifeguard on the clock at a swim centre, with today's shift, jobs and who's working" data-time="9:12" aria-label="Swim centres: swim and leisure centres"><img src="assets/industry-swim-leisure-crew-400.jpg" srcset="assets/industry-swim-leisure-crew-400.jpg 400w, assets/industry-swim-leisure-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Swim centres</span></a></li>
         <li class="p5 r"><a class="crew" href="construction.html" data-key="construction" data-word="site" data-screen="assets/app-construction-home-600.png" data-screen-alt="TEAM MATE Home screen: a carpenter on the clock at a building site, with today's shift, jobs and who's working" data-time="9:21" aria-label="Building sites: builders, trades and site crews"><img src="assets/industry-construction-crew-400.jpg" srcset="assets/industry-construction-crew-400.jpg 400w, assets/industry-construction-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Building sites</span></a></li>
+        <li class="crew-all"><a class="crew-more" href="#industries"><span class="crew-more-n">11 industries</span><span class="crew-more-go">See them all <span aria-hidden="true">↓</span></span></a></li>
       </ul>
       <!-- /gen:hero-crews -->
       <!-- Touch screens only, shown by site.js while the crews step
@@ -381,7 +354,7 @@
       <div data-reveal>
 <!-- gen:industries -->
 <div class="showcase" data-showcase>
-  <div class="sc-tabs" role="tablist" aria-label="Industries" style="--n: 6; --cols: 4; border-radius: 24px" hidden>
+  <div class="sc-tabs" role="tablist" aria-label="Industries" hidden>
     <button type="button" class="sc-tab" role="tab" id="sc-tab-hospitality" aria-controls="sc-hospitality" aria-selected="false" tabindex="-1">Hospitality</button>
     <button type="button" class="sc-tab" role="tab" id="sc-tab-hotels" aria-controls="sc-hotels" aria-selected="false" tabindex="-1">Hotels</button>
     <button type="button" class="sc-tab" role="tab" id="sc-tab-retail" aria-controls="sc-retail" aria-selected="true">Retail</button>
