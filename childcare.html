@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- gen:head (scripts/marketing-pages.mjs — edit there, not here) -->
+<title>Childcare Rostering App for Early Learning Centres | TEAM MATE</title>
+<meta name="description" content="Rosters, clock-in and leave for Australian childcare and early learning centres. Working with Children Checks on file, room-by-room gaps shown. Free for teams of 10 or fewer.">
+<link rel="canonical" href="https://teammateapp.au/childcare.html">
+<meta property="og:site_name" content="TEAM MATE">
+<meta property="og:locale" content="en_AU">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TEAM MATE for childcare and early learning">
+<meta property="og:description" content="Rosters, clock-in and leave for Australian childcare and early learning centres. Working with Children Checks on file, room-by-room gaps shown. Free for teams of 10 or fewer.">
+<meta property="og:url" content="https://teammateapp.au/childcare.html">
+<meta property="og:image" content="https://teammateapp.au/assets/og-childcare.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TEAM MATE for childcare and early learning: Every room covered, open to close.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="assets/tm-dot.svg" type="image/svg+xml">
+<link rel="icon" href="assets/tm-favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="assets/tm-touch-180.png">
+<link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://teammateapp.au/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Childcare",
+     "item": "https://teammateapp.au/childcare.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Can I keep track of Working with Children Checks?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Record each Working with Children Check, First Aid, anaphylaxis and asthma training, child protection, qualifications and teacher registrations, and when each one runs out, and TEAM MATE warns you before you roster someone who doesn't have what their job needs."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can it tell me when a room is short?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Set your own rule, like \"at least 2 educators in the Toddler Room from 7 to 9 am\" or \"someone with First Aid on while we're open\", and the roster lists any time that falls short. You choose the numbers; TEAM MATE doesn't work out ratios or check them against any law."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it handle early openers and late closers?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Each room has its own shifts, so you see who opens, who's in the middle and who closes, room by room, on one roster."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do educators see their shifts?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "On their phone. Shifts land the moment you publish, with the room and the times, and they clock in and out from the same app."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<!-- /gen:head -->
+</head>
+<body>
+
+<!-- Childcare page (2026-10-11, COMPETITORS.md §5 A2), beside the care pages.
+     Same copy guardrails as clinics.html / the README: no award /
+     compliance / legal / clinical-safety claims; suggested rules are a
+     "common starting point" the owner checks; we TRACK registrations and
+     checks, we never verify them; skill mix is the business's OWN rule
+     ("you choose the numbers") — never say it meets staffing laws, care
+     minutes or educator-to-child ratios. Every feature line maps to the
+     CHILDCARE preset (packages/core/src/onboarding/presets.ts), its
+     suggested-rules pack (packages/core/src/compliance/packs.ts) or an
+     app-wide feature in docs/KNOWLEDGE-BASE.md. Hero photo: owner-supplied
+     (scripts/prep-industry-photos.mjs childcare <file>). -->
+
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-logo" href="/" aria-label="TEAM MATE home">
+      <img src="assets/tm-wordmark-light.svg" alt="TEAM MATE" width="181" height="18">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <!-- Plain <details> menus: they open without JS; site.js only adds
+           close-on-outside-click and Escape. -->
+      <details class="nav-drop hide-sm is-current">
+        <summary>Industries</summary>
+        <div class="drop-panel">
+          <ul class="drop-cards">
+            <li><a class="drop-card" href="hospitality.html"><span class="drop-photo"><img src="assets/industry-hospitality-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Hospitality</strong><span class="ind-line">From the first coffee to last drinks.</span></a></li>
+            <li><a class="drop-card" href="retail.html"><span class="drop-photo"><img src="assets/industry-retail-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Retail</strong><span class="ind-line">Every trading hour, covered.</span></a></li>
+            <li><a class="drop-card" href="cleaning.html"><span class="drop-photo"><img src="assets/industry-cleaning-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Cleaning</strong><span class="ind-line">Every site covered, every night.</span></a></li>
+            <li><a class="drop-card" href="security.html"><span class="drop-photo"><img src="assets/industry-security-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Security</strong><span class="ind-line">Every post covered, round the clock.</span></a></li>
+            <li><a class="drop-card" href="clinics.html"><span class="drop-photo"><img src="assets/industry-clinics-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Healthcare</strong><span class="ind-line">Front desk to treatment room.</span></a></li>
+            <li><a class="drop-card" href="construction.html"><span class="drop-photo"><img src="assets/industry-construction-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Building sites</strong><span class="ind-line">From first pour to knock-off.</span></a></li>
+          </ul>
+          <p class="drop-more">Also for: <a href="aged-care.html">Aged care</a> · <a href="childcare.html" aria-current="page">Childcare</a></p>
+        </div>
+      </details>
+      <a href="/#product" class="hide-sm">Product</a>
+      <a href="pricing.html" class="hide-sm">Pricing</a>
+      <a href="contact.html" class="hide-sm">Contact</a>
+      <!-- One Dot Blue moment per viewport: this page's own blue CTA
+           wins, so the pill stays hairline secondary. -->
+      <a class="btn btn-secondary" href="/#get-the-app">Get the app</a>
+      <details class="nav-menu">
+        <summary aria-label="Menu">
+          <svg class="i-open" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5.5h14M2 12.5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="i-close" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="menu-panel">
+          <span class="label">Industries</span>
+          <ul class="menu-rows">
+            <li><a class="menu-row" href="hospitality.html"><img src="assets/industry-hospitality-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Hospitality</strong><span class="ind-line">From the first coffee to last drinks.</span></span></a></li>
+            <li><a class="menu-row" href="retail.html"><img src="assets/industry-retail-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Retail</strong><span class="ind-line">Every trading hour, covered.</span></span></a></li>
+            <li><a class="menu-row" href="cleaning.html"><img src="assets/industry-cleaning-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Cleaning</strong><span class="ind-line">Every site covered, every night.</span></span></a></li>
+            <li><a class="menu-row" href="security.html"><img src="assets/industry-security-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Security</strong><span class="ind-line">Every post covered, round the clock.</span></span></a></li>
+            <li><a class="menu-row" href="clinics.html"><img src="assets/industry-clinics-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Healthcare</strong><span class="ind-line">Front desk to treatment room.</span></span></a></li>
+            <li><a class="menu-row" href="construction.html"><img src="assets/industry-construction-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Building sites</strong><span class="ind-line">From first pour to knock-off.</span></span></a></li>
+          </ul>
+          <p class="menu-more">Also for: <a href="aged-care.html">Aged care</a> · <a href="childcare.html" aria-current="page">Childcare</a></p>
+          <ul class="menu-links">
+            <li><a href="/#product">Product</a></li>
+            <li><a href="/#managers">For managers</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="/#faq">Questions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://app.teammateapp.au/login">Sign in</a></li>
+          </ul>
+          <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Split hero (owner 2026-10-06: the industry photo leads). Photo:
+       owner-supplied, built by scripts/prep-industry-photos.mjs. -->
+  <section class="hero hero-split">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="label">Rostering app for childcare and early learning</span>
+          <h1>Every room covered,<br> open to close. <span class="blue">Sorted.</span></h1>
+          <p>Roster educators room by room, keep Working with Children
+          Checks and first aid up to date, and see the gaps before the
+          week starts.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+            <a class="btn btn-secondary" href="#site">See how it works</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="assets/industry-childcare.jpg"
+            srcset="assets/industry-childcare-800.jpg 800w, assets/industry-childcare.jpg 1600w"
+            sizes="(max-width: 720px) 100vw, 55vw"
+            alt="An educator reading a picture book to a group of young children in a bright early learning room"
+            width="1600" height="900" fetchpriority="high">
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="dot" aria-hidden="true"></div>
+          <h3>Room by room</h3>
+          <p>Babies, toddlers and kinder on one roster, openers to closers, so you see the whole day at once.</p>
+        </div>
+        <div class="card">
+          <div class="dot" aria-hidden="true"></div>
+          <h3>Checks on file</h3>
+          <p>Track Working with Children Checks, First Aid, anaphylaxis and asthma training, and see when each one is due to run out.</p>
+        </div>
+        <div class="card">
+          <div class="dot" aria-hidden="true"></div>
+          <h3>Gaps, spotted early</h3>
+          <p>Set your own “at least 2 educators in the toddler room” rule and the roster lists any time that falls short.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mist" id="site">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">For your centre</span>
+        <h2>Built around a long day care week.</h2>
+        <p>Pick "Childcare or early learning" in the welcome wizard and your team is set
+        up in minutes: no implementation call, no sales demo.</p>
+      </div>
+
+      <ul class="features feature-cards">
+        <li><strong>Your team, ready to go</strong> Educators, room leaders, an early childhood teacher, a cook and a centre director, plus a typical week to start from: an opener, a middle shift and a closer in the babies’, toddler and kinder rooms, 6:30am to 6:30pm on weekdays.</li>
+        <li><strong>Working with Children Checks and training</strong> Track who holds what and when it runs out: Working with Children Checks, First Aid, anaphylaxis and asthma training, child protection, Certificate III and Diploma qualifications, teacher registration and food safety. Keep the card number and state on file. You get a warning before you roster someone without one.</li>
+        <li><strong>Your own room rules</strong> “At least 2 Educators in the Toddler Room, 7am to 9am.” Set a rule for one room or the whole centre; the Schedule page and the Monday summary list any time that falls short, and Build my week tries to fill it. You choose the numbers; TEAM MATE doesn’t work out ratios or check them against any law.</li>
+        <li><strong>First aid cover while you’re open</strong> Tick the suggested rules and TEAM MATE warns you when nobody with First Aid, anaphylaxis or asthma training is rostered on between 6:30am and 6:30pm.</li>
+        <li><strong>Suggested rules for childcare</strong> A meal break on shifts longer than 5 hours, 10 hours off between shifts, no shift longer than 8½ hours and none shorter than 2. Common starting points: you check them, switch them on, and change any number.</li>
+        <li><strong>Handover notes</strong> What the opener wants the closer to know.</li>
+        <li><strong>Someone calls in sick?</strong> Post it as an open shift, free staff ask for it from their phone, and you pick who takes it.</li>
+        <li><strong>Leave without the paperwork</strong> Staff request leave from their phone and see their balances, and approved leave shows on the roster before you schedule over it.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">For your team</span>
+        <h2>The app your educators will actually open.</h2>
+        <p>Shifts land in their pocket the moment you publish, and in their
+        phone calendar too. No more ringing round at 6am to cover the
+        opening shift.</p>
+      </div>
+
+<!-- gen:phones -->
+      <div class="phones">
+        <div class="phone">
+          <figure>
+            <img src="assets/app-childcare-home.png" alt="TEAM MATE Home screen: an educator on the clock at an early learning centre, with today's shift, jobs and who's working" width="1080" height="2341" loading="lazy">
+            <figcaption>Clock in and out from Home</figcaption>
+          </figure>
+        </div>
+        <div class="phone">
+          <figure>
+            <img src="assets/app-childcare-schedule.png" alt="TEAM MATE Schedule screen: an educator's week, with confirmed shifts" width="1080" height="2341" loading="lazy">
+            <figcaption>Know your week at a glance</figcaption>
+          </figure>
+        </div>
+        <div class="phone">
+          <figure>
+            <img src="assets/app-childcare-timesheets.png" alt="TEAM MATE Timesheets screen: an educator's paid hours, approved by the manager" width="1080" height="2341" loading="lazy">
+            <figcaption>Hours, checked and approved</figcaption>
+          </figure>
+        </div>
+      </div>
+<!-- /gen:phones -->
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Free for your first 10 staff.<br> Actually free.</h2>
+      <p>Not a trial. No card details, no locked features. One honest price
+      when you grow past 10.</p>
+      <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Questions</span>
+        <h2>Questions childcare centres ask.</h2>
+      </div>
+<!-- gen:faq -->
+<div class="faq-list">
+  <details>
+    <summary>Can I keep track of Working with Children Checks?</summary>
+    <p>Yes. Record each Working with Children Check, First Aid, anaphylaxis and asthma training, child protection, qualifications and teacher registrations, and when each one runs out, and TEAM MATE warns you before you roster someone who doesn't have what their job needs.</p>
+  </details>
+  <details>
+    <summary>Can it tell me when a room is short?</summary>
+    <p>Yes. Set your own rule, like &quot;at least 2 educators in the Toddler Room from 7 to 9 am&quot; or &quot;someone with First Aid on while we're open&quot;, and the roster lists any time that falls short. You choose the numbers; TEAM MATE doesn't work out ratios or check them against any law.</p>
+  </details>
+  <details>
+    <summary>Does it handle early openers and late closers?</summary>
+    <p>Yes. Each room has its own shifts, so you see who opens, who's in the middle and who closes, room by room, on one roster.</p>
+  </details>
+  <details>
+    <summary>How do educators see their shifts?</summary>
+    <p>On their phone. Shifts land the moment you publish, with the room and the times, and they clock in and out from the same app.</p>
+  </details>
+</div>
+<!-- /gen:faq -->
+    </div>
+  </section>
+
+  <section class="mist">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Born in hospo</span>
+        <h2>Built for every crew.</h2>
+        <p>TEAM MATE started in Melbourne cafés and restaurants. The same
+        app runs all of these crews too, each with its own setup in the
+        welcome wizard.</p>
+      </div>
+<!-- gen:industries -->
+<ul class="ind-grid compact six">
+  <li><a class="ind-card" href="hospitality.html"><img src="assets/industry-hospitality-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Hospitality</span></a></li>
+  <li><a class="ind-card" href="retail.html"><img src="assets/industry-retail-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Retail</span></a></li>
+  <li><a class="ind-card" href="cleaning.html"><img src="assets/industry-cleaning-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Cleaning</span></a></li>
+  <li><a class="ind-card" href="security.html"><img src="assets/industry-security-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Security</span></a></li>
+  <li><a class="ind-card" href="clinics.html"><img src="assets/industry-clinics-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Healthcare</span></a></li>
+  <li><a class="ind-card" href="construction.html"><img src="assets/industry-construction-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Building sites</span></a></li>
+</ul>
+<!-- /gen:industries -->
+      <div class="hero-cta hero-cta-left">
+        <a class="btn btn-secondary" href="/">See everything TEAM MATE does</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <img src="assets/tm-wordmark-reversed.svg" alt="TEAM MATE" width="151" height="15">
+      <span class="tagline">Your work crew, <span class="blue">sorted.</span></span>
+    </div>
+    <div class="foot-cols">
+      <nav aria-label="Industries">
+        <p class="foot-h">Industries</p>
+        <a href="hospitality.html">Hospitality</a>
+        <a href="retail.html">Retail</a>
+        <a href="cleaning.html">Cleaning</a>
+        <a href="security.html">Security</a>
+        <a href="clinics.html">Healthcare</a>
+        <a href="aged-care.html">Aged care</a>
+        <a href="construction.html">Building sites</a>
+        <a href="childcare.html">Childcare</a>
+      </nav>
+      <nav aria-label="Product">
+        <p class="foot-h">Product</p>
+        <a href="/#product">Staff app</a>
+        <a href="/#managers">For managers</a>
+        <a href="/#how-it-works">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="/#faq">Questions</a>
+      </nav>
+      <nav aria-label="Company">
+        <p class="foot-h">Company</p>
+        <a href="contact.html">Contact</a>
+        <a href="https://app.teammateapp.au/login">Sign in</a>
+        <a href="https://app.teammateapp.au/privacy">Privacy</a>
+        <a href="https://app.teammateapp.au/terms">Terms</a>
+        <a href="mailto:support@teammateapp.au">support@teammateapp.au</a>
+      </nav>
+    </div>
+    <div class="foot-base">Made in Melbourne, hosted in Australia. © 2026 TEAM MATE</div>
+  </div>
+</footer>
+
+</body>
+</html>
