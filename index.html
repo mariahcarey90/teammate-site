@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- gen:head (scripts/marketing-pages.mjs — edit there, not here) -->
 <title>Free Rostering App for Australian Teams | TEAM MATE</title>
-<meta name="description" content="Rosters, clock-in, timesheets and leave for Australian hospitality, retail, cleaning, security, healthcare and building crews. Free for teams of 10 or fewer.">
+<meta name="description" content="Rosters, clock-in, timesheets and leave for hospitality, retail, cleaning, security, healthcare, aged care, childcare and building crews. Free for teams of 10 or fewer.">
 <link rel="canonical" href="https://teammateapp.au/">
 <meta property="og:site_name" content="TEAM MATE">
 <meta property="og:locale" content="en_AU">
@@ -178,16 +178,17 @@
            close-on-outside-click and Escape. -->
       <details class="nav-drop hide-sm">
         <summary>Industries</summary>
-        <div class="drop-panel">
+        <div class="drop-panel" style="--cols: 4; --rows: 2">
           <ul class="drop-cards">
             <li><a class="drop-card" href="hospitality.html"><span class="drop-photo"><img src="assets/industry-hospitality-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Hospitality</strong><span class="ind-line">From the first coffee to last drinks.</span></a></li>
             <li><a class="drop-card" href="retail.html"><span class="drop-photo"><img src="assets/industry-retail-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Retail</strong><span class="ind-line">Every trading hour, covered.</span></a></li>
             <li><a class="drop-card" href="cleaning.html"><span class="drop-photo"><img src="assets/industry-cleaning-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Cleaning</strong><span class="ind-line">Every site covered, every night.</span></a></li>
             <li><a class="drop-card" href="security.html"><span class="drop-photo"><img src="assets/industry-security-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Security</strong><span class="ind-line">Every post covered, round the clock.</span></a></li>
             <li><a class="drop-card" href="clinics.html"><span class="drop-photo"><img src="assets/industry-clinics-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Healthcare</strong><span class="ind-line">Front desk to treatment room.</span></a></li>
+            <li><a class="drop-card" href="aged-care.html"><span class="drop-photo"><img src="assets/industry-aged-care-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Aged care</strong><span class="ind-line">Every wing covered, day and night.</span></a></li>
+            <li><a class="drop-card" href="childcare.html"><span class="drop-photo"><img src="assets/industry-childcare-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Childcare</strong><span class="ind-line">Every room covered, open to close.</span></a></li>
             <li><a class="drop-card" href="construction.html"><span class="drop-photo"><img src="assets/industry-construction-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Building sites</strong><span class="ind-line">From first pour to knock-off.</span></a></li>
           </ul>
-          <p class="drop-more">Also for: <a href="aged-care.html">Aged care</a> · <a href="childcare.html">Childcare</a></p>
         </div>
       </details>
       <a href="/#product" class="hide-sm">Product</a>
@@ -211,9 +212,10 @@
             <li><a class="menu-row" href="cleaning.html"><img src="assets/industry-cleaning-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Cleaning</strong><span class="ind-line">Every site covered, every night.</span></span></a></li>
             <li><a class="menu-row" href="security.html"><img src="assets/industry-security-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Security</strong><span class="ind-line">Every post covered, round the clock.</span></span></a></li>
             <li><a class="menu-row" href="clinics.html"><img src="assets/industry-clinics-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Healthcare</strong><span class="ind-line">Front desk to treatment room.</span></span></a></li>
+            <li><a class="menu-row" href="aged-care.html"><img src="assets/industry-aged-care-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Aged care</strong><span class="ind-line">Every wing covered, day and night.</span></span></a></li>
+            <li><a class="menu-row" href="childcare.html"><img src="assets/industry-childcare-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Childcare</strong><span class="ind-line">Every room covered, open to close.</span></span></a></li>
             <li><a class="menu-row" href="construction.html"><img src="assets/industry-construction-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Building sites</strong><span class="ind-line">From first pour to knock-off.</span></span></a></li>
           </ul>
-          <p class="menu-more">Also for: <a href="aged-care.html">Aged care</a> · <a href="childcare.html">Childcare</a></p>
           <ul class="menu-links">
             <li><a href="/#product">Product</a></li>
             <li><a href="/#managers">For managers</a></li>
@@ -236,8 +238,10 @@
        type-led and still on the desktop until the visitor acts. The brand tagline
        is the statement; the word "work" is a slot that becomes each crew
        ("hospo", "retail" …) while that industry's card is hovered or
-       focused. Below it, the crew ribbon: six portraits (the owner's
-       square tile portraits, cut 4:5) in a soft arc around a clean,
+       focused. Below it, the crew ribbon: a portrait for every live crew
+       (eight since 2026-10-12, when aged care and childcare joined the
+       six; the owner's square tile portraits, cut 4:5) in a soft arc
+       around a clean,
        upright phone drawn in CSS around the real Home screen. At rest it
        shows the café's Home; pointing at a crew shows that crew's REAL
        Home screen and its clock (site.js). The phone is whole, its own
@@ -245,7 +249,7 @@
        The h1 is plain text: "Your work crew, sorted." site.js fades the
        real word "work" and lays aria-hidden crew words over it, so
        assistive tech and crawlers always get the one stable sentence.
-       Without JS: the plain tagline, six links, the café's Home screen.
+       Without JS: the plain tagline, the crew links, the café's Home screen.
        Touch screens (phones, tablets, iPad landscape) step through the
        crews every 2.5s with a Pause button; never under reduced motion.
        Blue: "Start free" is this viewport's one blue moment; "sorted."
@@ -265,12 +269,14 @@
     <div class="ribbon" data-ribbon data-reveal>
       <!-- gen:hero-crews -->
       <ul class="crews" aria-label="Industries">
-        <li class="p3 l"><a class="crew" href="hospitality.html" data-key="hospitality" data-word="hospo" data-screen="assets/app-hospitality-home-600.png" data-screen-alt="TEAM MATE Home screen: a barista on the clock at a café, with today's shift, jobs and who's working" data-time="9:41" aria-label="Hospitality: cafés, restaurants, pubs and bars"><img src="assets/industry-hospitality-crew-400.jpg" srcset="assets/industry-hospitality-crew-400.jpg 400w, assets/industry-hospitality-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Hospitality</span></a></li>
-        <li class="p2 l"><a class="crew" href="retail.html" data-key="retail" data-word="retail" data-screen="assets/app-retail-home-600.png" data-screen-alt="TEAM MATE Home screen: a sales assistant on the clock at a deli, with today's shift, jobs and who's working" data-time="11:25" aria-label="Retail: shops and stores"><img src="assets/industry-retail-crew-400.jpg" srcset="assets/industry-retail-crew-400.jpg 400w, assets/industry-retail-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Retail</span></a></li>
-        <li class="p1 l"><a class="crew" href="cleaning.html" data-key="cleaning" data-word="cleaning" data-screen="assets/app-cleaning-home-600.png" data-screen-alt="TEAM MATE Home screen: a cleaner on the clock at an office site, with today's shift, jobs and who's working" data-time="7:26" aria-label="Cleaning: crews across client sites"><img src="assets/industry-cleaning-crew-400.jpg" srcset="assets/industry-cleaning-crew-400.jpg 400w, assets/industry-cleaning-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Cleaning</span></a></li>
-        <li class="p1 r"><a class="crew" href="security.html" data-key="security" data-word="security" data-screen="assets/app-security-home-600.png" data-screen-alt="TEAM MATE Home screen: a security officer on the clock at an arena, with today's shift, jobs and who's working" data-time="11:24" aria-label="Security: guards, crowd control and patrols"><img src="assets/industry-security-crew-400.jpg" srcset="assets/industry-security-crew-400.jpg 400w, assets/industry-security-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Security</span></a></li>
-        <li class="p2 r"><a class="crew" href="clinics.html" data-key="clinics" data-word="clinic" data-screen="assets/app-clinics-home-600.png" data-screen-alt="TEAM MATE Home screen: a nurse on the clock at a physio clinic, with today's shift, jobs and who's working" data-time="9:53" aria-label="Healthcare: clinics, practices and allied health"><img src="assets/industry-clinics-crew-400.jpg" srcset="assets/industry-clinics-crew-400.jpg 400w, assets/industry-clinics-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Healthcare</span></a></li>
-        <li class="p3 r"><a class="crew" href="construction.html" data-key="construction" data-word="site" data-screen="assets/app-construction-home-600.png" data-screen-alt="TEAM MATE Home screen: a carpenter on the clock at a building site, with today's shift, jobs and who's working" data-time="9:21" aria-label="Building sites: builders, trades and site crews"><img src="assets/industry-construction-crew-400.jpg" srcset="assets/industry-construction-crew-400.jpg 400w, assets/industry-construction-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Building sites</span></a></li>
+        <li class="p4 l"><a class="crew" href="hospitality.html" data-key="hospitality" data-word="hospo" data-screen="assets/app-hospitality-home-600.png" data-screen-alt="TEAM MATE Home screen: a barista on the clock at a café, with today's shift, jobs and who's working" data-time="9:41" aria-label="Hospitality: cafés, restaurants, pubs and bars"><img src="assets/industry-hospitality-crew-400.jpg" srcset="assets/industry-hospitality-crew-400.jpg 400w, assets/industry-hospitality-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Hospitality</span></a></li>
+        <li class="p3 l"><a class="crew" href="retail.html" data-key="retail" data-word="retail" data-screen="assets/app-retail-home-600.png" data-screen-alt="TEAM MATE Home screen: a sales assistant on the clock at a deli, with today's shift, jobs and who's working" data-time="11:25" aria-label="Retail: shops and stores"><img src="assets/industry-retail-crew-400.jpg" srcset="assets/industry-retail-crew-400.jpg 400w, assets/industry-retail-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Retail</span></a></li>
+        <li class="p2 l"><a class="crew" href="cleaning.html" data-key="cleaning" data-word="cleaning" data-screen="assets/app-cleaning-home-600.png" data-screen-alt="TEAM MATE Home screen: a cleaner on the clock at an office site, with today's shift, jobs and who's working" data-time="7:26" aria-label="Cleaning: crews across client sites"><img src="assets/industry-cleaning-crew-400.jpg" srcset="assets/industry-cleaning-crew-400.jpg 400w, assets/industry-cleaning-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Cleaning</span></a></li>
+        <li class="p1 l"><a class="crew" href="security.html" data-key="security" data-word="security" data-screen="assets/app-security-home-600.png" data-screen-alt="TEAM MATE Home screen: a security officer on the clock at an arena, with today's shift, jobs and who's working" data-time="11:24" aria-label="Security: guards, crowd control and patrols"><img src="assets/industry-security-crew-400.jpg" srcset="assets/industry-security-crew-400.jpg 400w, assets/industry-security-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Security</span></a></li>
+        <li class="p1 r"><a class="crew" href="clinics.html" data-key="clinics" data-word="clinic" data-screen="assets/app-clinics-home-600.png" data-screen-alt="TEAM MATE Home screen: a nurse on the clock at a physio clinic, with today's shift, jobs and who's working" data-time="9:53" aria-label="Healthcare: clinics, practices and allied health"><img src="assets/industry-clinics-crew-400.jpg" srcset="assets/industry-clinics-crew-400.jpg 400w, assets/industry-clinics-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Healthcare</span></a></li>
+        <li class="p2 r"><a class="crew" href="aged-care.html" data-key="aged-care" data-word="aged care" data-screen="assets/app-aged-care-home-600.png" data-screen-alt="TEAM MATE Home screen: a personal care worker on the clock at an aged care home, with today's shift, jobs and who's working" data-time="9:47" aria-label="Aged care: aged care homes"><img src="assets/industry-aged-care-crew-400.jpg" srcset="assets/industry-aged-care-crew-400.jpg 400w, assets/industry-aged-care-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Aged care</span></a></li>
+        <li class="p3 r"><a class="crew" href="childcare.html" data-key="childcare" data-word="childcare" data-screen="assets/app-childcare-home-600.png" data-screen-alt="TEAM MATE Home screen: an educator on the clock at an early learning centre, with today's shift, jobs and who's working" data-time="9:38" aria-label="Childcare: childcare and early learning centres"><img src="assets/industry-childcare-crew-400.jpg" srcset="assets/industry-childcare-crew-400.jpg 400w, assets/industry-childcare-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Childcare</span></a></li>
+        <li class="p4 r"><a class="crew" href="construction.html" data-key="construction" data-word="site" data-screen="assets/app-construction-home-600.png" data-screen-alt="TEAM MATE Home screen: a carpenter on the clock at a building site, with today's shift, jobs and who's working" data-time="9:21" aria-label="Building sites: builders, trades and site crews"><img src="assets/industry-construction-crew-400.jpg" srcset="assets/industry-construction-crew-400.jpg 400w, assets/industry-construction-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Building sites</span></a></li>
       </ul>
       <!-- /gen:hero-crews -->
       <!-- Touch screens only, shown by site.js while the crews step
@@ -325,7 +331,8 @@
        owner-supplied, scripts/prep-industry-photos.mjs. Slimmed with hero
        A2 (owner 2026-10-07: don't repeat the hero): its phone shows each
        industry's Schedule (the hero's phone shows Home), and the intro no
-       longer lists the six crews the hero has just shown. -->
+       longer lists the crews the hero has just shown. Aged care and
+       childcare got their own tabs 2026-10-12 (owner: equally prominent). -->
   <section class="scene-band mist" id="industries" aria-labelledby="industries-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
@@ -337,12 +344,14 @@
       <div data-reveal>
 <!-- gen:industries -->
 <div class="showcase" data-showcase>
-  <div class="sc-tabs" role="tablist" aria-label="Industries" hidden>
+  <div class="sc-tabs" role="tablist" aria-label="Industries" style="--n: 8; --cols: 4" hidden>
     <button type="button" class="sc-tab" role="tab" id="sc-tab-hospitality" aria-controls="sc-hospitality" aria-selected="false" tabindex="-1">Hospitality</button>
     <button type="button" class="sc-tab" role="tab" id="sc-tab-retail" aria-controls="sc-retail" aria-selected="true">Retail</button>
     <button type="button" class="sc-tab" role="tab" id="sc-tab-cleaning" aria-controls="sc-cleaning" aria-selected="false" tabindex="-1">Cleaning</button>
     <button type="button" class="sc-tab" role="tab" id="sc-tab-security" aria-controls="sc-security" aria-selected="false" tabindex="-1">Security</button>
     <button type="button" class="sc-tab" role="tab" id="sc-tab-clinics" aria-controls="sc-clinics" aria-selected="false" tabindex="-1">Healthcare</button>
+    <button type="button" class="sc-tab" role="tab" id="sc-tab-aged-care" aria-controls="sc-aged-care" aria-selected="false" tabindex="-1">Aged care</button>
+    <button type="button" class="sc-tab" role="tab" id="sc-tab-childcare" aria-controls="sc-childcare" aria-selected="false" tabindex="-1">Childcare</button>
     <button type="button" class="sc-tab" role="tab" id="sc-tab-construction" aria-controls="sc-construction" aria-selected="false" tabindex="-1">Building sites</button>
   </div>
   <div class="sc-panel" id="sc-hospitality" role="tabpanel" aria-labelledby="sc-tab-hospitality">
@@ -423,6 +432,38 @@
         <li><strong>Leave, sorted</strong> Staff ask from their phone, you approve, and the roster knows they're away.</li>
       </ul>
       <a class="btn btn-secondary sc-more" href="clinics.html">See TEAM MATE for healthcare</a>
+    </div>
+  </div>
+  <div class="sc-panel" id="sc-aged-care" role="tabpanel" aria-labelledby="sc-tab-aged-care">
+    <div class="sc-media">
+      <img class="sc-photo" src="assets/industry-aged-care-800.jpg" srcset="assets/industry-aged-care-800.jpg 800w, assets/industry-aged-care.jpg 1600w" sizes="(max-width: 720px) 100vw, 620px" alt="" width="800" height="450" loading="lazy">
+      <img class="sc-phone" src="assets/app-aged-care-schedule.png" alt="TEAM MATE Schedule screen: a personal care worker's week, with confirmed shifts" width="1080" height="2341" loading="lazy">
+    </div>
+    <div class="sc-copy">
+      <span class="label">Aged care homes</span>
+      <h3 class="sc-title">Every wing covered, day and night.</h3>
+      <ul class="sc-points">
+        <li><strong>Around the clock</strong> Morning, afternoon and night shifts on one roster, wing by wing, so you see the whole day at once.</li>
+        <li><strong>Registrations on file</strong> Track AHPRA registrations, Police Checks and First Aid, and see when each one is due to run out.</li>
+        <li><strong>Gaps, spotted early</strong> Set your own “at least one nurse on” rule and the roster lists any hour that falls short.</li>
+      </ul>
+      <a class="btn btn-secondary sc-more" href="aged-care.html">See TEAM MATE for aged care</a>
+    </div>
+  </div>
+  <div class="sc-panel" id="sc-childcare" role="tabpanel" aria-labelledby="sc-tab-childcare">
+    <div class="sc-media">
+      <img class="sc-photo" src="assets/industry-childcare-800.jpg" srcset="assets/industry-childcare-800.jpg 800w, assets/industry-childcare.jpg 1600w" sizes="(max-width: 720px) 100vw, 620px" alt="" width="800" height="450" loading="lazy">
+      <img class="sc-phone" src="assets/app-childcare-schedule.png" alt="TEAM MATE Schedule screen: an educator's week, with confirmed shifts" width="1080" height="2341" loading="lazy">
+    </div>
+    <div class="sc-copy">
+      <span class="label">Childcare and early learning centres</span>
+      <h3 class="sc-title">Every room covered, open to close.</h3>
+      <ul class="sc-points">
+        <li><strong>Room by room</strong> Babies, toddlers and kinder on one roster, openers to closers, so you see the whole day at once.</li>
+        <li><strong>Checks on file</strong> Track Working with Children Checks, First Aid, anaphylaxis and asthma training, and see when each one is due to run out.</li>
+        <li><strong>Gaps, spotted early</strong> Set your own “at least 2 educators in the toddler room” rule and the roster lists any time that falls short.</li>
+      </ul>
+      <a class="btn btn-secondary sc-more" href="childcare.html">See TEAM MATE for childcare</a>
     </div>
   </div>
   <div class="sc-panel" id="sc-construction" role="tabpanel" aria-labelledby="sc-tab-construction">
@@ -635,8 +676,8 @@
         <a href="security.html">Security</a>
         <a href="clinics.html">Healthcare</a>
         <a href="aged-care.html">Aged care</a>
-        <a href="construction.html">Building sites</a>
         <a href="childcare.html">Childcare</a>
+        <a href="construction.html">Building sites</a>
       </nav>
       <nav aria-label="Product">
         <p class="foot-h">Product</p>
