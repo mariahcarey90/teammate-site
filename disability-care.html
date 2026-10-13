@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- gen:head (scripts/marketing-pages.mjs — edit there, not here) -->
+<title>Disability Support Worker Rostering App | TEAM MATE</title>
+<meta name="description" content="Rosters, clock-in and leave for Australian disability and home care. NDIS Worker Screening Checks on file, group homes and visits. Free for teams of 10 or fewer.">
+<link rel="canonical" href="https://teammateapp.au/disability-care.html">
+<meta property="og:site_name" content="TEAM MATE">
+<meta property="og:locale" content="en_AU">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TEAM MATE for disability and home care">
+<meta property="og:description" content="Rosters, clock-in and leave for Australian disability and home care. NDIS Worker Screening Checks on file, group homes and visits. Free for teams of 10 or fewer.">
+<meta property="og:url" content="https://teammateapp.au/disability-care.html">
+<meta property="og:image" content="https://teammateapp.au/assets/og-disability-care.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TEAM MATE for disability and home care: Every shift and visit covered.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="assets/tm-dot.svg" type="image/svg+xml">
+<link rel="icon" href="assets/tm-favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="assets/tm-touch-180.png">
+<link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://teammateapp.au/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Healthcare",
+     "item": "https://teammateapp.au/clinics.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Disability care",
+     "item": "https://teammateapp.au/disability-care.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Can I keep track of NDIS Worker Screening Checks?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Record each NDIS Worker Screening Check, Police Check and Working with Children Check and when it runs out, along with First Aid, CPR and a driver licence, and TEAM MATE warns you before you roster someone who doesn't have one."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it work for a group home and community visits?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. A group home and your community work are separate areas, so you see who's at the house and who's out with clients."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can it tell me when a house is short?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Set your own rule, like \"at least 1 support worker with First Aid on, around the clock\", and the roster lists any hour that falls short. You choose the numbers."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do support workers see their shifts?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "On their phone. Shifts land the moment you publish, with the place and the times, and they clock in and out from the same app."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<!-- /gen:head -->
+</head>
+<body>
+
+<!-- Care page under Healthcare (2026-10-11, COMPETITORS.md §5 A1).
+     Same copy guardrails as clinics.html / the README: no award /
+     compliance / legal / clinical-safety claims; suggested rules are a
+     "common starting point" the owner checks; we TRACK registrations and
+     checks, we never verify them; skill mix is the business's OWN rule
+     ("you choose the numbers") — never say it meets staffing laws, care
+     minutes or ratios. Every feature line maps to the
+     DISABILITY_CARE preset (packages/core/src/onboarding/presets.ts), its
+     suggested-rules pack (packages/core/src/compliance/packs.ts) or an
+     app-wide feature in docs/KNOWLEDGE-BASE.md. No sleepovers or on-call
+     claims until Healthcare 4 is built. Hero photo: owner-supplied
+     (scripts/prep-industry-photos.mjs disability-care <file>). -->
+
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-logo" href="/" aria-label="TEAM MATE home">
+      <img src="assets/tm-wordmark-light.svg" alt="TEAM MATE" width="181" height="18">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <!-- Plain <details> menus: they open without JS; site.js only adds
+           close-on-outside-click and Escape. -->
+      <details class="nav-drop hide-sm is-current">
+        <summary>Industries</summary>
+        <div class="drop-panel" style="--cols: 6; --rows: 2">
+          <ul class="drop-cards">
+            <li><a class="drop-card" href="hospitality.html"><span class="drop-photo"><img src="assets/industry-hospitality-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Hospitality</strong><span class="ind-line">From the first coffee to last drinks.</span></a></li>
+            <li><a class="drop-card" href="hotels.html"><span class="drop-photo"><img src="assets/industry-hotels-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Hotels</strong><span class="ind-line">Every floor covered, check-in to checkout.</span></a></li>
+            <li><a class="drop-card" href="retail.html"><span class="drop-photo"><img src="assets/industry-retail-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Retail</strong><span class="ind-line">Every trading hour, covered.</span></a></li>
+            <li><a class="drop-card" href="cleaning.html"><span class="drop-photo"><img src="assets/industry-cleaning-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Cleaning</strong><span class="ind-line">Every site covered, day or night.</span></a></li>
+            <li><a class="drop-card" href="security.html"><span class="drop-photo"><img src="assets/industry-security-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Security</strong><span class="ind-line">Every post covered, round the clock.</span></a></li>
+            <li><a class="drop-card" href="clinics.html"><span class="drop-photo"><img src="assets/industry-clinics-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Healthcare</strong><span class="ind-line">Front desk to treatment room.</span></a></li>
+            <li><a class="drop-card" href="aged-care.html"><span class="drop-photo"><img src="assets/industry-aged-care-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Aged care</strong><span class="ind-line">Every wing covered, day and night.</span></a></li>
+            <li><a class="drop-card" href="disability-care.html" aria-current="page"><span class="drop-photo"><img src="assets/industry-disability-care-menu.jpg" alt="" width="560" height="560" loading="lazy"><span class="ind-here" aria-hidden="true">You're here</span></span><strong>Disability care</strong><span class="ind-line">Every shift and visit covered.</span></a></li>
+            <li><a class="drop-card" href="childcare.html"><span class="drop-photo"><img src="assets/industry-childcare-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Childcare</strong><span class="ind-line">Every room covered, open to close.</span></a></li>
+            <li><a class="drop-card" href="gyms.html"><span class="drop-photo"><img src="assets/industry-gyms-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Gyms</strong><span class="ind-line">Every class covered, early till late.</span></a></li>
+            <li><a class="drop-card" href="swim-leisure.html"><span class="drop-photo"><img src="assets/industry-swim-leisure-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Swim centres</strong><span class="ind-line">Every lane covered, first swim to last.</span></a></li>
+            <li><a class="drop-card" href="construction.html"><span class="drop-photo"><img src="assets/industry-construction-menu.jpg" alt="" width="560" height="560" loading="lazy"></span><strong>Building sites</strong><span class="ind-line">From first pour to knock-off.</span></a></li>
+          </ul>
+        </div>
+      </details>
+      <a href="/#product" class="hide-sm">Product</a>
+      <a href="pricing.html" class="hide-sm">Pricing</a>
+      <a href="contact.html" class="hide-sm">Contact</a>
+      <!-- One Dot Blue moment per viewport: this page's own blue CTA
+           wins, so the pill stays hairline secondary. -->
+      <a class="btn btn-secondary" href="/#get-the-app">Get the app</a>
+      <details class="nav-menu">
+        <summary aria-label="Menu">
+          <svg class="i-open" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5.5h14M2 12.5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="i-close" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="menu-panel">
+          <span class="label">Industries</span>
+          <ul class="menu-rows">
+            <li><a class="menu-row" href="hospitality.html"><img src="assets/industry-hospitality-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Hospitality</strong><span class="ind-line">From the first coffee to last drinks.</span></span></a></li>
+            <li><a class="menu-row" href="hotels.html"><img src="assets/industry-hotels-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Hotels</strong><span class="ind-line">Every floor covered, check-in to checkout.</span></span></a></li>
+            <li><a class="menu-row" href="retail.html"><img src="assets/industry-retail-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Retail</strong><span class="ind-line">Every trading hour, covered.</span></span></a></li>
+            <li><a class="menu-row" href="cleaning.html"><img src="assets/industry-cleaning-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Cleaning</strong><span class="ind-line">Every site covered, day or night.</span></span></a></li>
+            <li><a class="menu-row" href="security.html"><img src="assets/industry-security-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Security</strong><span class="ind-line">Every post covered, round the clock.</span></span></a></li>
+            <li><a class="menu-row" href="clinics.html"><img src="assets/industry-clinics-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Healthcare</strong><span class="ind-line">Front desk to treatment room.</span></span></a></li>
+            <li><a class="menu-row" href="aged-care.html"><img src="assets/industry-aged-care-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Aged care</strong><span class="ind-line">Every wing covered, day and night.</span></span></a></li>
+            <li><a class="menu-row" href="disability-care.html" aria-current="page"><img src="assets/industry-disability-care-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Disability care<span class="ind-here" aria-hidden="true">You're here</span></strong><span class="ind-line">Every shift and visit covered.</span></span></a></li>
+            <li><a class="menu-row" href="childcare.html"><img src="assets/industry-childcare-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Childcare</strong><span class="ind-line">Every room covered, open to close.</span></span></a></li>
+            <li><a class="menu-row" href="gyms.html"><img src="assets/industry-gyms-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Gyms</strong><span class="ind-line">Every class covered, early till late.</span></span></a></li>
+            <li><a class="menu-row" href="swim-leisure.html"><img src="assets/industry-swim-leisure-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Swim centres</strong><span class="ind-line">Every lane covered, first swim to last.</span></span></a></li>
+            <li><a class="menu-row" href="construction.html"><img src="assets/industry-construction-thumb.jpg" alt="" width="192" height="192" loading="lazy"><span><strong>Building sites</strong><span class="ind-line">From first pour to knock-off.</span></span></a></li>
+          </ul>
+          <ul class="menu-links">
+            <li><a href="/#product">Product</a></li>
+            <li><a href="/#managers">For managers</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="/#faq">Questions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://app.teammateapp.au/login">Sign in</a></li>
+          </ul>
+          <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Split hero (owner 2026-10-06: the industry photo leads). Photo:
+       owner-supplied, built by scripts/prep-industry-photos.mjs. -->
+  <section class="hero hero-split">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="label">Rostering app for disability and home care</span>
+          <h1>Every shift and visit<br> covered. <span class="blue">Sorted.</span></h1>
+          <p>Keep every house staffed and every community visit covered, keep
+          NDIS Worker Screening Checks up to date, and give support workers
+          their week on their phone.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+            <a class="btn btn-secondary" href="#site">See how it works</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="assets/industry-disability-care.jpg"
+            srcset="assets/industry-disability-care-800.jpg 800w, assets/industry-disability-care.jpg 1600w"
+            sizes="(max-width: 720px) 100vw, 55vw"
+            alt="Two women smiling at each other in a park with gum trees, one on a bench and one in a wheelchair"
+            width="1600" height="900" fetchpriority="high">
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="dot" aria-hidden="true"></div>
+          <h3>House and community</h3>
+          <p>Group homes and community visits on one roster, so you see who’s at the house and who’s out with clients.</p>
+        </div>
+        <div class="card">
+          <div class="dot" aria-hidden="true"></div>
+          <h3>Checks on file</h3>
+          <p>Track NDIS Worker Screening Checks, Police Checks and First Aid, and see when each one is due to run out.</p>
+        </div>
+        <div class="card">
+          <div class="dot" aria-hidden="true"></div>
+          <h3>Gaps, spotted early</h3>
+          <p>Set your own “at least one support worker with First Aid on” rule and the roster lists any hour that falls short.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mist" id="site">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">For your service</span>
+        <h2>Built around a support week.</h2>
+        <p>Pick "Disability or home care" in the welcome wizard and your team
+        is set up in minutes: no implementation call, no sales demo.</p>
+      </div>
+
+      <ul class="features feature-cards">
+        <li><strong>Your team, ready to go</strong> Support workers, team leaders and a coordinator, plus a typical week to start from: a group home staffed around the clock in three 8-hour shifts, and community visits on weekdays, morning and afternoon.</li>
+        <li><strong>NDIS Worker Screening Checks and more</strong> Track who holds what and when it runs out: NDIS Worker Screening Checks, Police Checks, Working with Children Checks, First Aid, CPR, Manual Handling and driver licences. Keep the card number and state on file, and get a warning before you roster someone without one.</li>
+        <li><strong>Your own skill mix</strong> “At least 1 support worker with First Aid on, around the clock.” Set the rule once; the Schedule page and the Monday summary list any hour that falls short, and Build my week tries to fill it. You choose the numbers.</li>
+        <li><strong>Suggested rules for disability and home care</strong> A meal break on shifts longer than 5 hours, 10 hours off between shifts, no shift longer than 8½ hours and none shorter than 2. Common starting points: you check them, switch them on, and change any number.</li>
+        <li><strong>Clock in where the work is</strong> Each house can have its own location check, plus an optional photo on each clock-in, so hours match who was actually there.</li>
+        <li><strong>Handover notes</strong> What the night shift wants the morning shift to know.</li>
+        <li><strong>Someone calls in sick?</strong> Post it as an open shift, free support workers ask for it from their phone, and you pick who takes it.</li>
+        <li><strong>Announcements people confirm</strong> A client’s new routine, a change to the house roster: see who’s read it.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">For your team</span>
+        <h2>The app your support workers will actually open.</h2>
+        <p>Shifts land in their pocket the moment you publish, with the place
+        and the times, and in their phone calendar too. No more texting
+        the week out one by one.</p>
+      </div>
+
+<!-- gen:phones -->
+      <div class="phones">
+        <div class="phone">
+          <figure>
+            <img src="assets/app-disability-care-home.png" alt="TEAM MATE Home screen: a support worker on the clock at a group home, with today's shift, jobs and who's working" width="1080" height="2341" loading="lazy">
+            <figcaption>Clock in and out from Home</figcaption>
+          </figure>
+        </div>
+        <div class="phone">
+          <figure>
+            <img src="assets/app-disability-care-schedule.png" alt="TEAM MATE Schedule screen: a support worker's week, with confirmed shifts" width="1080" height="2341" loading="lazy">
+            <figcaption>Know your week at a glance</figcaption>
+          </figure>
+        </div>
+        <div class="phone">
+          <figure>
+            <img src="assets/app-disability-care-timesheets.png" alt="TEAM MATE Timesheets screen: a support worker's paid hours, approved by the manager" width="1080" height="2341" loading="lazy">
+            <figcaption>Hours, checked and approved</figcaption>
+          </figure>
+        </div>
+      </div>
+<!-- /gen:phones -->
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Free for your first 10 staff.<br> Actually free.</h2>
+      <p>Not a trial. No card details, no locked features. One honest price
+      when you grow past 10.</p>
+      <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Questions</span>
+        <h2>Questions disability and home care services ask.</h2>
+      </div>
+<!-- gen:faq -->
+<div class="faq-list">
+  <details>
+    <summary>Can I keep track of NDIS Worker Screening Checks?</summary>
+    <p>Yes. Record each NDIS Worker Screening Check, Police Check and Working with Children Check and when it runs out, along with First Aid, CPR and a driver licence, and TEAM MATE warns you before you roster someone who doesn't have one.</p>
+  </details>
+  <details>
+    <summary>Does it work for a group home and community visits?</summary>
+    <p>Yes. A group home and your community work are separate areas, so you see who's at the house and who's out with clients.</p>
+  </details>
+  <details>
+    <summary>Can it tell me when a house is short?</summary>
+    <p>Yes. Set your own rule, like &quot;at least 1 support worker with First Aid on, around the clock&quot;, and the roster lists any hour that falls short. You choose the numbers.</p>
+  </details>
+  <details>
+    <summary>How do support workers see their shifts?</summary>
+    <p>On their phone. Shifts land the moment you publish, with the place and the times, and they clock in and out from the same app.</p>
+  </details>
+</div>
+<!-- /gen:faq -->
+    </div>
+  </section>
+
+  <section class="mist">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Born in hospo</span>
+        <h2>Built for every crew.</h2>
+        <p>TEAM MATE started in Melbourne cafés and restaurants. The same
+        app runs all of these crews too, each with its own setup in the
+        welcome wizard.</p>
+      </div>
+<!-- gen:industries -->
+<ul class="ind-grid compact">
+  <li><a class="ind-card" href="hospitality.html"><img src="assets/industry-hospitality-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Hospitality</span></a></li>
+  <li><a class="ind-card" href="hotels.html"><img src="assets/industry-hotels-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Hotels</span></a></li>
+  <li><a class="ind-card" href="retail.html"><img src="assets/industry-retail-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Retail</span></a></li>
+  <li><a class="ind-card" href="cleaning.html"><img src="assets/industry-cleaning-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Cleaning</span></a></li>
+  <li><a class="ind-card" href="security.html"><img src="assets/industry-security-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Security</span></a></li>
+  <li><a class="ind-card" href="clinics.html"><img src="assets/industry-clinics-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Healthcare</span></a></li>
+  <li><a class="ind-card" href="aged-care.html"><img src="assets/industry-aged-care-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Aged care</span></a></li>
+  <li><a class="ind-card" href="childcare.html"><img src="assets/industry-childcare-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Childcare</span></a></li>
+  <li><a class="ind-card" href="gyms.html"><img src="assets/industry-gyms-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Gyms</span></a></li>
+  <li><a class="ind-card" href="swim-leisure.html"><img src="assets/industry-swim-leisure-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Swim centres</span></a></li>
+  <li><a class="ind-card" href="construction.html"><img src="assets/industry-construction-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Building sites</span></a></li>
+</ul>
+<!-- /gen:industries -->
+      <div class="hero-cta hero-cta-left">
+        <a class="btn btn-secondary" href="/">See everything TEAM MATE does</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <img src="assets/tm-wordmark-reversed.svg" alt="TEAM MATE" width="151" height="15">
+      <span class="tagline">Your work crew, <span class="blue">sorted.</span></span>
+    </div>
+    <div class="foot-cols">
+      <nav aria-label="Industries">
+        <p class="foot-h">Industries</p>
+        <a href="hospitality.html">Hospitality</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="retail.html">Retail</a>
+        <a href="cleaning.html">Cleaning</a>
+        <a href="security.html">Security</a>
+        <a href="clinics.html">Healthcare</a>
+        <a href="aged-care.html">Aged care</a>
+        <a href="disability-care.html">Disability care</a>
+        <a href="childcare.html">Childcare</a>
+        <a href="gyms.html">Gyms</a>
+        <a href="swim-leisure.html">Swim centres</a>
+        <a href="construction.html">Building sites</a>
+      </nav>
+      <nav aria-label="Product">
+        <p class="foot-h">Product</p>
+        <a href="/#product">Staff app</a>
+        <a href="/#managers">For managers</a>
+        <a href="/#how-it-works">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="/#faq">Questions</a>
+      </nav>
+      <nav aria-label="Company">
+        <p class="foot-h">Company</p>
+        <a href="contact.html">Contact</a>
+        <a href="https://app.teammateapp.au/login">Sign in</a>
+        <a href="https://app.teammateapp.au/privacy">Privacy</a>
+        <a href="https://app.teammateapp.au/terms">Terms</a>
+        <a href="mailto:support@teammateapp.au">support@teammateapp.au</a>
+      </nav>
+    </div>
+    <div class="foot-base">Made in Melbourne, hosted in Australia. © 2026 TEAM MATE</div>
+  </div>
+</footer>
+
+</body>
+</html>

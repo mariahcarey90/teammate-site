@@ -764,7 +764,9 @@ footer {
 
 .sc-tab {
   flex: 1 1 auto;
-  padding: 12px 10px;
+  /* slim side padding: the tabs grow to fill the row anyway, and all
+     twelve names fit one row from 1180px (2026-10-13, disability care) */
+  padding: 12px 7px;
   border: 0;
   border-radius: var(--radius-pill);
   background: transparent;
@@ -793,12 +795,9 @@ footer {
 @media (max-width: 960px) {
   .sc-tab { font-size: 14px; }
 }
-/* phones: three a row ("Building sites" whole down to 320px) */
+/* phones: three a row (the smallest phones: see the 360px block) */
 @media (max-width: 720px) {
   .sc-tab { flex-basis: calc((100% - 2 * 4px) / 3); }
-}
-@media (max-width: 370px) {
-  .sc-tab { font-size: 13px; }
 }
 
 .sc-panel {
@@ -1248,9 +1247,11 @@ body.contact main { flex: 1 0 auto; }
   .foot-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
   .foot-cols nav:last-child { grid-column: 1 / -1; }
 }
-/* the smallest phones: "Swim centres →" still fits on one line */
+/* the smallest phones: "Swim centres →" still fits on one line, and the
+   switcher's "Disability care" tab stays three a row down to 320px */
 @media (max-width: 360px) {
   .ind-name { padding: 4px 9px; font-size: 13px; }
+  .sc-tab { padding-left: 1px; padding-right: 1px; font-size: 12px; }
 }
 
 /* =====================================================================
