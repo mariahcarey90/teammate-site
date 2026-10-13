@@ -1196,6 +1196,12 @@ body.contact main { flex: 1 0 auto; }
   html.menu-open body { overflow: hidden; }
 }
 
+/* small tablets, still four tiles a row (cards 150-185px): a smaller
+   pill keeps "Disability care →" whole and centred on its tile */
+@media (min-width: 721px) and (max-width: 860px) {
+  .ind-name { bottom: 10px; max-width: calc(100% - 16px); padding: 5px 10px; font-size: 14px; }
+}
+
 @media (max-width: 720px) {
   .menu-panel {
     height: calc(100vh - 64px);
@@ -1247,10 +1253,11 @@ body.contact main { flex: 1 0 auto; }
   .foot-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
   .foot-cols nav:last-child { grid-column: 1 / -1; }
 }
-/* the smallest phones: "Swim centres →" still fits on one line, and the
-   switcher's "Disability care" tab stays three a row down to 320px */
+/* the smallest phones: "Disability care →" still fits whole on its tile
+   (12px, like the tabs), and the switcher's "Disability care" tab stays
+   three a row down to 320px */
 @media (max-width: 360px) {
-  .ind-name { padding: 4px 9px; font-size: 13px; }
+  .ind-name { padding: 4px 9px; font-size: 12px; }
   .sc-tab { padding-left: 1px; padding-right: 1px; font-size: 12px; }
 }
 
@@ -1362,8 +1369,11 @@ body.contact main { flex: 1 0 auto; }
   transition: transform 300ms ease-out;
 }
 
-/* the name sits on the photo in a white pill (no scrim); the selected
-   crew gets the live Dot, which fades in and pulses (brand motion) */
+/* the name sits on the photo in a white pill (no scrim), centred on the
+   card; the selected crew gets the live Dot just above its pill, which
+   fades in and pulses (brand motion). The Dot sits above rather than
+   beside the name so the name never shifts or gets squeezed off-centre
+   (owner 2026-10-13: long names read as off-centre) */
 .crew-name {
   position: absolute;
   left: 50%;
@@ -1377,18 +1387,18 @@ body.contact main { flex: 1 0 auto; }
   font-weight: 600;
   line-height: 1.3;
   white-space: nowrap;
-  transition: padding 200ms ease-out;
 }
 .crew-name::before {
   content: "";
   position: absolute;
-  left: 13px;
-  top: 50%;
+  left: 50%;
+  bottom: calc(100% + 7px);
   width: 8px;
   height: 8px;
-  margin-top: -4px;
+  margin-left: -4px;
   border-radius: 50%;
   background: var(--dot-blue);
+  box-shadow: 0 0 0 2px var(--white);
   opacity: 0;
   transition: opacity 200ms ease-out;
 }
@@ -1402,9 +1412,6 @@ body.contact main { flex: 1 0 auto; }
 .crew:hover img,
 .crew:focus-visible img,
 .crew.is-active img { transform: scale(1.035); }
-.crew:hover .crew-name,
-.crew:focus-visible .crew-name,
-.crew.is-active .crew-name { padding-left: 29px; }
 .crew:hover .crew-name::before,
 .crew:focus-visible .crew-name::before,
 .crew.is-active .crew-name::before {
@@ -1628,10 +1635,6 @@ body.contact main { flex: 1 0 auto; }
 }
 @media (min-width: 1000px) and (max-width: 1239px) {
   .crew-name { bottom: 10px; padding: 5px 11px; }
-  .crew-name::before { left: 10px; }
-  .crew:hover .crew-name,
-  .crew:focus-visible .crew-name,
-  .crew.is-active .crew-name { padding-left: 24px; }
 }
 
 /* ---- desktop, more than ten crews: two wings either side of the phone
@@ -1673,12 +1676,16 @@ body.contact main { flex: 1 0 auto; }
   .crews.many li:nth-child(10) { grid-area: 2 / 5; }
   .crews.many li:nth-child(11) { grid-area: 2 / 6; }
   .crews.many li:nth-child(12) { grid-area: 2 / 7; }
+  /* type and side padding scale with the card, so the longest name
+     ("Disability care") fits whole, centred, on the smallest card (104px) */
   .crews.many .crew-name,
-  .crews.many .p1 .crew-name { left: 50%; bottom: 9px; max-width: calc(100% - 12px); padding: 5px 11px; font-size: clamp(12px, 0.95vw, 14px); }
-  .crews.many .crew-name::before { left: 10px; }
-  .crews.many .crew:hover .crew-name,
-  .crews.many .crew:focus-visible .crew-name,
-  .crews.many .crew.is-active .crew-name { padding-left: 23px; }
+  .crews.many .p1 .crew-name {
+    left: 50%;
+    bottom: 9px;
+    max-width: calc(100% - 8px);
+    padding: 5px clamp(7px, calc(var(--cw) * 0.07), 11px);
+    font-size: clamp(11px, calc(var(--cw) * 0.105), 14px);
+  }
   .crews.many .crew:hover,
   .crews.many .crew:focus-visible,
   .crews.many .crew.is-active { transform: translateY(-6px); }
@@ -1755,10 +1762,6 @@ body.contact main { flex: 1 0 auto; }
   .crew.is-active { transform: translateY(-6px); }
   .crew:active { transform: translateY(-6px) scale(0.97); }
   .crew-name { font-size: 14px; padding: 5px 12px; bottom: 9px; }
-  .crew-name::before { left: 11px; }
-  .crew:hover .crew-name,
-  .crew:focus-visible .crew-name,
-  .crew.is-active .crew-name { padding-left: 25px; }
   .sig-pause:not([hidden]) { margin-top: 2px; }
 }
 
@@ -1782,6 +1785,11 @@ body.contact main { flex: 1 0 auto; }
   .sig-title { font-size: clamp(40px, 13.6vw, 62px); line-height: 0.98; letter-spacing: -0.03em; }
   .sig-a { display: block; }
   .sig-c { display: inline; }
+}
+/* the smallest phones (cards 128px): "Disability care" keeps clear air
+   either side of its pill */
+@media (max-width: 360px) {
+  .crew-name { padding: 5px 10px; font-size: 13px; }
 }
 
 /* ---- reduced motion: no lifts, no rolls, no zoom; fades only ---- */
