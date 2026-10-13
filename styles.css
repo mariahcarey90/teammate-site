@@ -685,8 +685,9 @@ footer {
         page: every other live crew, 7 today). Four to a row, a short
         last row centred (4 + 3); two to a row on phones, where an odd
         last tile spans the row. Photos fill a 4:3 frame; the name sits
-        on the photo in a white pill — no gradient scrim (BRAND.md: no
-        gradients). ---- */
+        on the photo in a white pill, centred like the homepage's crew
+        cards (owner 2026-10-13: it read as off-centre in the corner) —
+        no gradient scrim (BRAND.md: no gradients). ---- */
 
 .ind-grid {
   list-style: none;
@@ -719,8 +720,11 @@ footer {
 
 .ind-name {
   position: absolute;
-  left: 12px;
+  left: 50%;
   bottom: 12px;
+  transform: translateX(-50%);
+  max-width: calc(100% - 24px);
+  white-space: nowrap;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
   background: var(--white);
@@ -1210,7 +1214,7 @@ body.contact main { flex: 1 0 auto; }
   /* an odd last tile spans the row, as tall as the others */
   .ind-grid > li:last-child:nth-child(odd) { flex-basis: 100%; }
   .ind-grid > li:last-child:nth-child(odd) img { aspect-ratio: 8 / 3; }
-  .ind-name { left: 8px; bottom: 8px; padding: 4px 11px; font-size: 14px; }
+  .ind-name { bottom: 8px; max-width: calc(100% - 16px); padding: 4px 11px; font-size: 14px; }
 
   /* switcher: the track goes rows of --cols (8 crews: two rows of four;
      all in view, no sideways scroll); the panel's inner padding shrinks */
@@ -1243,6 +1247,10 @@ body.contact main { flex: 1 0 auto; }
 
   .foot-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
   .foot-cols nav:last-child { grid-column: 1 / -1; }
+}
+/* the smallest phones: "Swim centres →" still fits on one line */
+@media (max-width: 360px) {
+  .ind-name { padding: 4px 9px; font-size: 13px; }
 }
 
 /* =====================================================================
