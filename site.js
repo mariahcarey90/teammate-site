@@ -40,20 +40,6 @@
     var m = document.querySelector(".nav-menu");
     if (m && m.open && window.innerWidth > 900) m.open = false;
   });
-
-  // The Industries menu's photos are lazy (closed <details>), so the first
-  // open showed grey boxes for a moment: start fetching them as soon as the
-  // pointer or keyboard reaches "Industries".
-  var drop = document.querySelector(".nav-drop");
-  if (drop) {
-    var warm = function () {
-      drop.querySelectorAll("img").forEach(function (img) { new Image().src = img.src; });
-      drop.removeEventListener("pointerenter", warm);
-      drop.removeEventListener("focusin", warm);
-    };
-    drop.addEventListener("pointerenter", warm);
-    drop.addEventListener("focusin", warm);
-  }
 })();
 
 // Homepage industry switcher (scripts/marketing-pages.mjs renders it).
