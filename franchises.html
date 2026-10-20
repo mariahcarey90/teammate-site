@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- gen:head (scripts/marketing-pages.mjs — edit there, not here) -->
+<title>Franchise &amp; Multi-Store Rostering App | TEAM MATE</title>
+<meta name="description" content="Rosters, clock-in and pay for owners running several stores. Every store side by side, staff shared between stores. Free for teams of 10 or fewer.">
+<link rel="canonical" href="https://teammateapp.au/franchises.html">
+<meta property="og:site_name" content="TEAM MATE">
+<meta property="og:locale" content="en_AU">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TEAM MATE for franchises and multi-store owners">
+<meta property="og:description" content="Rosters, clock-in and pay for owners running several stores. Every store side by side, staff shared between stores. Free for teams of 10 or fewer.">
+<meta property="og:url" content="https://teammateapp.au/franchises.html">
+<meta property="og:image" content="https://teammateapp.au/assets/tm-og-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TEAM MATE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="assets/tm-dot.svg" type="image/svg+xml">
+<link rel="icon" href="assets/tm-favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="assets/tm-touch-180.png">
+<link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://teammateapp.au/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Franchises",
+     "item": "https://teammateapp.au/franchises.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "We own several stores. Is that one account?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. One business, with each store as its own location. You see every store, and each store manager sees their own."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can staff work at more than one store?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Put someone on more than one store's team and they can be rostered and clock in at each."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Each franchisee is a separate business. Does head office see them all?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Not yet. Each business has its own TEAM MATE account, so a franchisee's rosters and pay stay theirs. If you own the stores yourself, they all sit in one account."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it connect to our tills?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Square, yes: each store's daily sales come in and feed the suggested headcount. With another till, upload your daily sales instead."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<!-- /gen:head -->
+</head>
+<body>
+
+<!-- Franchises page (2026-10-20, H521: owner "do franchises and
+     not-for-profit and councils"); HELD for the owner's look.
+     No welcome setup of its own (a franchise is any kind of business), so
+     every line maps to an app-wide feature in docs/KNOWLEDGE-BASE.md:
+     locations, Reports > All locations, the staff-sharing pool, location
+     managers, Square, sales upload, swaps. It speaks to an owner running
+     several stores in ONE account. Not promised (we don't have them): a
+     head-office view across separately owned franchisees, one template
+     copied to every store, tills other than Square. The FAQ says the
+     head-office one plainly. -->
+
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-logo" href="/" aria-label="TEAM MATE home">
+      <img src="assets/tm-wordmark-light.svg" alt="TEAM MATE" width="181" height="18">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <!-- Plain <details> menus: they open without JS; site.js only adds
+           close-on-outside-click and Escape. -->
+      <details class="nav-drop hide-sm is-current">
+        <summary>Industries</summary>
+        <div class="drop-panel">
+          <div class="drop-group">
+            <p class="drop-h">Food, drink and hotels</p>
+            <ul>
+              <li><a href="hospitality.html">Hospitality</a></li>
+              <li><a href="hotels.html">Hotels</a></li>
+              <li><a href="fast-food.html">Fast food</a></li>
+            </ul>
+          </div>
+          <div class="drop-group">
+            <p class="drop-h">Shops and salons</p>
+            <ul>
+              <li><a href="retail.html">Retail</a></li>
+              <li><a href="salons.html">Hair and beauty</a></li>
+            </ul>
+          </div>
+          <div class="drop-group">
+            <p class="drop-h">Health and care</p>
+            <ul>
+              <li><a href="clinics.html">Healthcare</a></li>
+              <li><a href="aged-care.html">Aged care</a></li>
+              <li><a href="disability-care.html">Disability care</a></li>
+              <li><a href="pharmacy.html">Pharmacies</a></li>
+              <li><a href="vet-clinics.html">Vet clinics</a></li>
+            </ul>
+          </div>
+          <div class="drop-group">
+            <p class="drop-h">Children and learning</p>
+            <ul>
+              <li><a href="childcare.html">Childcare</a></li>
+              <li><a href="tutoring.html">Tutoring</a></li>
+            </ul>
+          </div>
+          <div class="drop-group">
+            <p class="drop-h">Fitness, leisure and events</p>
+            <ul>
+              <li><a href="gyms.html">Gyms</a></li>
+              <li><a href="swim-leisure.html">Swim centres</a></li>
+              <li><a href="events.html">Events</a></li>
+            </ul>
+          </div>
+          <div class="drop-group">
+            <p class="drop-h">Trades, cleaning and security</p>
+            <ul>
+              <li><a href="cleaning.html">Cleaning</a></li>
+              <li><a href="security.html">Security</a></li>
+              <li><a href="construction.html">Building sites</a></li>
+              <li><a href="field-service.html">Field service</a></li>
+            </ul>
+          </div>
+          <div class="drop-group">
+            <p class="drop-h">Warehouse, factory and farm</p>
+            <ul>
+              <li><a href="warehouse.html">Warehouses</a></li>
+              <li><a href="manufacturing.html">Factories</a></li>
+              <li><a href="farms.html">Farms</a></li>
+            </ul>
+          </div>
+          <div class="drop-group">
+            <p class="drop-h">Offices, councils and more</p>
+            <ul>
+              <li><a href="call-centre.html">Call centres</a></li>
+              <li><a href="not-for-profit.html">Not-for-profits</a></li>
+              <li><a href="council.html">Councils</a></li>
+              <li><a href="franchises.html" aria-current="page">Franchises</a></li>
+            </ul>
+          </div>
+        </div>
+      </details>
+      <a href="/#product" class="hide-sm">Product</a>
+      <a href="pricing.html" class="hide-sm">Pricing</a>
+      <a href="contact.html" class="hide-sm">Contact</a>
+      <!-- One Dot Blue moment per viewport: this page's own blue CTA
+           wins, so the pill stays hairline secondary. -->
+      <a class="btn btn-secondary" href="/#get-the-app">Get the app</a>
+      <details class="nav-menu">
+        <summary aria-label="Menu">
+          <svg class="i-open" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5.5h14M2 12.5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="i-close" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="menu-panel">
+          <span class="label">Industries</span>
+          <div class="menu-groups">
+            <div class="menu-group">
+              <p class="menu-h">Food, drink and hotels</p>
+              <ul>
+                <li><a href="hospitality.html">Hospitality</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="fast-food.html">Fast food</a></li>
+              </ul>
+            </div>
+            <div class="menu-group">
+              <p class="menu-h">Shops and salons</p>
+              <ul>
+                <li><a href="retail.html">Retail</a></li>
+                <li><a href="salons.html">Hair and beauty</a></li>
+              </ul>
+            </div>
+            <div class="menu-group">
+              <p class="menu-h">Health and care</p>
+              <ul>
+                <li><a href="clinics.html">Healthcare</a></li>
+                <li><a href="aged-care.html">Aged care</a></li>
+                <li><a href="disability-care.html">Disability care</a></li>
+                <li><a href="pharmacy.html">Pharmacies</a></li>
+                <li><a href="vet-clinics.html">Vet clinics</a></li>
+              </ul>
+            </div>
+            <div class="menu-group">
+              <p class="menu-h">Children and learning</p>
+              <ul>
+                <li><a href="childcare.html">Childcare</a></li>
+                <li><a href="tutoring.html">Tutoring</a></li>
+              </ul>
+            </div>
+            <div class="menu-group">
+              <p class="menu-h">Fitness, leisure and events</p>
+              <ul>
+                <li><a href="gyms.html">Gyms</a></li>
+                <li><a href="swim-leisure.html">Swim centres</a></li>
+                <li><a href="events.html">Events</a></li>
+              </ul>
+            </div>
+            <div class="menu-group">
+              <p class="menu-h">Trades, cleaning and security</p>
+              <ul>
+                <li><a href="cleaning.html">Cleaning</a></li>
+                <li><a href="security.html">Security</a></li>
+                <li><a href="construction.html">Building sites</a></li>
+                <li><a href="field-service.html">Field service</a></li>
+              </ul>
+            </div>
+            <div class="menu-group">
+              <p class="menu-h">Warehouse, factory and farm</p>
+              <ul>
+                <li><a href="warehouse.html">Warehouses</a></li>
+                <li><a href="manufacturing.html">Factories</a></li>
+                <li><a href="farms.html">Farms</a></li>
+              </ul>
+            </div>
+            <div class="menu-group">
+              <p class="menu-h">Offices, councils and more</p>
+              <ul>
+                <li><a href="call-centre.html">Call centres</a></li>
+                <li><a href="not-for-profit.html">Not-for-profits</a></li>
+                <li><a href="council.html">Councils</a></li>
+                <li><a href="franchises.html" aria-current="page">Franchises</a></li>
+              </ul>
+            </div>
+          </div>
+          <ul class="menu-links">
+            <li><a href="/#product">Product</a></li>
+            <li><a href="/#managers">For managers</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="/#faq">Questions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://app.teammateapp.au/login">Sign in</a></li>
+          </ul>
+          <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero hero-split">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="label">Rostering app for franchises and multi-store owners</span>
+          <h1>Every store covered,<br> one roster. <span class="blue">Sorted.</span></h1>
+          <p>Run every store from one account: each store's roster, hours and
+          wages side by side, store managers running their own, and staff
+          lent between stores when one is short.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+            <a class="btn btn-secondary" href="#site">See how it works</a>
+          </div>
+        </div>
+<!-- gen:hero-media -->
+        <div class="hero-media hero-media-phone">
+          <img src="assets/app-franchises-home.png" alt="TEAM MATE Home screen: a crew member on the clock at a franchise bakery, with today's shift, jobs and who's working" width="1080" height="2341" fetchpriority="high">
+        </div>
+        <!-- /gen:hero-media -->
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="dot" aria-hidden="true"></div>
+          <h3>Every store at once</h3>
+          <p>Reports, All locations shows each store's hours, wages, budget, sales and labour % for the week or month, side by side.</p>
+        </div>
+        <div class="card">
+          <div class="dot" aria-hidden="true"></div>
+          <h3>Lend staff between stores</h3>
+          <p>Short at one store? See who's free at your other stores and put them on the shift.</p>
+        </div>
+        <div class="card">
+          <div class="dot" aria-hidden="true"></div>
+          <h3>Store managers run their store</h3>
+          <p>Each store manager rosters, approves and sees their own store. You see them all.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mist" id="site">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">For your stores</span>
+        <h2>Built for more than one door.</h2>
+        <p>Add each store as a location and pick your kind of business in the
+        welcome wizard: jobs, areas and a typical week to start from, in minutes.</p>
+      </div>
+      <ul class="features feature-cards">
+        <li><strong>Every store side by side</strong> Reports, All locations: contract and rostered hours, worked hours and wages, the wages budget, sales and labour % for every store, for the week or the month. Anything over budget is in red and said in words.</li>
+        <li><strong>Staff shared between stores</strong> When a shift has nobody on it, see who's free at your other stores: no clash, not on leave, inside their hours. Add them and they can be rostered and clock in there.</li>
+        <li><strong>A manager for each store</strong> Store managers roster, approve timesheets and leave, and see only their own store. Owners and admins see every store.</li>
+        <li><strong>Sales in, headcount out</strong> Square sends each store's daily sales; with another till, upload them. Either way you get a suggested headcount for each day.</li>
+        <li><strong>The same jobs everywhere</strong> Jobs and tickets are shared across the business, so a barista is a barista at every store, with the same tickets on file.</li>
+        <li><strong>Monday summary</strong> One email each Monday with last week's hours, wages and anything that needs you, store by store.</li>
+        <li><strong>Your bookkeeper, read-only</strong> Give your bookkeeper their own sign-in to timesheets and the payroll file, without access to anything else.</li>
+        <li><strong>Swaps and leave by phone</strong> Staff swap shifts and request leave from their phone; it comes to the right store manager to approve.</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">For your team</span>
+        <h2>The app your crews will actually open.</h2>
+        <p>Shifts land in their pocket the moment you publish, and in their
+        phone calendar too. No more spreadsheet rosters by email.</p>
+      </div>
+<!-- gen:phones -->
+      <div class="phones">
+        <div class="phone">
+          <figure>
+            <img src="assets/app-franchises-home.png" alt="TEAM MATE Home screen: a crew member on the clock at a franchise bakery, with today's shift, jobs and who's working" width="1080" height="2341" loading="lazy">
+            <figcaption>Clock in and out from Home</figcaption>
+          </figure>
+        </div>
+        <div class="phone">
+          <figure>
+            <img src="assets/app-franchises-schedule.png" alt="TEAM MATE Schedule screen: a crew member's week, with confirmed shifts" width="1080" height="2341" loading="lazy">
+            <figcaption>Know your week at a glance</figcaption>
+          </figure>
+        </div>
+        <div class="phone">
+          <figure>
+            <img src="assets/app-franchises-timesheets.png" alt="TEAM MATE Timesheets screen: a crew member's paid hours, approved by the manager" width="1080" height="2341" loading="lazy">
+            <figcaption>Hours, checked and approved</figcaption>
+          </figure>
+        </div>
+      </div>
+<!-- /gen:phones -->
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap">
+      <h2>Free for your first 10 staff.<br> Actually free.</h2>
+      <p>Not a trial. No card details, no locked features. One honest price
+      when you grow past 10.</p>
+      <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free</a>
+    </div>
+  </section>
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Questions</span>
+        <h2>Questions multi-store owners ask.</h2>
+      </div>
+<!-- gen:faq -->
+<div class="faq-list">
+  <details>
+    <summary>We own several stores. Is that one account?</summary>
+    <p>Yes. One business, with each store as its own location. You see every store, and each store manager sees their own.</p>
+  </details>
+  <details>
+    <summary>Can staff work at more than one store?</summary>
+    <p>Yes. Put someone on more than one store's team and they can be rostered and clock in at each.</p>
+  </details>
+  <details>
+    <summary>Each franchisee is a separate business. Does head office see them all?</summary>
+    <p>Not yet. Each business has its own TEAM MATE account, so a franchisee's rosters and pay stay theirs. If you own the stores yourself, they all sit in one account.</p>
+  </details>
+  <details>
+    <summary>Does it connect to our tills?</summary>
+    <p>Square, yes: each store's daily sales come in and feed the suggested headcount. With another till, upload your daily sales instead.</p>
+  </details>
+</div>
+<!-- /gen:faq -->
+    </div>
+  </section>
+  <section class="mist">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Born in hospo</span>
+        <h2>Built for every crew.</h2>
+        <p>TEAM MATE started in Melbourne cafés and restaurants. The same
+        app runs all of these crews too, each with its own setup in the
+        welcome wizard.</p>
+      </div>
+<!-- gen:industries -->
+<ul class="ind-grid compact">
+  <li><a class="ind-card" href="hospitality.html"><img src="assets/industry-hospitality-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Hospitality</span></a></li>
+  <li><a class="ind-card" href="hotels.html"><img src="assets/industry-hotels-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Hotels</span></a></li>
+  <li><a class="ind-card" href="retail.html"><img src="assets/industry-retail-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Retail</span></a></li>
+  <li><a class="ind-card" href="cleaning.html"><img src="assets/industry-cleaning-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Cleaning</span></a></li>
+  <li><a class="ind-card" href="security.html"><img src="assets/industry-security-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Security</span></a></li>
+  <li><a class="ind-card" href="clinics.html"><img src="assets/industry-clinics-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Healthcare</span></a></li>
+  <li><a class="ind-card" href="aged-care.html"><img src="assets/industry-aged-care-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Aged care</span></a></li>
+  <li><a class="ind-card" href="disability-care.html"><img src="assets/industry-disability-care-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Disability care</span></a></li>
+  <li><a class="ind-card" href="childcare.html"><img src="assets/industry-childcare-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Childcare</span></a></li>
+  <li><a class="ind-card" href="gyms.html"><img src="assets/industry-gyms-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Gyms</span></a></li>
+  <li><a class="ind-card" href="swim-leisure.html"><img src="assets/industry-swim-leisure-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Swim centres</span></a></li>
+  <li><a class="ind-card" href="construction.html"><img src="assets/industry-construction-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Building sites</span></a></li>
+</ul>
+<!-- /gen:industries -->
+      <div class="hero-cta hero-cta-left">
+        <a class="btn btn-secondary" href="/">See everything TEAM MATE does</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <img src="assets/tm-wordmark-reversed.svg" alt="TEAM MATE" width="151" height="15">
+      <span class="tagline">Your work crew, <span class="blue">sorted.</span></span>
+    </div>
+    <div class="foot-cols">
+      <nav class="foot-industries" aria-label="Industries">
+        <p class="foot-h">Industries</p>
+        <div class="foot-ind">
+          <a href="hospitality.html">Hospitality</a>
+          <a href="hotels.html">Hotels</a>
+          <a href="fast-food.html">Fast food</a>
+          <a href="retail.html">Retail</a>
+          <a href="salons.html">Hair and beauty</a>
+          <a href="clinics.html">Healthcare</a>
+          <a href="aged-care.html">Aged care</a>
+          <a href="disability-care.html">Disability care</a>
+          <a href="pharmacy.html">Pharmacies</a>
+          <a href="vet-clinics.html">Vet clinics</a>
+          <a href="childcare.html">Childcare</a>
+          <a href="tutoring.html">Tutoring</a>
+          <a href="gyms.html">Gyms</a>
+          <a href="swim-leisure.html">Swim centres</a>
+          <a href="events.html">Events</a>
+          <a href="cleaning.html">Cleaning</a>
+          <a href="security.html">Security</a>
+          <a href="construction.html">Building sites</a>
+          <a href="field-service.html">Field service</a>
+          <a href="warehouse.html">Warehouses</a>
+          <a href="manufacturing.html">Factories</a>
+          <a href="farms.html">Farms</a>
+          <a href="call-centre.html">Call centres</a>
+          <a href="not-for-profit.html">Not-for-profits</a>
+          <a href="council.html">Councils</a>
+          <a href="franchises.html">Franchises</a>
+        </div>
+      </nav>
+      <nav aria-label="Product">
+        <p class="foot-h">Product</p>
+        <a href="/#product">Staff app</a>
+        <a href="/#managers">For managers</a>
+        <a href="/#how-it-works">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="/#faq">Questions</a>
+      </nav>
+      <nav aria-label="Company">
+        <p class="foot-h">Company</p>
+        <a href="contact.html">Contact</a>
+        <a href="https://app.teammateapp.au/login">Sign in</a>
+        <a href="https://app.teammateapp.au/privacy">Privacy</a>
+        <a href="https://app.teammateapp.au/terms">Terms</a>
+        <a href="mailto:support@teammateapp.au">support@teammateapp.au</a>
+      </nav>
+    </div>
+    <div class="foot-base">Made in Melbourne, hosted in Australia. © 2026 TEAM MATE</div>
+  </div>
+</footer>
+
+</body>
+</html>
