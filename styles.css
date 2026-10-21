@@ -932,6 +932,55 @@ section:not(.mist) .feature-cards li { background: var(--mist); }
 
 /* ---- FAQ accordion (text from scripts/marketing-pages.mjs) ---- */
 
+/* ---- homepage "Find your industry" (H585): every live page, grouped
+   as in the Industries menu, words only ---- */
+.ind-dir { margin-top: 56px; }
+.ind-dir-head h3 { margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.01em; }
+.ind-dir-head p { margin: 8px 0 0; color: var(--text-secondary); }
+.ind-dir-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.ind-dir-group {
+  padding: 18px 12px 12px;
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  background: #fff;
+}
+.ind-dir-group h4 {
+  margin: 0 0 6px;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+.ind-dir-group ul { list-style: none; margin: 0; padding: 0; }
+.ind-dir-group a {
+  display: block;
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background-color 200ms ease-out, color 200ms ease-out;
+}
+.ind-dir-group a:hover,
+.ind-dir-group a:focus-visible { background: var(--mist); color: var(--dot-blue-deep); }
+@media (max-width: 960px) { .ind-dir-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) {
+  .ind-dir { margin-top: 40px; }
+  .ind-dir-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .ind-dir-group ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 4px; }
+  .ind-dir-group a { padding: 9px 10px; }
+}
+
 .faq-list { max-width: 780px; margin-top: 36px; border-top: 1px solid var(--hairline); }
 .faq-list details { border-bottom: 1px solid var(--hairline); }
 .faq-list summary {
@@ -1245,6 +1294,23 @@ body.contact main { flex: 1 0 auto; }
   line-height: 0.95;
   letter-spacing: -0.026em; /* owner 2026-10-07: a touch looser than the -0.032em draft */
   margin: 0;
+}
+/* the small search line inside the h1 (owner 2026-10-21, H585): reads as
+   the eyebrow label every industry page has above its h1 */
+.sig-title .sig-kicker {
+  display: block;
+  margin-bottom: clamp(14px, 2vh, 22px);
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+}
+/* Wide screens: the search line's height comes out of the hero's top
+   gap, the gap under it and the ribbon's margin, so every crew name still
+   shows in the first view (the height-aware rule above). */
+@media (min-width: 1000px) {
+  .hero.sig { padding-top: clamp(20px, 2.4vh, 40px); }
+  .sig-title .sig-kicker { margin-bottom: 10px; }
+  .hero.sig .ribbon { margin-top: clamp(24px, 3.4vh, 56px); }
 }
 .sig-vis { display: block; white-space: nowrap; }
 .sig-c { display: block; color: var(--dot-blue); }
