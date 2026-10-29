@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- gen:head (scripts/marketing-pages.mjs — edit there, not here) -->
 <title>Free Rostering App for Australian Teams | TEAM MATE</title>
 <meta name="description" content="Your work crew, sorted. Rosters, clock-in, timesheets and leave for Australian shift teams, from cafés to warehouses. Free for teams of 10 or fewer.">
 <link rel="canonical" href="https://teammateapp.au/">
@@ -147,14 +146,6 @@
  ]
 }
 </script>
-<!-- /gen:head -->
-<!-- Mobile-only entrance motion (owner request 2026-09-11, Handover+
-     homage — their Squarespace fade/ease reveal). This gate must run
-     before first paint: it flags <html> as tm-anim ONLY on small
-     screens with JS, IntersectionObserver and motion allowed, and the
-     CSS hides [data-reveal] targets only under that flag — so desktop,
-     no-JS and reduced-motion visitors never see hidden content. The
-     reveal logic itself is the script at the end of <body>. -->
 <script>
 (function () {
   try {
@@ -174,8 +165,6 @@
       <img src="assets/tm-wordmark-light.svg" alt="TEAM MATE" width="181" height="18">
     </a>
     <nav class="nav-links" aria-label="Main">
-      <!-- Plain <details> menus: they open without JS; site.js only adds
-           close-on-outside-click and Escape. -->
       <details class="nav-drop hide-sm">
         <summary>Industries</summary>
         <div class="drop-panel">
@@ -250,10 +239,6 @@
       <a href="/#product" class="hide-sm">Product</a>
       <a href="pricing.html" class="hide-sm">Pricing</a>
       <a href="contact.html" class="hide-sm">Contact</a>
-      <!-- One Dot Blue moment per viewport (BRAND.md / change request
-           2026-09-20 item 5): above the fold the hero "Start free" wins,
-           so this pill starts hairline-secondary; the script at the foot
-           of <body> promotes it to primary once the hero scrolls out. -->
       <a id="nav-cta" class="btn btn-secondary" href="#get-the-app">Get the app</a>
       <details class="nav-menu">
         <summary aria-label="Menu">
@@ -346,32 +331,6 @@
 </header>
 
 <main>
-  <!-- Hero A3, "The Signature, clean phone" (owner pick 2026-10-09:
-       option 1 of four boards; A2's hand-held phone photo "didn't look
-       right", and hero B's photo-and-phone split was live for one day):
-       type-led and still on the desktop until the visitor acts. The brand tagline
-       is the statement; the word "work" is a slot that becomes each crew
-       ("hospo", "retail" …) while that industry's card is hovered or
-       focused. Below it, the crew ribbon: a portrait for every live crew
-       (eight since 2026-10-12, when aged care and childcare joined the
-       six; the owner's square tile portraits, cut 4:5) in a soft arc
-       around a clean,
-       upright phone drawn in CSS around the real Home screen. At rest it
-       shows the café's Home; pointing at a crew shows that crew's REAL
-       Home screen and its clock (site.js). The phone is whole, its own
-       blue "Take a break" button included (owner call 2026-10-09).
-       The h1 opens with a small search line, "Rostering app for
-       Australian shift teams" (owner 2026-10-21, H585: search engines
-       weigh the h1 most; the brand line stays the big words).
-       The h1 is plain text: "Your work crew, sorted." site.js fades the
-       real word "work" and lays aria-hidden crew words over it, so
-       assistive tech and crawlers always get the one stable sentence.
-       Without JS: the plain tagline, the crew links, the café's Home screen.
-       Touch screens (phones, tablets, iPad landscape) step through the
-       crews every 2.5s with a Pause button; never under reduced motion.
-       Blue: "Start free" is this viewport's one blue moment; "sorted."
-       and the card dots are the exempt wordmark-adjacent accents, and
-       the phone's own blue button is the owner's recorded exception. -->
   <section class="hero sig" aria-labelledby="sig-h">
     <div class="wrap sig-head">
       <h1 id="sig-h" class="sig-title" data-reveal><span class="label sig-kicker">Rostering app for Australian shift teams</span> <span class="sig-vis"><span class="sig-a">Your <span class="slot" data-slot>work</span></span> <span class="sig-b">crew,</span> <span class="sig-c">sorted.</span></span></h1>
@@ -384,7 +343,6 @@
     </div>
 
     <div class="ribbon" data-ribbon data-reveal>
-      <!-- gen:hero-crews -->
       <ul class="crews many" aria-label="Industries">
         <li class="p6 l"><a class="crew" href="hospitality.html" data-key="hospitality" data-word="hospo" data-screen="assets/app-hospitality-home-600.png" data-screen-alt="TEAM MATE Home screen: a barista on the clock at a café, with today's shift, jobs and who's working" data-time="9:41" aria-label="Hospitality: cafés, restaurants, pubs and bars"><img src="assets/industry-hospitality-crew-400.jpg" srcset="assets/industry-hospitality-crew-400.jpg 400w, assets/industry-hospitality-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Hospitality</span></a></li>
         <li class="p5 l"><a class="crew" href="hotels.html" data-key="hotels" data-word="hotel" data-screen="assets/app-hotels-home-600.png" data-screen-alt="TEAM MATE Home screen: a front desk agent on the clock at a hotel, with today's shift, jobs and who's working" data-time="10:04" aria-label="Hotels: hotels, motels and resorts"><img src="assets/industry-hotels-crew-400.jpg" srcset="assets/industry-hotels-crew-400.jpg 400w, assets/industry-hotels-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Hotels</span></a></li>
@@ -399,9 +357,6 @@
         <li class="p5 r"><a class="crew" href="swim-leisure.html" data-key="swim-leisure" data-word="pool" data-screen="assets/app-swim-leisure-home-600.png" data-screen-alt="TEAM MATE Home screen: a lifeguard on the clock at a swim centre, with today's shift, jobs and who's working" data-time="9:12" aria-label="Swim centres: swim and leisure centres"><img src="assets/industry-swim-leisure-crew-400.jpg" srcset="assets/industry-swim-leisure-crew-400.jpg 400w, assets/industry-swim-leisure-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Swim centres</span></a></li>
         <li class="p6 r"><a class="crew" href="construction.html" data-key="construction" data-word="site" data-screen="assets/app-construction-home-600.png" data-screen-alt="TEAM MATE Home screen: a carpenter on the clock at a building site, with today's shift, jobs and who's working" data-time="9:21" aria-label="Building sites: builders, trades and site crews"><img src="assets/industry-construction-crew-400.jpg" srcset="assets/industry-construction-crew-400.jpg 400w, assets/industry-construction-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Building sites</span></a></li>
       </ul>
-      <!-- /gen:hero-crews -->
-      <!-- Touch screens only, shown by site.js while the crews step
-           through on their own: stops and restarts that (WCAG 2.2.2). -->
       <button class="sig-pause" type="button" data-pause hidden><span class="sig-pause-i" aria-hidden="true"></span><span data-pause-label>Pause</span></button>
       <div class="sig-phone">
         <div class="dev">
@@ -417,17 +372,6 @@
     </div>
   </section>
 
-  <!-- Early-customer logo strip — REAL venues only (fictional
-       placeholders removed 2026-09-10, owner-approved deploy with the
-       two real logos; Lucky Cat added 2026-09-11 — shown WITHOUT its
-       "MELBOURNE" line since 2026-09-15 (owner call, see README); all three
-       venues are the owner's own businesses, so
-       artwork approval is the owner's in-chat OK). Fake/placeholder
-       logos must NEVER ship — a fictional venue shown as a customer
-       is fabricated social proof. To add a real customer: README
-       "Assets" — original artwork untouched (one recorded exception:
-       rock-sugar-grey.svg, owner-supplied trace, owner call
-       2026-09-10 — do not "fix" back). -->
   <section class="logos" aria-label="Teams using TEAM MATE">
     <div class="wrap">
       <span class="label" data-reveal>The first crews on board</span>
@@ -439,21 +383,6 @@
     </div>
   </section>
 
-  <!-- Hero shot #2 (owner picks 2026-09-15): the daytime café flat-lay,
-       SIGN-IN screen variant, closer-camera master. Shipped = the
-       owner's EXACT ChatGPT render (AI wordmark + status bar included)
-       — same recorded owner call as the hero (2026-09-15 in-chat);
-       do not "fix" it back. Vector-rebuild revert recipe in the
-       marketing README (composite-flatlay-day.mjs signin). The splash
-       asset (photo-flatlay-brand.jpg) and the night shot + its script
-       remain for a swap back. -->
-  <!-- Who it's for (owner 2026-10-06): the industry switcher, generated
-       from the INDUSTRIES list in scripts/marketing-pages.mjs. Photos:
-       owner-supplied, scripts/prep-industry-photos.mjs. Slimmed with hero
-       A2 (owner 2026-10-07: don't repeat the hero): its phone shows each
-       industry's Schedule (the hero's phone shows Home), and the intro no
-       longer lists the crews the hero has just shown. Aged care and
-       childcare got their own tabs 2026-10-12 (owner: equally prominent). -->
   <section class="scene-band mist" id="industries" aria-labelledby="industries-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
@@ -463,7 +392,6 @@
         for the way you work.</p>
       </div>
       <div data-reveal>
-<!-- gen:industries -->
 <div class="showcase" data-showcase>
   <div class="sc-tabs" role="tablist" aria-label="Industries" hidden>
     <button type="button" class="sc-tab" role="tab" id="sc-tab-hospitality" aria-controls="sc-hospitality" aria-selected="false" tabindex="-1">Hospitality</button>
@@ -672,10 +600,8 @@
     </div>
   </div>
 </div>
-<!-- /gen:industries -->
       </div>
       <div data-reveal>
-<!-- gen:ind-dir -->
 <div class="ind-dir" id="find-your-industry">
   <div class="ind-dir-head">
     <h3>Find your industry</h3>
@@ -750,13 +676,8 @@
     </div>
   </div>
 </div>
-<!-- /gen:ind-dir -->
       </div>
     </div>
-    <!-- Mobile portrait crop RETIRED for now (owner 2026-09-15: the
-         720px crop upscaled soft on 3x iPhones and lost the coffee +
-         apron). Full scene serves everywhere until a native portrait
-         master is generated; the crop recipe stays in the README. -->
     <img class="band-img" data-reveal src="assets/photo-flatlay-signin.jpg"
       alt="A phone on a sunlit marble café counter beside a flat white, showing the TEAM MATE sign-in screen"
       width="2400" height="1600" loading="lazy">
@@ -800,7 +721,6 @@
         your phone calendar. No printouts, no group-chat chaos.</p>
       </div>
 
-<!-- gen:phones -->
       <div class="phones">
         <div class="phone" data-reveal>
           <figure>
@@ -821,7 +741,6 @@
           </figure>
         </div>
       </div>
-<!-- /gen:phones -->
 
       <ul class="features feature-cards cols-3" data-reveal>
         <li><strong>Open shifts</strong> See extra shifts you're eligible for and claim them in a tap.</li>
@@ -864,8 +783,6 @@
     </div>
   </section>
 
-  <!-- FAQ text lives in scripts/marketing-pages.mjs (it also feeds the
-       page's FAQPage search data, so the two can't drift). -->
   <section id="faq">
     <div class="wrap">
       <div class="section-head" data-reveal>
@@ -873,7 +790,6 @@
         <h2>Good questions, straight answers.</h2>
       </div>
       <div data-reveal>
-<!-- gen:faq -->
 <div class="faq-list">
   <details>
     <summary>Is TEAM MATE really free?</summary>
@@ -904,7 +820,6 @@
     <p>In Australia. TEAM MATE is made in Melbourne and hosted in Australia.</p>
   </details>
 </div>
-<!-- /gen:faq -->
       </div>
     </div>
   </section>
@@ -917,8 +832,6 @@
         <p>Employers set up TEAM MATE on the web and invite the team — everyone
         else just signs into the app with their work email. The staff app is
         coming to the App Store and Google Play.</p>
-        <!-- Store badges: swap this line for official App Store / Google Play
-             badges + links once the listings are live (docs/store/LISTINGS.md). -->
       </div>
       <div class="hero-cta hero-cta-left" data-reveal>
         <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start free on the web</a>
@@ -987,12 +900,6 @@
   </div>
 </footer>
 
-<!-- Mobile entrance motion, part 2 (gate script is in <head>): stagger
-     within each section, then reveal targets as they enter the
-     viewport. Deliberately NOT IntersectionObserver: a plain
-     rAF-throttled scroll sweep degrades to "everything visible" if
-     anything goes wrong, and IO callbacks proved unverifiable in the
-     embedded dev browser — 22 rect checks per scroll frame is cheap. -->
 <script>
 (function () {
   if (!document.documentElement.classList.contains("tm-anim")) return;
@@ -1029,14 +936,6 @@
 })();
 </script>
 
-<!-- One-blue-moment nav pill (change request 2026-09-20 item 5): the pill
-     is hairline secondary whenever ANY in-page blue CTA is in the
-     viewport (hero "Start free", "See pricing", "Start free on the web")
-     and becomes the viewport's blue moment only when none is — so no
-     viewport ever shows two. Same rAF-throttled pattern as the reveal
-     sweep above; degrades to a permanent secondary pill if anything goes
-     wrong, which still obeys the rule. Runs regardless of tm-anim —
-     this is state, not motion. -->
 <script>
 (function () {
   var cta = document.getElementById("nav-cta");

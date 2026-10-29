@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- gen:head (scripts/marketing-pages.mjs — edit there, not here) -->
 <title>Swim &amp; Leisure Centre Rostering App for Lifeguards | TEAM MATE</title>
 <meta name="description" content="Rosters, clock-in and pay for Australian swim and leisure centres. Lifeguard tickets on file, two on the pool deck, swim lessons rostered. Free for teams of 10 or fewer.">
 <link rel="canonical" href="https://teammateapp.au/swim-leisure.html">
@@ -85,23 +84,9 @@
  ]
 }
 </script>
-<!-- /gen:head -->
 </head>
 <body>
 
-<!-- Swim and leisure centres page (2026-10-12, foreman queue item 9). HELD in
-     scripts/marketing-pages.mjs until the owner's photos arrive: nothing
-     links here and the deploy leaves it out.
-     Same copy guardrails as clinics.html / the README: no award /
-     compliance / legal / safety claims; suggested rules are a "common
-     starting point" the owner checks; we TRACK tickets and checks, we
-     never verify them; skill mix is the business's OWN rule ("you choose
-     the numbers") — never say it meets staffing laws or pool safety
-     guidelines. Every feature line maps to the AQUATIC preset
-     (packages/core/src/onboarding/presets.ts), its suggested-rules pack
-     (packages/core/src/compliance/packs.ts) or an app-wide feature in
-     docs/KNOWLEDGE-BASE.md. Hero photo: owner-supplied
-     (scripts/prep-industry-photos.mjs swim-leisure <file>, then --tile). -->
 
 <header class="nav">
   <div class="wrap">
@@ -109,8 +94,6 @@
       <img src="assets/tm-wordmark-light.svg" alt="TEAM MATE" width="181" height="18">
     </a>
     <nav class="nav-links" aria-label="Main">
-      <!-- Plain <details> menus: they open without JS; site.js only adds
-           close-on-outside-click and Escape. -->
       <details class="nav-drop hide-sm is-current">
         <summary>Industries</summary>
         <div class="drop-panel">
@@ -185,8 +168,6 @@
       <a href="/#product" class="hide-sm">Product</a>
       <a href="pricing.html" class="hide-sm">Pricing</a>
       <a href="contact.html" class="hide-sm">Contact</a>
-      <!-- One Dot Blue moment per viewport: this page's own blue CTA
-           wins, so the pill stays hairline secondary. -->
       <a class="btn btn-secondary" href="/#get-the-app">Get the app</a>
       <details class="nav-menu">
         <summary aria-label="Menu">
@@ -279,10 +260,6 @@
 </header>
 
 <main>
-  <!-- Split hero (owner 2026-10-06: the industry photo leads). Photo:
-       waiting for the owner's (this page is HELD in
-       scripts/marketing-pages.mjs until it arrives); file it with
-       scripts/prep-industry-photos.mjs and fix this alt to match it. -->
   <section class="hero hero-split">
     <div class="wrap">
       <div class="hero-grid">
@@ -357,7 +334,6 @@
         pool.</p>
       </div>
 
-<!-- gen:phones -->
       <div class="phones">
         <div class="phone">
           <figure>
@@ -378,7 +354,6 @@
           </figure>
         </div>
       </div>
-<!-- /gen:phones -->
     </div>
   </section>
 
@@ -397,7 +372,6 @@
         <span class="label">Questions</span>
         <h2>Questions swim centres ask.</h2>
       </div>
-<!-- gen:faq -->
 <div class="faq-list">
   <details>
     <summary>Can it tell me when the pool deck is short?</summary>
@@ -416,7 +390,6 @@
     <p>On their phone. Shifts land the moment you publish, with the area and the times, and they clock in and out from the same app.</p>
   </details>
 </div>
-<!-- /gen:faq -->
     </div>
   </section>
 
@@ -429,7 +402,6 @@
         app runs all of these crews too, each with its own setup in the
         welcome wizard.</p>
       </div>
-<!-- gen:industries -->
 <ul class="ind-grid compact">
   <li><a class="ind-card" href="hospitality.html"><img src="assets/industry-hospitality-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Hospitality</span></a></li>
   <li><a class="ind-card" href="hotels.html"><img src="assets/industry-hotels-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Hotels</span></a></li>
@@ -443,7 +415,6 @@
   <li><a class="ind-card" href="gyms.html"><img src="assets/industry-gyms-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Gyms</span></a></li>
   <li><a class="ind-card" href="construction.html"><img src="assets/industry-construction-800.jpg" alt="" width="800" height="450" loading="lazy"><span class="ind-name">Building sites</span></a></li>
 </ul>
-<!-- /gen:industries -->
       <div class="hero-cta hero-cta-left">
         <a class="btn btn-secondary" href="/">See everything TEAM MATE does</a>
       </div>
