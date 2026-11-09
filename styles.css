@@ -429,6 +429,19 @@ section.mist { background: var(--mist); }
   background: var(--dot-blue);
 }
 
+/* the tips add-on, under the two plan cards */
+.addon {
+  max-width: 780px;
+  margin: 24px auto 0;
+  padding: 24px 32px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+  text-align: left;
+}
+.addon h3 { font-size: 17px; }
+.hero .addon p { max-width: none; margin: 6px 0 0; font-size: 15px; }
+.addon strong { color: var(--ink); }
+
 .price-note {
   text-align: center;
   color: var(--text-tertiary);
@@ -457,6 +470,24 @@ th, td {
 th { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-tertiary); }
 
 td.us { font-weight: 800; color: var(--dot-blue); }
+
+/* tertiary text is for White only (BRAND.md): on Mist, headers use secondary */
+.mist th { color: var(--text-secondary); }
+
+/* a group heading row inside a table (pricing comparison) */
+tr.group th { padding-top: 28px; color: var(--ink); }
+tbody:first-of-type tr.group th { padding-top: 14px; }
+
+/* what's in each plan: a dot = included, a dash = not */
+.plan-table th + th, .plan-table td + td { text-align: center; width: 22%; }
+.plan-table .tick {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--dot-blue);
+}
+.plan-table .no { color: var(--text-tertiary); }
 
 /* FAQ */
 
@@ -1094,6 +1125,7 @@ body.contact main { flex: 1 0 auto; }
   .price-cards { gap: 16px; margin-top: 40px; }
   .price-card { padding: 28px 24px; }
   .price-card .price { font-size: 38px; }
+  .addon { margin-top: 16px; padding: 20px 24px; }
 
   table { font-size: 15px; }
   th, td { padding: 12px 10px; }
