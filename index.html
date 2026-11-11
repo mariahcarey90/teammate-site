@@ -146,23 +146,15 @@
  ]
 }
 </script>
-<script>
-(function () {
-  try {
-    if (window.matchMedia("(max-width: 720px)").matches &&
-        !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      document.documentElement.classList.add("tm-anim");
-    }
-  } catch (e) { /* no motion is always safe */ }
-})();
-</script>
+<link rel="stylesheet" href="home.css">
+<noscript><style>.st{height:100vh}</style></noscript>
 </head>
-<body>
+<body class="cine" data-ch="0">
 
-<header class="nav">
+<header class="nav nav-cine">
   <div class="wrap">
     <a class="nav-logo" href="/" aria-label="TEAM MATE home">
-      <img src="assets/tm-wordmark-light.svg" alt="TEAM MATE" width="181" height="18">
+      <svg role="img" aria-label="TEAM MATE" width="181" height="18" viewBox="4.3 0 1005.9 100"><path class="wm-type" d="M34.67 19.63L4.30 19.63L4.30 0L88.82 0L88.82 19.63L58.50 19.63L58.50 100L34.67 100L34.67 19.63ZM186.91 100L117.18 100L117.18 0L186.91 0L186.91 19.63L141.35 19.63L141.35 40.14L183.35 40.14L183.35 59.81L141.35 59.81L141.35 80.37L186.91 80.37L186.91 100ZM263.62 25.20L240.18 100L214.20 100L247.94 0L280.12 0L313.86 100L287.88 100L264.40 25.20L263.62 25.20ZM236.71 79.00L236.71 60.64L291.01 60.64L291.01 79.00L236.71 79.00ZM341.15 100L341.15 0L371.08 0L396.47 61.91L397.64 61.91L423.04 0L452.97 0L452.97 100L429.43 100L429.43 38.57L428.60 38.57L404.58 99.37L389.54 99.37L365.52 38.23L364.69 38.23L364.69 100L341.15 100ZM577.30 100L577.30 0L607.24 0L632.63 61.91L633.80 61.91L659.19 0L689.12 0L689.12 100L665.58 100L665.58 38.57L664.75 38.57L640.73 99.37L625.69 99.37L601.67 38.23L600.84 38.23L600.84 100L577.30 100ZM765.83 25.20L742.39 100L716.41 100L750.15 0L782.33 0L816.07 100L790.09 100L766.61 25.20L765.83 25.20ZM738.92 79.00L738.92 60.64L793.22 60.64L793.22 79.00L738.92 79.00ZM857.96 19.63L827.59 19.63L827.59 0L912.11 0L912.11 19.63L881.79 19.63L881.79 100L857.96 100L857.96 19.63ZM1010.20 100L940.48 100L940.48 0L1010.20 0L1010.20 19.63L964.65 19.63L964.65 40.14L1006.64 40.14L1006.64 59.81L964.65 59.81L964.65 80.37L1010.20 80.37L1010.20 100Z"/><circle class="wm-dot" cx="515.14" cy="50" r="21"/></svg>
     </a>
     <nav class="nav-links" aria-label="Main">
       <details class="nav-drop hide-sm">
@@ -239,7 +231,8 @@
       <a href="/#product" class="hide-sm">Product</a>
       <a href="pricing.html" class="hide-sm">Pricing</a>
       <a href="contact.html" class="hide-sm">Contact</a>
-      <a id="nav-cta" class="btn btn-secondary" href="#get-the-app">Get the app</a>
+      <a class="btn btn-secondary cine-get" href="#get-the-app">Get the app</a>
+      <a class="btn btn-primary cine-try" href="https://app.teammateapp.au/signup">Start your free trial</a>
       <details class="nav-menu">
         <summary aria-label="Menu">
           <svg class="i-open" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5.5h14M2 12.5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -331,46 +324,152 @@
 </header>
 
 <main>
-  <section class="hero sig" aria-labelledby="sig-h">
-    <div class="wrap sig-head">
-      <h1 id="sig-h" class="sig-title" data-reveal><span class="label sig-kicker">Rostering app for Australian shift teams</span> <span class="sig-vis"><span class="sig-a">Your <span class="slot" data-slot>work</span></span> <span class="sig-b">crew,</span> <span class="sig-c">sorted.</span></span></h1>
-      <p class="sig-sub" data-reveal><span>Roster. Clock in. Get paid.</span> <span>All in one place.</span></p>
-      <div class="hero-cta sig-cta" data-reveal>
-        <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start your free trial</a>
-        <a class="btn btn-secondary" href="#how-it-works">See how it works</a>
-      </div>
-      <p class="sig-note" data-reveal><span>14 days free, no card needed.</span> <span>Then from $6 a person a month, plus GST.</span></p>
-    </div>
+<section id="story" class="st" data-ch="0" aria-label="How TEAM MATE works">
+<div class="st-pin">
+<div class="st-glow" aria-hidden="true"></div>
+<div class="st-panel" aria-hidden="true"></div>
 
-    <div class="ribbon" data-ribbon data-reveal>
-      <ul class="crews many" aria-label="Industries">
-        <li class="p6 l"><a class="crew" href="hospitality.html" data-key="hospitality" data-word="hospo" data-screen="assets/app-hospitality-home-600.png" data-screen-alt="TEAM MATE Home screen: a barista on the clock at a café, with today's shift, jobs and who's working" data-time="9:41" aria-label="Hospitality: cafés, restaurants, pubs and bars"><img src="assets/industry-hospitality-crew-400.jpg" srcset="assets/industry-hospitality-crew-400.jpg 400w, assets/industry-hospitality-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Hospitality</span></a></li>
-        <li class="p5 l"><a class="crew" href="hotels.html" data-key="hotels" data-word="hotel" data-screen="assets/app-hotels-home-600.png" data-screen-alt="TEAM MATE Home screen: a front desk agent on the clock at a hotel, with today's shift, jobs and who's working" data-time="10:04" aria-label="Hotels: hotels, motels and resorts"><img src="assets/industry-hotels-crew-400.jpg" srcset="assets/industry-hotels-crew-400.jpg 400w, assets/industry-hotels-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Hotels</span></a></li>
-        <li class="p4 l"><a class="crew" href="retail.html" data-key="retail" data-word="retail" data-screen="assets/app-retail-home-600.png" data-screen-alt="TEAM MATE Home screen: a sales assistant on the clock at a deli, with today's shift, jobs and who's working" data-time="11:25" aria-label="Retail: shops and stores"><img src="assets/industry-retail-crew-400.jpg" srcset="assets/industry-retail-crew-400.jpg 400w, assets/industry-retail-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Retail</span></a></li>
-        <li class="p3 l"><a class="crew" href="cleaning.html" data-key="cleaning" data-word="cleaning" data-screen="assets/app-cleaning-home-600.png" data-screen-alt="TEAM MATE Home screen: a cleaner on the clock at an office site, with today's shift, jobs and who's working" data-time="7:26" aria-label="Cleaning: crews across client sites"><img src="assets/industry-cleaning-crew-400.jpg" srcset="assets/industry-cleaning-crew-400.jpg 400w, assets/industry-cleaning-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Cleaning</span></a></li>
-        <li class="p2 l"><a class="crew" href="security.html" data-key="security" data-word="security" data-screen="assets/app-security-home-600.png" data-screen-alt="TEAM MATE Home screen: a security officer on the clock at an arena, with today's shift, jobs and who's working" data-time="11:24" aria-label="Security: guards, crowd control and patrols"><img src="assets/industry-security-crew-400.jpg" srcset="assets/industry-security-crew-400.jpg 400w, assets/industry-security-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Security</span></a></li>
-        <li class="p1 l"><a class="crew" href="clinics.html" data-key="clinics" data-word="clinic" data-screen="assets/app-clinics-home-600.png" data-screen-alt="TEAM MATE Home screen: a nurse on the clock at a physio clinic, with today's shift, jobs and who's working" data-time="9:53" aria-label="Healthcare: clinics, practices and allied health"><img src="assets/industry-clinics-crew-400.jpg" srcset="assets/industry-clinics-crew-400.jpg 400w, assets/industry-clinics-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Healthcare</span></a></li>
-        <li class="p1 r"><a class="crew" href="aged-care.html" data-key="aged-care" data-word="aged care" data-screen="assets/app-aged-care-home-600.png" data-screen-alt="TEAM MATE Home screen: a personal care worker on the clock at an aged care home, with today's shift, jobs and who's working" data-time="9:47" aria-label="Aged care: aged care homes"><img src="assets/industry-aged-care-crew-400.jpg" srcset="assets/industry-aged-care-crew-400.jpg 400w, assets/industry-aged-care-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Aged care</span></a></li>
-        <li class="p2 r"><a class="crew" href="disability-care.html" data-key="disability-care" data-word="support" data-screen="assets/app-disability-care-home-600.png" data-screen-alt="TEAM MATE Home screen: a support worker on the clock at a group home, with today's shift, jobs and who's working" data-time="10:12" aria-label="Disability care: group homes and home care visits"><img src="assets/industry-disability-care-crew-400.jpg" srcset="assets/industry-disability-care-crew-400.jpg 400w, assets/industry-disability-care-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Disability care</span></a></li>
-        <li class="p3 r"><a class="crew" href="childcare.html" data-key="childcare" data-word="childcare" data-screen="assets/app-childcare-home-600.png" data-screen-alt="TEAM MATE Home screen: an educator on the clock at an early learning centre, with today's shift, jobs and who's working" data-time="9:38" aria-label="Childcare: childcare and early learning centres"><img src="assets/industry-childcare-crew-400.jpg" srcset="assets/industry-childcare-crew-400.jpg 400w, assets/industry-childcare-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Childcare</span></a></li>
-        <li class="p4 r"><a class="crew" href="gyms.html" data-key="gyms" data-word="gym" data-screen="assets/app-gyms-home-600.png" data-screen-alt="TEAM MATE Home screen: a fitness instructor on the clock at a gym, with today's shift, jobs and who's working" data-time="8:17" aria-label="Gyms: gyms and fitness centres"><img src="assets/industry-gyms-crew-400.jpg" srcset="assets/industry-gyms-crew-400.jpg 400w, assets/industry-gyms-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Gyms</span></a></li>
-        <li class="p5 r"><a class="crew" href="swim-leisure.html" data-key="swim-leisure" data-word="pool" data-screen="assets/app-swim-leisure-home-600.png" data-screen-alt="TEAM MATE Home screen: a lifeguard on the clock at a swim centre, with today's shift, jobs and who's working" data-time="9:12" aria-label="Swim centres: swim and leisure centres"><img src="assets/industry-swim-leisure-crew-400.jpg" srcset="assets/industry-swim-leisure-crew-400.jpg 400w, assets/industry-swim-leisure-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Swim centres</span></a></li>
-        <li class="p6 r"><a class="crew" href="construction.html" data-key="construction" data-word="site" data-screen="assets/app-construction-home-600.png" data-screen-alt="TEAM MATE Home screen: a carpenter on the clock at a building site, with today's shift, jobs and who's working" data-time="9:21" aria-label="Building sites: builders, trades and site crews"><img src="assets/industry-construction-crew-400.jpg" srcset="assets/industry-construction-crew-400.jpg 400w, assets/industry-construction-crew-640.jpg 640w" sizes="(max-width: 999px) 50vw, 12vw" alt="" width="400" height="500" decoding="async"><span class="crew-name">Building sites</span></a></li>
-      </ul>
-      <button class="sig-pause" type="button" data-pause hidden><span class="sig-pause-i" aria-hidden="true"></span><span data-pause-label>Pause</span></button>
-      <div class="sig-phone">
-        <div class="dev">
-          <div class="dev-screen">
-            <div class="dev-bar" aria-hidden="true"><span data-dev-time>9:41</span><svg viewBox="0 0 78 14" aria-hidden="true"><rect x="0" y="9" width="3.4" height="5" rx="1" fill="currentColor"/><rect x="5" y="6.5" width="3.4" height="7.5" rx="1" fill="currentColor"/><rect x="10" y="4" width="3.4" height="10" rx="1" fill="currentColor"/><rect x="15" y="1.5" width="3.4" height="12.5" rx="1" fill="currentColor"/><path d="M31 3.6a10.6 10.6 0 0 1 7.4 3l1.4-1.4A12.6 12.6 0 0 0 31 1.6a12.6 12.6 0 0 0-8.8 3.6l1.4 1.4a10.6 10.6 0 0 1 7.4-3Zm0 4a6.6 6.6 0 0 1 4.6 1.9l1.4-1.4a8.6 8.6 0 0 0-12 0l1.4 1.4A6.6 6.6 0 0 1 31 7.6Zm0 4a2.6 2.6 0 0 1 1.8.7L31 14l-1.8-1.7a2.6 2.6 0 0 1 1.8-.7Z" fill="currentColor"/><rect x="47.5" y="1.5" width="25" height="11.5" rx="3.6" fill="none" stroke="currentColor" stroke-opacity=".4"/><rect x="50" y="4" width="17" height="6.5" rx="2" fill="currentColor"/></svg></div>
-            <i class="dev-isl" aria-hidden="true"></i>
-            <div class="dev-shots" data-shots>
-              <img src="assets/app-hospitality-home-600.png" alt="TEAM MATE Home screen: a barista on the clock at a café, with today's shift, jobs and who's working" width="600" height="1301" decoding="async" data-key="hospitality">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+<div class="st-hero">
+<h1 class="st-h1"><span class="st-kick pg-fade" style="--d:.1s">Rostering app for Australian shift teams</span> <span class="pg-line"><span class="pg-up" style="--d:.2s">Your work crew,</span></span> <span class="pg-line"><span class="pg-up pg-pop" style="--d:.38s;color:#8FA3FF">sorted.</span></span></h1>
+<p class="pg-fade" style="--d:.75s;margin:0;font-size:21px;color:#C4CAD6">Roster. Clock in. Get paid. All in one place.</p>
+<div class="pg-fade" style="--d:.87s;display:flex;flex-wrap:wrap;justify-content:center;gap:14px">
+<a href="https://app.teammateapp.au/signup" class="pg-btn" style="text-decoration:none;background:#2B4DFF;color:#FFFFFF;font-weight:600;font-size:17px;padding:15px 28px;border-radius:999px;box-shadow:0 12px 40px rgba(43,77,255,.55)">Start your free trial</a>
+<button type="button" class="pg-btn st-go" data-go="1" style="font:inherit;color:inherit;background:none;cursor:pointer;font-weight:600;font-size:17px;padding:14px 28px;border-radius:999px;border:1px solid rgba(255,255,255,.32)">See how it works</button>
+</div>
+<p class="pg-fade" style="--d:.99s;margin:0;font-size:15px;color:#C4CAD6">14 days free, no card needed. Then from $6 a person a month, plus GST.</p>
+</div>
+
+<div class="st-left">
+<div class="st-word w1"><span class="st-eye">The Schedule tab</span><span class="st-big">Roster.</span></div>
+<div class="st-word w2"><span class="st-eye">The Home tab</span><span class="st-big">Clock in.</span></div>
+<div class="st-word w3"><span class="st-eye">The Timesheets tab</span><span class="st-big">Get paid.</span></div>
+</div>
+<div class="st-right">
+<p class="st-copy w1">Publish the week and your crew sees it in the app and their phone calendar straight away.</p>
+<p class="st-copy w2">One tap at the start of the shift. Hours and pay add up from there.</p>
+<p class="st-copy w3">Your manager approves the hours in one queue, then exports the payroll file.</p>
+</div>
+
+<div class="st-phonewrap">
+<div class="st-rise"><div class="st-tilt">
+<div role="img" aria-label="The TEAM MATE staff app on a phone. Its screen changes as you scroll: Home, Schedule, then Timesheets." class="st-phone">
+<div aria-hidden="true" class="ap" style="position:absolute;left:0;top:0;width:360px;height:780px;transform:scale(.8);transform-origin:0 0">
+<div class="st-scr s-home" style="position: absolute; inset: 0; box-sizing: border-box; background: #FFFFFF; padding: 22px 14px 0">
+<div style="display: flex; justify-content: center; align-items: baseline; gap: 7px">
+<span style="display: flex; align-items: center; gap: 5px; font-size: 52px; font-weight: 800; line-height: 1">9<i style="width: 10px; height: 10px; border-radius: 50%; background: #2B4DFF"></i>41</span>
+<span class="ap-grey" style="font-size: 17px; font-weight: 700">am</span>
+</div>
+<div class="ap-eye" style="text-align: center; margin-top: 10px">Wednesday 9 September · Yarra River Café</div>
+<div class="ap-card" style="margin-top: 12px; display: flex; flex-direction: column; gap: 5px">
+<span><span class="ap-pill ap-ok"><i class="ci-blink"></i>On the clock</span></span>
+<span style="display: flex; align-items: baseline; margin-top: 4px"><span style="font-size: 30px; font-weight: 800; line-height: 1">2:45</span><span class="ap-grey" style="font-size: 15px; font-weight: 700; line-height: 1; height: 1em; overflow: hidden; display: flex">:<span class="ci-secs" style="display: flex; flex-direction: column"><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span></span></span></span>
+<span class="ap-grey">since 6:56 am</span>
+<span class="ap-b" style="margin-top: 6px">Finishes 3:00 pm · in 5h 19m</span>
+<span class="ap-track"><b style="width: 34%"></b></span>
+<span class="ap-grey" style="margin-top: 5px">7:00 am – 3:00 pm · Barista · Front of House</span>
+<span class="ap-grey">Break: 30 min, not taken yet</span>
+<span style="font-weight: 500; margin-top: 5px">Jobs today: 1 of 3 done ›</span>
+</div>
+<div class="ap-eye" style="margin-top: 20px">On with you today</div>
+<div class="ap-card" style="margin-top: 12px; display: flex; align-items: center; justify-content: space-between; padding: 10px 14px 10px 18px"><span style="display: flex; align-items: center; gap: 10px"><span style="display: flex"><span class="ap-av on">AM</span><span class="ap-av on">KN</span><span class="ap-av on">HQ</span><span class="ap-av">MR</span></span><span style="font-weight: 500">Ava (supervisor), Kai and 3 more</span></span><span class="ap-grey">›</span></div>
+<div class="ap-card" style="margin-top: 14px; display: flex; flex-direction: column; gap: 9px"><span style="display: flex; justify-content: space-between"><span class="ap-b">This week: 17h 56m of 45h · 3 shifts left</span><span class="ap-grey">›</span></span><span class="ap-track"><b style="width: 40%"></b></span></div>
+<div class="ap-card" style="margin-top: 14px; display: flex; align-items: center; gap: 12px"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#0A0F1A" stroke-width="1.6" stroke-linecap="round"><circle cx="9" cy="9" r="7"></circle><path d="M9 5.2V9l2.4 1.6"></path></svg><span style="flex: 1; display: flex; flex-direction: column"><span class="ap-b">Clock details</span><span class="ap-grey">Every venue, today's shifts, handover notes</span></span><span class="ap-grey">›</span></div>
+<div style="position: absolute; left: 14px; right: 14px; bottom: 50px; display: grid; grid-template-columns: 131px 1fr; gap: 8px; font-size: 15px; font-weight: 700; text-align: center; line-height: 48px">
+<span style="background: #E5E8EE; border-radius: 999px">Clock out</span>
+<span style="background: #2B4DFF; color: #FFFFFF; border-radius: 999px">Take a break</span>
+</div>
+<div class="ap-tabs"><span class="on">Home</span><span>Team</span><span>Schedule</span><span>Timesheets</span><span>Me</span></div>
+</div>
+<div class="st-scr s-sched" style="position: absolute; inset: 0; box-sizing: border-box; background: #FFFFFF; padding: 16px 14px 0">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="font-size: 28px; font-weight: 800; letter-spacing: -0.02em">Schedule</span>
+<span style="display: flex; align-items: center; gap: 8px"><span style="background: #F3F5F7; border-radius: 999px; padding: 7px 13px; font-weight: 700">Time off</span><span style="background: #F3F5F7; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: 800; letter-spacing: 1px">···</span></span>
+</div>
+<div style="display: flex; justify-content: space-between; margin-top: 22px; padding: 0 4px; font-weight: 700"><span>September</span><span class="ap-grey" style="letter-spacing: 22px">‹›</span></div>
+<div class="ap-cal ap-wk" style="margin-top: 8px"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+<div class="ap-cal" style="margin-top: 8px">
+<div></div><div class="past"><span>1</span></div><div class="past"><span>2</span></div><div class="past"><span>3</span></div><div class="past"><span>4</span></div><div class="past"><span>5</span></div><div class="past"><span>6</span></div>
+<div class="past"><span>7</span><i></i></div><div class="past"><span>8</span><i></i></div><div class="sel"><span>9</span><i></i></div><div><span>10</span><i></i></div><div><span>11</span><i></i></div><div><span>12</span><i></i></div><div><span>13</span></div>
+<div><span>14</span><i></i></div><div><span>15</span><i></i></div><div><span>16</span><i></i></div><div><span>17</span><i></i></div><div><span>18</span><i></i></div><div><span>19</span><i></i></div><div><span>20</span></div>
+<div><span>21</span><i></i></div><div><span>22</span><i></i></div><div><span>23</span><i></i></div><div><span>24</span><i></i></div><div><span>25</span><i></i></div><div><span>26</span><i></i></div><div><span>27</span></div>
+<div><span>28</span></div><div><span>29</span></div><div><span>30</span></div>
+</div>
+<div class="ap-b" style="margin-top: 14px">This week · 45h rostered</div>
+<div class="ap-eye" style="margin-top: 14px">Today · Wednesday 9 September</div>
+<div class="ap-card" style="margin-top: 8px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 22px; font-weight: 800; letter-spacing: -0.01em">7:00 am – 3:00 pm</span>
+<span style="font-size: 14px; font-weight: 500">Barista · Front of House · 30m break</span>
+<span style="display: flex; align-items: center; gap: 10px; padding-left: 4px"><span style="display: flex"><span class="ap-av on">AM</span><span class="ap-av on">KN</span><span class="ap-av on">HQ</span><span class="ap-av">MR</span></span><span class="ap-grey">with Ava, Kai +3</span></span>
+<span style="display: flex; align-items: center; justify-content: space-between; margin-top: 2px"><span class="ap-pill ap-ok"><i></i>Confirmed</span><span class="ap-b">Details ›</span></span>
+</div>
+<div class="ap-tabs"><span>Home</span><span>Team</span><span class="on">Schedule</span><span>Timesheets</span><span>Me</span></div>
+</div>
+<div class="st-scr s-ts" style="position: absolute; inset: 0; box-sizing: border-box; background: #FFFFFF; padding: 16px 14px 0">
+<span style="font-size: 28px; font-weight: 800; letter-spacing: -0.02em">Timesheets</span>
+<p class="ap-grey" style="margin: 14px 0 0">Paid hours from your clock-ins, after any rounding your venue uses. Your manager checks and approves them before payday.</p>
+<div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 12px"><span class="ap-eye">This week</span><span style="font-size: 15px; font-weight: 800">15h 11m</span></div>
+<div class="ap-card" style="margin-top: 8px; padding: 6px 14px">
+<div class="ap-ts"><span><span class="ap-b">Tue, 8 Sept</span><span class="ap-grey">6:57 am – 3:02 pm · 30m break</span></span><span><span class="ap-b">7h 35m</span><span style="display: grid"><span class="ap-pill ap-wait ci-wait" style="grid-area: 1/1"><i></i>Waiting</span><span class="ap-pill ap-ok ci-appr" style="grid-area: 1/1"><i></i>Approved</span></span></span></div>
+<div class="ap-ts"><span><span class="ap-b">Mon, 7 Sept</span><span class="ap-grey">6:55 am – 3:01 pm · 30m break</span></span><span><span class="ap-b">7h 36m</span><span style="display: grid"><span class="ap-pill ap-wait ci-wait" style="grid-area: 1/1"><i></i>Waiting</span><span class="ap-pill ap-ok ci-appr" style="grid-area: 1/1"><i></i>Approved</span></span></span></div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 20px"><span class="ap-eye">Last week</span><span style="font-size: 15px; font-weight: 800">45h 28m</span></div>
+<div class="ap-card" style="margin-top: 8px; padding: 6px 14px">
+<div class="ap-ts"><span><span class="ap-b">Sat, 5 Sept</span><span class="ap-grey">6:58 am – 3:00 pm · 30m break</span></span><span><span class="ap-b">7h 32m</span><span class="ap-pill ap-ok"><i></i>Approved</span></span></div>
+<div class="ap-ts"><span><span class="ap-b">Fri, 4 Sept</span><span class="ap-grey">6:56 am – 3:02 pm · 30m break</span></span><span><span class="ap-b">7h 36m</span><span class="ap-pill ap-ok"><i></i>Approved</span></span></div>
+<div class="ap-ts"><span><span class="ap-b">Thu, 3 Sept</span><span class="ap-grey">6:54 am – 3:01 pm · 30m break</span></span><span><span class="ap-b">7h 37m</span><span class="ap-pill ap-ok"><i></i>Approved</span></span></div>
+<div class="ap-ts"><span><span class="ap-b">Wed, 2 Sept</span><span class="ap-grey">6:57 am – 3:00 pm · 30m break</span></span><span><span class="ap-b">7h 33m</span><span class="ap-pill ap-ok"><i></i>Approved</span></span></div>
+<div class="ap-ts"><span><span class="ap-b">Tue, 1 Sept</span><span class="ap-grey">6:55 am – 3:02 pm · 30m break</span></span><span><span class="ap-b">7h 37m</span><span class="ap-pill ap-ok"><i></i>Approved</span></span></div>
+<div class="ap-ts"><span><span class="ap-b">Mon, 31 Aug</span><span class="ap-grey">6:58 am – 3:01 pm · 30m break</span></span><span><span class="ap-b">7h 33m</span><span class="ap-pill ap-ok"><i></i>Approved</span></span></div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 20px"><span class="ap-eye">Week of Mon, 24 Aug</span><span style="font-size: 15px; font-weight: 800">45h 30m</span></div>
+<div class="ap-card" style="margin-top: 8px; padding: 6px 14px">
+<div class="ap-ts"><span><span class="ap-b">Sat, 29 Aug</span><span class="ap-grey">6:56 am – 3:00 pm · 30m break</span></span><span><span class="ap-b">7h 34m</span><span class="ap-pill ap-ok"><i></i>Approved</span></span></div>
+<div class="ap-ts"><span><span class="ap-b">Fri, 28 Aug</span><span class="ap-grey">6:54 am – 3:02 pm · 30m break</span></span><span><span class="ap-b">7h 38m</span><span class="ap-pill ap-ok"><i></i>Approved</span></span></div>
+</div>
+<div class="ap-tabs"><span>Home</span><span>Team</span><span>Schedule</span><span class="on">Timesheets</span><span>Me</span></div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="st-chip c1" aria-hidden="true" style="right:calc(50% + 144px * var(--ps,1));top:calc(50% - 286px * var(--ps,1))"><i></i><span>Roster published</span></div>
+<div class="st-pop p1 ap" aria-hidden="true" style="left:calc(50% + 100px * var(--ps,1));top:calc(50% + 120px * var(--ps,1))"><div class="ap-eye" style="margin: 6px 0 10px">Today · Wednesday 9 September</div>
+<div class="ap-card" style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 22px; font-weight: 800; letter-spacing: -0.01em">7:00 am – 3:00 pm</span>
+<span style="font-size: 14px; font-weight: 500">Barista · Front of House · 30m break</span>
+<span style="display: flex; align-items: center; gap: 10px; padding-left: 4px"><span style="display: flex"><span class="ap-av on">AM</span><span class="ap-av on">KN</span><span class="ap-av on">HQ</span><span class="ap-av">MR</span></span><span class="ap-grey">with Ava, Kai +3</span></span>
+<span style="display: flex; align-items: center; justify-content: space-between; margin-top: 2px"><span class="ap-pill ap-ok"><i></i>Confirmed</span><span class="ap-b">Details ›</span></span>
+</div>
+</div>
+<div class="st-chip c2" aria-hidden="true" style="left:calc(50% + 144px * var(--ps,1));top:calc(50% - 280px * var(--ps,1))"><i></i><span>Clocked in, 6:56 am</span></div>
+<div class="st-pop p2 ap" aria-hidden="true" style="right:calc(50% + 96px * var(--ps,1));top:calc(50% + 96px * var(--ps,1))"><div class="ap-card" style="display: flex; flex-direction: column; gap: 5px">
+<span><span class="ap-pill ap-ok"><i class="ci-blink"></i>On the clock</span></span>
+<span style="display: flex; align-items: baseline; margin-top: 4px"><span style="font-size: 30px; font-weight: 800; line-height: 1">2:45</span><span class="ap-grey" style="font-size: 15px; font-weight: 700; line-height: 1; height: 1em; overflow: hidden; display: flex">:<span class="ci-secs" style="display: flex; flex-direction: column"><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span></span></span></span>
+<span class="ap-grey">since 6:56 am</span>
+<span class="ap-b" style="margin-top: 6px">Finishes 3:00 pm · in 5h 19m</span>
+<span class="ap-track"><b style="width: 34%"></b></span>
+<span class="ap-grey" style="margin-top: 5px">7:00 am – 3:00 pm · Barista · Front of House</span>
+<span class="ap-grey">Break: 30 min, not taken yet</span>
+</div>
+</div>
+<div class="st-chip c3" aria-hidden="true" style="right:calc(50% + 144px * var(--ps,1));top:calc(50% - 286px * var(--ps,1))"><i></i><span>Payroll file ready</span></div>
+<div class="st-pop p3 ap" aria-hidden="true" style="left:calc(50% + 100px * var(--ps,1));top:calc(50% + 110px * var(--ps,1))"><div style="display: flex; justify-content: space-between; align-items: baseline; margin: 6px 0 8px"><span class="ap-eye">This week</span><span style="font-size: 15px; font-weight: 800">15h 11m</span></div>
+<div class="ap-card" style="padding: 6px 14px">
+<div class="ap-ts"><span><span class="ap-b">Tue, 8 Sept</span><span class="ap-grey">6:57 am – 3:02 pm · 30m break</span></span><span><span class="ap-b">7h 35m</span><span style="display: grid"><span class="ap-pill ap-wait ci-wait5" style="grid-area: 1/1"><i></i>Waiting</span><span class="ap-pill ap-ok ci-appr5" style="grid-area: 1/1"><i></i>Approved</span></span></span></div>
+<div class="ap-ts"><span><span class="ap-b">Mon, 7 Sept</span><span class="ap-grey">6:55 am – 3:01 pm · 30m break</span></span><span><span class="ap-b">7h 36m</span><span style="display: grid"><span class="ap-pill ap-wait ci-wait5" style="grid-area: 1/1; animation-delay: .5s"><i></i>Waiting</span><span class="ap-pill ap-ok ci-appr5" style="grid-area: 1/1; animation-delay: .5s"><i></i>Approved</span></span></span></div>
+<div class="ap-ts"><span><span class="ap-b">Sat, 5 Sept</span><span class="ap-grey">6:58 am – 3:00 pm · 30m break</span></span><span><span class="ap-b">7h 32m</span><span class="ap-pill ap-ok"><i></i>Approved</span></span></div>
+</div>
+</div>
+</div>
+
+<div class="st-tabs" role="group" aria-label="Jump to a step">
+<button type="button" class="st-go t1" data-go="1">Roster</button>
+<button type="button" class="st-go t2" data-go="2">Clock in</button>
+<button type="button" class="st-go t3" data-go="3">Get paid</button>
+</div>
+</div>
+</section>
+
 
   <section class="logos" aria-label="Teams using TEAM MATE">
     <div class="wrap">
@@ -382,6 +481,73 @@
       </ul>
     </div>
   </section>
+
+<section id="product" class="cine-dark" style="overflow: hidden">
+<div class="wrap cine-head cine-head-closer">
+<p class="cine-eye">Straight from the app</p>
+<h2 class="cine-h2" style="max-width: 18ch">The staff app your crew will actually use.</h2>
+</div>
+<div role="img" aria-label="Close-ups from the app: the On the clock card, today's shift, timesheets being approved, who is on with you today, and the Clock out and Take a break buttons." style="position: relative; padding: 8px 0 104px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent)">
+<div aria-hidden="true" class="ci-reel ap" style="display: flex; gap: 20px; width: max-content; padding: 0 5%">
+
+<div style="position: relative; width: 376px; height: 300px; box-sizing: border-box; border-radius: 22px; background: #FFFFFF; padding: 14px">
+<div class="ap-card" style="display: flex; flex-direction: column; gap: 5px">
+<span><span class="ap-pill ap-ok"><i class="ci-blink"></i>On the clock</span></span>
+<span style="display: flex; align-items: baseline; margin-top: 4px"><span style="font-size: 30px; font-weight: 800; line-height: 1">2:45</span><span class="ap-grey" style="font-size: 15px; font-weight: 700; line-height: 1; height: 1em; overflow: hidden; display: flex">:<span class="ci-secs" style="display: flex; flex-direction: column"><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span></span></span></span>
+<span class="ap-grey">since 6:56 am</span>
+<span class="ap-b" style="margin-top: 6px">Finishes 3:00 pm · in 5h 19m</span>
+<span class="ap-track"><b style="width: 34%"></b></span>
+<span class="ap-grey" style="margin-top: 5px">7:00 am – 3:00 pm · Barista · Front of House</span>
+<span class="ap-grey">Break: 30 min, not taken yet</span>
+</div>
+<span class="ci-tag">Clock in</span>
+</div>
+
+<div style="position: relative; width: 376px; height: 300px; box-sizing: border-box; border-radius: 22px; background: #FFFFFF; padding: 14px">
+<div class="ap-eye" style="margin: 6px 0 10px">Today · Wednesday 9 September</div>
+<div class="ap-card" style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 22px; font-weight: 800; letter-spacing: -0.01em">7:00 am – 3:00 pm</span>
+<span style="font-size: 14px; font-weight: 500">Barista · Front of House · 30m break</span>
+<span style="display: flex; align-items: center; gap: 10px; padding-left: 4px"><span style="display: flex"><span class="ap-av on">AM</span><span class="ap-av on">KN</span><span class="ap-av on">HQ</span><span class="ap-av">MR</span></span><span class="ap-grey">with Ava, Kai +3</span></span>
+<span style="display: flex; align-items: center; justify-content: space-between; margin-top: 2px"><span class="ap-pill ap-ok"><i></i>Confirmed</span><span class="ap-b">Details ›</span></span>
+</div>
+<span class="ci-tag">Your shifts</span>
+</div>
+
+<div style="position: relative; width: 376px; height: 300px; box-sizing: border-box; border-radius: 22px; background: #FFFFFF; padding: 14px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; margin: 6px 0 8px"><span class="ap-eye">This week</span><span style="font-size: 15px; font-weight: 800">15h 11m</span></div>
+<div class="ap-card" style="padding: 6px 14px">
+<div class="ap-ts"><span><span class="ap-b">Tue, 8 Sept</span><span class="ap-grey">6:57 am – 3:02 pm · 30m break</span></span><span><span class="ap-b">7h 35m</span><span style="display: grid"><span class="ap-pill ap-wait ci-wait5" style="grid-area: 1/1"><i></i>Waiting</span><span class="ap-pill ap-ok ci-appr5" style="grid-area: 1/1"><i></i>Approved</span></span></span></div>
+<div class="ap-ts"><span><span class="ap-b">Mon, 7 Sept</span><span class="ap-grey">6:55 am – 3:01 pm · 30m break</span></span><span><span class="ap-b">7h 36m</span><span style="display: grid"><span class="ap-pill ap-wait ci-wait5" style="grid-area: 1/1; animation-delay: .5s"><i></i>Waiting</span><span class="ap-pill ap-ok ci-appr5" style="grid-area: 1/1; animation-delay: .5s"><i></i>Approved</span></span></span></div>
+<div class="ap-ts"><span><span class="ap-b">Sat, 5 Sept</span><span class="ap-grey">6:58 am – 3:00 pm · 30m break</span></span><span><span class="ap-b">7h 32m</span><span class="ap-pill ap-ok"><i></i>Approved</span></span></div>
+</div>
+<span class="ci-tag">Timesheets</span>
+</div>
+
+<div style="position: relative; width: 376px; height: 300px; box-sizing: border-box; border-radius: 22px; background: #FFFFFF; padding: 14px">
+<div class="ap-eye" style="margin: 6px 0 10px">On with you today</div>
+<div class="ap-card" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px 10px 18px"><span style="display: flex; align-items: center; gap: 10px"><span style="display: flex"><span class="ap-av on">AM</span><span class="ap-av on">KN</span><span class="ap-av on">HQ</span><span class="ap-av">MR</span></span><span style="font-weight: 500">Ava (supervisor), Kai and 3 more</span></span><span class="ap-grey">›</span></div>
+<div class="ap-card" style="margin-top: 14px; display: flex; flex-direction: column; gap: 9px"><span style="display: flex; justify-content: space-between"><span class="ap-b">This week: 17h 56m of 45h · 3 shifts left</span><span class="ap-grey">›</span></span><span class="ap-track"><b class="ci-grow" style="width: 40%; transform-origin: left"></b></span></div>
+<span class="ci-tag">Your crew</span>
+</div>
+
+<div style="position: relative; width: 376px; height: 300px; box-sizing: border-box; border-radius: 22px; background: #FFFFFF; padding: 26px 14px 14px">
+<div style="display: flex; justify-content: center; align-items: baseline; gap: 7px">
+<span style="display: flex; align-items: center; gap: 5px; font-size: 52px; font-weight: 800; line-height: 1">9<i class="ci-blink" style="width: 10px; height: 10px; border-radius: 50%; background: #2B4DFF"></i>41</span>
+<span class="ap-grey" style="font-size: 17px; font-weight: 700">am</span>
+</div>
+<div class="ap-eye" style="text-align: center; margin-top: 10px">Wednesday 9 September · Yarra River Café</div>
+<div style="margin-top: 34px; display: grid; grid-template-columns: 131px 1fr; gap: 8px; font-size: 15px; font-weight: 700; text-align: center; line-height: 48px">
+<span style="background: #E5E8EE; border-radius: 999px">Clock out</span>
+<span style="background: #2B4DFF; color: #FFFFFF; border-radius: 999px">Take a break</span>
+</div>
+<span class="ci-tag">Breaks</span>
+</div>
+
+</div>
+</div>
+</section>
+
 
   <section class="scene-band mist" id="industries" aria-labelledby="industries-h">
     <div class="wrap">
@@ -683,105 +849,74 @@
       width="2400" height="1600" loading="lazy">
   </section>
 
-  <section id="how-it-works">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="label">How it works</span>
-        <h2>Up and running before your next shift.</h2>
+  <section id="how-it-works" class="cine-white">
+    <span id="managers" class="cine-anchor" aria-hidden="true"></span>
+    <div class="wrap cine-stack">
+      <div class="cine-head">
+        <p class="cine-eye">How it works</p>
+        <h2 class="cine-h2" style="max-width: 16ch">Up and running before your next shift.</h2>
       </div>
-      <ol class="steps">
-        <li class="step" data-reveal>
-          <span class="step-num" aria-hidden="true">1</span>
+      <ol class="cine-steps">
+        <li class="cine-step">
+          <span class="cine-num" aria-hidden="true">1</span>
           <h3>Pick your industry</h3>
-          <p>The welcome wizard adds your jobs, a typical week and suggested
-          rules for your kind of business. No implementation call, no sales demo.</p>
+          <p>A welcome wizard sets up your jobs, a typical week and suggested rules. No implementation call, no sales demo.</p>
         </li>
-        <li class="step" data-reveal>
-          <span class="step-num" aria-hidden="true">2</span>
+        <li class="cine-step">
+          <span class="cine-num" aria-hidden="true">2</span>
           <h3>Publish your roster</h3>
-          <p>Your crew sees their shifts in the app, and in their phone
-          calendar, the moment you publish.</p>
+          <p>Your crew sees their shifts in the app and in their phone calendar straight away.</p>
         </li>
-        <li class="step" data-reveal>
-          <span class="step-num" aria-hidden="true">3</span>
+        <li class="cine-step">
+          <span class="cine-num" aria-hidden="true">3</span>
           <h3>Clock in, approve, export</h3>
-          <p>Hours and pay add up as they work. Approve timesheets in one
-          queue and export files your payroll software can read.</p>
+          <p>Hours and pay add up as the crew clocks in. Approve timesheets in one queue, then export the payroll file.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <section class="mist" id="product">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="label">Product</span>
-        <h2>The staff app your crew will actually use.</h2>
-        <p>New shifts appear the moment they're published — in the app and in
-        your phone calendar. No printouts, no group-chat chaos.</p>
+  <section id="pricing" class="cine-mist">
+    <div class="wrap cine-stack">
+      <div class="cine-head">
+        <p class="cine-eye">Pricing</p>
+        <h2 class="cine-h2" style="max-width: 16ch">One price per person, billed monthly.</h2>
       </div>
-
-      <div class="phones">
-        <div class="phone" data-reveal>
-          <figure>
-            <img src="assets/app-hospitality-home.png" alt="TEAM MATE Home screen: a barista on the clock at a café, with today's shift, jobs and who's working" width="1080" height="2341" loading="lazy">
-            <figcaption>Clock in and out from Home</figcaption>
-          </figure>
+      <div class="cine-plans">
+        <div class="cine-plan">
+          <h3>Foundation</h3>
+          <p class="cine-price">$6</p>
+          <p class="cine-per">per person a month, plus GST</p>
+          <ul>
+            <li>Everything to run the week</li>
+            <li>Rosters, open shifts, swaps and rule warnings</li>
+            <li>Find a replacement when someone can't work</li>
+            <li>Clock in by phone, kiosk or crew, even with no signal</li>
+            <li>Timesheets, payroll files and penalty rates you set</li>
+            <li>Leave, team chat, news and reports</li>
+            <li>Labour % of sales, from the day's sales you type in</li>
+            <li>Several locations, each with its own managers</li>
+          </ul>
         </div>
-        <div class="phone" data-reveal>
-          <figure>
-            <img src="assets/app-hospitality-schedule.png" alt="TEAM MATE Schedule screen: a barista's week, with confirmed shifts" width="1080" height="2341" loading="lazy">
-            <figcaption>Know your week at a glance</figcaption>
-          </figure>
-        </div>
-        <div class="phone" data-reveal>
-          <figure>
-            <img src="assets/app-hospitality-timesheets.png" alt="TEAM MATE Timesheets screen: a barista's paid hours, approved by the manager" width="1080" height="2341" loading="lazy">
-            <figcaption>Hours, checked and approved</figcaption>
-          </figure>
+        <div class="cine-plan cine-plan-plus">
+          <h3>Plus</h3>
+          <p class="cine-price">$9</p>
+          <p class="cine-per">per person a month, plus GST</p>
+          <ul>
+            <li>Everything in Foundation</li>
+            <li>Smart scheduling, sales forecasts and demand rules</li>
+            <li>Sales brought in for you, from a file or your Square till</li>
+            <li>Staff sharing, labour budgets and special periods</li>
+            <li>The HR pack: onboarding, training, reviews and policies</li>
+            <li>Tickets and licences, with expiry reminders</li>
+            <li>Open API, AI assistants and your own branding</li>
+          </ul>
         </div>
       </div>
-
-      <ul class="features feature-cards cols-3" data-reveal>
-        <li><strong>Open shifts</strong> See extra shifts you're eligible for and claim them in a tap.</li>
-        <li><strong>Swaps</strong> Offer a shift to a teammate; managers approve in the app.</li>
-        <li><strong>Shift reminders</strong> A nudge before each shift starts, and a "still clocked in?" one if you forget to clock off.</li>
-        <li><strong>Leave</strong> Check balances, request time off, track approvals.</li>
-        <li><strong>Announcements and tasks</strong> Read updates, confirm the important ones, tick off today's list.</li>
-        <li><strong>Handover notes</strong> What the last shift wants the next one to know.</li>
-      
+      <p class="cine-note">Every new business gets 14 days of Plus free, no card needed. Tip sharing is a $2.50 add-on on either plan. <a href="pricing.html">Compare the plans side by side</a></p>
     </div>
   </section>
 
-  <section id="managers">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="label">For managers</span>
-        <h2>Run the whole roster from the web.</h2>
-        <p>Set up in minutes with the welcome wizard — no implementation call,
-        no sales demo.</p>
-      </div>
-
-      <ul class="features feature-cards" data-reveal>
-        <li><strong>Build and publish rosters</strong> Your crew sees changes instantly.</li>
-        <li><strong>Approve timesheets and leave</strong> From one queue, in seconds.</li>
-        <li><strong>Weekend, evening and public-holiday rates</strong> Set your rates once and pay adds them up for you.</li>
-        <li><strong>Export payroll files</strong> Files your payroll software can read, Xero-ready included.</li>
-        <li><strong>Forecast busy days</strong> On Plus: staff the rush, not the lull.</li>
-        <li><strong>Your compliance rules in one place</strong> Set them once, see them applied.</li>
-        <li><strong>One price a person</strong> $6 or $9 a person a month, plus GST. You'll always know what you're paying for.</li>
-      
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="wrap">
-      <h2 data-reveal>Try it free for 14 days.<br> No card needed.</h2>
-      <p data-reveal>Every Plus feature, and nothing is charged unless you choose a plan.
-      Then it's $6 or $9 a person a month, plus GST.</p>
-      <a class="btn btn-primary" data-reveal href="pricing.html">See pricing</a>
-    </div>
-  </section>
 
   <section id="faq">
     <div class="wrap">
@@ -824,19 +959,14 @@
     </div>
   </section>
 
-  <section class="mist" id="get-the-app">
+  <section id="get-the-app" class="cine-cta">
     <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="label">Get the app</span>
-        <h2>Your crew signs in from their pocket.</h2>
-        <p>Employers set up TEAM MATE on the web and invite the team — everyone
-        else just signs into the app with their work email. The staff app is
-        coming to the App Store and Google Play.</p>
+      <h2>Try it free for 14 days. No card needed.</h2>
+      <div class="cine-cta-row">
+        <a class="pg-btn cine-btn-white" href="https://app.teammateapp.au/signup">Start your free trial</a>
+        <a class="pg-btn cine-btn-line" href="https://app.teammateapp.au/login">Sign in</a>
       </div>
-      <div class="hero-cta hero-cta-left" data-reveal>
-        <a class="btn btn-primary" href="https://app.teammateapp.au/signup">Start your free trial on the web</a>
-        <a class="btn btn-secondary" href="https://app.teammateapp.au/login">Sign in</a>
-      </div>
+      <p>Set up TEAM MATE on the web and invite your team. Everyone else signs in to the app with their work email.</p>
     </div>
   </section>
 </main>
@@ -901,67 +1031,43 @@
 </footer>
 
 <script>
-(function () {
-  if (!document.documentElement.classList.contains("tm-anim")) return;
-  var els = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
-  els.forEach(function (el) {
-    var section = el.closest("section") || document.body;
-    var n = section.tmRevealCount || 0;
-    section.tmRevealCount = n + 1;
-    el.style.setProperty("--reveal-delay", Math.min(n * 90, 450) + "ms");
-  });
-  var ticking = false;
-  function sweep() {
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var st = document.getElementById('story'), rise = st.querySelector('.st-rise'), tilt = st.querySelector('.st-tilt'),
+      bar = document.querySelector('.nav-cine'), reel = document.querySelector('#product [role="img"]'), ticking = false, cur = -1;
+  rise.classList.add('st-enter');
+  var cuts = [0.17, 0.45, 0.73], stops = [0, 0.31, 0.59, 0.9];
+  function size(){ var s = Math.max(0.55, Math.min(1.12, innerHeight * 0.74 / 640)); if (innerWidth < 860) s = Math.min(s, innerWidth * 0.62 / 304); st.style.setProperty('--ps', s.toFixed(3)); }
+  function span(){ return st.offsetHeight - innerHeight; }
+  function frame(){
     ticking = false;
-    var vh = window.innerHeight || document.documentElement.clientHeight;
-    els = els.filter(function (el) {
-      var r = el.getBoundingClientRect();
-      if (r.top < vh * 0.92 && r.bottom > 0) {
-        el.classList.add("is-in");
-        return false;
-      }
-      return true;
+    var y = window.scrollY - st.offsetTop, p = Math.max(0, Math.min(1, y / span()));
+    var ch = p < cuts[0] ? 0 : p < cuts[1] ? 1 : p < cuts[2] ? 2 : 3;
+    if (ch !== cur) { cur = ch; st.dataset.ch = ch; document.body.dataset.ch = ch; }
+    st.style.setProperty('--p0', Math.min(1, p / cuts[0]).toFixed(4));
+    if (bar) bar.classList.toggle('is-solid', window.scrollY > st.offsetTop + st.offsetHeight - 80);
+    if (reel && !reduce) { var r = reel.getBoundingClientRect(); if (r.bottom > -100 && r.top < innerHeight + 100) reel.style.setProperty('--sx', ((innerHeight - r.top) * 0.18).toFixed(1)); }
+  }
+  addEventListener('scroll', function(){ if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, { passive: true });
+  addEventListener('resize', function(){ size(); frame(); });
+  st.querySelectorAll('.st-go').forEach(function(b){ b.addEventListener('click', function(){
+    window.scrollTo({ top: st.offsetTop + span() * stops[+b.dataset.go] + 2, behavior: reduce ? 'auto' : 'smooth' }); }); });
+  if (!reduce && matchMedia('(hover: hover)').matches) {
+    st.addEventListener('pointermove', function(e){
+      var x = e.clientX / innerWidth - 0.5, yy = e.clientY / innerHeight - 0.5;
+      tilt.style.transform = 'rotateY(' + (x * 14).toFixed(2) + 'deg) rotateX(' + (-yy * 10).toFixed(2) + 'deg)';
     });
-    if (!els.length) {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    }
+    st.addEventListener('pointerleave', function(){ tilt.style.transform = ''; });
   }
-  function onScroll() {
-    if (!ticking) { ticking = true; requestAnimationFrame(sweep); }
-  }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onScroll);
-  sweep();
+  var groups = ['.logos .label', '.logo-row', '.cine-head > *', '#industries .section-head > *', '.cine-step', '.cine-plan', '.cine-note', '#faq .section-head > *', '#get-the-app h2', '#get-the-app .cine-cta-row', '#get-the-app p'];
+  groups.forEach(function(g){ document.querySelectorAll(g).forEach(function(el, i){ el.classList.add('rv'); el.style.setProperty('--d', (i * 0.11) + 's'); }); });
+  var watch = [].slice.call(document.querySelectorAll('.rv'));
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('is-on'); io.unobserve(e.target); } }); }, { threshold: 0.18 });
+    watch.forEach(function(el){ io.observe(el); });
+  } else watch.forEach(function(el){ el.classList.add('is-on'); });
+  size(); frame();
 })();
 </script>
-
-<script>
-(function () {
-  var cta = document.getElementById("nav-cta");
-  if (!cta) return;
-  var rivals = Array.prototype.slice.call(document.querySelectorAll("main .btn-primary"));
-  if (!rivals.length) return;
-  var nav = document.querySelector(".nav");
-  var ticking = false;
-  function update() {
-    ticking = false;
-    var navH = nav ? nav.offsetHeight : 76;
-    var rivalVisible = rivals.some(function (el) {
-      var r = el.getBoundingClientRect();
-      return r.bottom > navH && r.top < window.innerHeight;
-    });
-    cta.classList.toggle("btn-primary", !rivalVisible);
-    cta.classList.toggle("btn-secondary", rivalVisible);
-  }
-  function onScroll() {
-    if (!ticking) { ticking = true; requestAnimationFrame(update); }
-  }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onScroll);
-  update();
-})();
-</script>
-
 </body>
 </html>
