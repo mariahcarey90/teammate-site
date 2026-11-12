@@ -844,9 +844,12 @@
 </div>
       </div>
     </div>
-    <img class="band-img" data-reveal src="assets/photo-flatlay-signin.jpg"
-      alt="A phone on a sunlit marble café counter beside a flat white, showing the TEAM MATE sign-in screen"
-      width="2400" height="1600" loading="lazy">
+    <video class="band-img" data-reveal data-band-video muted loop playsinline
+      preload="none" poster="assets/flatlay-espresso-steam-poster.jpg"
+      width="1664" height="1248"
+      aria-label="A phone on a sunlit wooden café table beside an espresso, showing the TEAM MATE sign-in screen">
+      <source src="assets/flatlay-espresso-steam.mp4" type="video/mp4">
+    </video>
   </section>
 
   <section id="how-it-works" class="cine-white">
@@ -1066,6 +1069,12 @@
     var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('is-on'); io.unobserve(e.target); } }); }, { threshold: 0.18 });
     watch.forEach(function(el){ io.observe(el); });
   } else watch.forEach(function(el){ el.classList.add('is-on'); });
+  var vid = document.querySelector('[data-band-video]');
+  if (vid && !reduce && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function(es){ es.forEach(function(e){
+      if (e.isIntersecting) { var p = vid.play(); if (p && p.catch) p.catch(function(){}); } else vid.pause();
+    }); }, { threshold: 0.25 }).observe(vid);
+  }
   size(); frame();
 })();
 </script>
