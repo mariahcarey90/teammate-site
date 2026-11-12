@@ -319,28 +319,12 @@ section.mist { background: var(--mist); }
   margin-top: 64px;
 }
 
-/* The espresso video (owner 2026-11-12: "way too big, I can't see the
-   whole picture"). It is 4:3, so full width ran taller than the screen.
-   Never taller than the screen (less the fixed top bar and a margin):
-   on wide screens it shrinks, sits centred as a framed picture with
-   rounded corners and room underneath; phones keep it edge to edge. */
-.band-video {
-  width: auto;
-  max-width: 100%;
-  max-height: calc(100vh - 140px);
-  max-height: calc(100svh - 140px);
-  margin-left: auto;
-  margin-right: auto;
-}
-@media (min-width: 721px) {
-  /* flow-root: keeps the video's bottom margin inside the grey band */
-  .scene-band:has(.band-video) { display: flow-root; }
-  .band-video {
-    max-width: calc(100% - 64px);
-    margin-bottom: 72px;
-    border-radius: var(--radius-card);
-  }
-}
+/* The espresso video (.band-video) runs full width like the photo did
+   (owner 2026-11-12, "Full width again"). Tried and turned down the same
+   day: shrunk to fit the screen with rounded corners ("looks squashy"),
+   blurred or dark faded sides, trimmed top and bottom. The video is 4:3,
+   so on a laptop it runs a little past the bottom of the screen; the fix
+   waits on a wide (about 2:1) render for laptops, phones keep this one. */
 
 /* ---- feature bullets ---- */
 
