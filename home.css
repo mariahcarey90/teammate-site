@@ -282,8 +282,11 @@ html.menu-open .nav-cine {
 /* the brand line never shrinks (owner 2026-10-21): on tablets and phones
    it keeps the old home page's size, bigger than the artifact's 8.4vw */
 @media (max-width: 860px) { .st-h1 { font-size: clamp(56px, 10vw, 96px); } }
+/* phones: 12vw, was 13.6vw (owner 2026-11-12 on an iPhone: the "Y" of
+   "Your" and the comma touched the screen edges). "Your work crew," now
+   sits about 30px in from each side, close to the 20px page margin. */
 @media (max-width: 600px) {
-  .st-h1 { font-size: clamp(40px, 13.6vw, 62px); letter-spacing: -.03em; }
+  .st-h1 { font-size: clamp(40px, 12vw, 62px); letter-spacing: -.03em; }
   .st-h1 .pg-line { white-space: nowrap; }
 }
 @media (max-width: 720px) {
